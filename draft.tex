@@ -12,18 +12,36 @@
 \headsep=0.25in
 
 \title{ BareTag Tool-Tracker}
-\author{ Walter Tebbetts, Sean Brown, Ken Su, and Connor McGarry }
-\date{\today}
+\author{ Walter Tebbetts, CompE, Sean Brown, CompE, \\ Ken Su, CompE, and Connor McGarry, CompE}
+\date{October 14, 2024}
 
 \begin{document}
 \maketitle	
 \pagebreak
 
-% Optional TOC
-% \tableofcontents
-% \pagebreak
 
-%--Paper--
+\begin{abstract}
+    Over the past 10 years, the majority of tools on a construction 
+    site have converted from wired to battery-powered. While this 
+    makes tools easy to move around, it also makes them easy to misplace
+    and an easier target for theives. Data indicates that the construction
+    idustry suffered nearly \$1,000,000,000 in loses due to tool theft in
+    2023 alone [1], strongly indicating the need for a robust and effective 
+    theft mitigation system. We propose the BareTag Tool-Tracker, a novel
+    approach to tool tracking that utilizes Ultra-Wideband(UWB) and Bluetooth 
+    Low-Energy(BLE) radio in order to real-time track tools, materials, or other 
+    valuable items on a construction site. The system utilizes a series
+    of pre-placed Anchor posts, that send UWB pings to a Tag that is connected
+    to a tool. Each Anchor can then calculate its distance to a Tag, relaying
+    that information to a Base station over Long Range(LoRa) radio. The 
+    base station runs the aggregated distance data through a multilateration
+    algorithm that can calculate the Tag's location with $\pm$ 10 cm accuracy.
+    The calculated location is then output to a local terminal, as well as 
+    uploaded to a cloud database for future reference. Altogether, the BareTag Tool-Tracker
+    is highly accurate ($\pm$ 10 cm), low-power (1 year of battery life), and
+    scalable (increase range by adding additional Anchors).
+
+\end{abstract}
 
 \section{Section 1}
 
@@ -32,7 +50,8 @@ Lorem Impsum
 
 \pagebreak
 \section{Section 2}
-Lorem Ipsum \\
+Lorem Ipsum \\ h
+
 
 %--/Paper--
 
