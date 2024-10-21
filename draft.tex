@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \begin{document}
 
 \title{BareTag Tool-Tracker\\
@@ -45,8 +46,8 @@
     makes tools easy to move around, it also makes them easy to misplace
     and an easier target for theives. Data indicates that the construction
     idustry suffered nearly \$1,000,000,000 in loses due to tool theft in
-    2023 alone [1], strongly indicating the need for a robust and effective 
-    theft mitigation system. We propose the BareTag Tool-Tracker, a novel
+    2016 alone [1], strongly indicating the need for a robust and effective 
+    theft mitigation system. We propose the BareTag Tool Tracker, a novel
     approach to tool tracking that utilizes Ultra-Wideband(UWB) and Bluetooth 
     Low-Energy(BLE) radio in order to real-time track tools, materials, or other 
     valuable items on a construction site. The system utilizes a series
@@ -61,17 +62,13 @@
     scalable (increase range by adding additional Anchors).
 \end{abstract}
 
-\begin{IEEEkeywords}
-component, formatting, style, styling, insert
-\end{IEEEkeywords}
 
 \section{Introduction}
-On constructions sites tools are constantly being misplaced or passed 
-around causing workers to spend extra time searching and waiting before 
+On constructions sites tools are constantly being misplaced causing workers to spend extra time searching and waiting before 
 returning to their assignments. Furthermore, in recent years research has 
 shown that theft on constructions sites has built up costs for construction 
 companies and slowing down projects, very detrimental for small companies. 
-In recent years many different approaches have been taken to solve this 
+Many different approaches have been taken to solve this 
 growing issue. 
 
 \subsection{Significance}
@@ -88,11 +85,11 @@ sites had outgrown theft in convenience stores [3]. Many managers have
 reported that these incidents have escalated to organized crime with 
 evidence of sophisticated planning and coordinated executions. [2]. 
 Theft on the site is not only costly to the business owners but also 
-even more inconvenient for the construction workers and their managers. 
+inconvenient for the construction workers and their managers. 
 Due to the lack of proper tools construction workers may not continue with
 their assignments and managers have to keep pushing deadlines. The 
 result of this costs the business not just in extra wages, but also 
-extra insurance and the company’s reputation [2]. 
+extra insurance and reputation [2]. 
 
 \subsection{Context and Survey of Similar Solutions}
 
@@ -101,7 +98,7 @@ and continues to be a problem of interest today. In designing our system,
 we extensively researched many similar solutions to examine how these 
 solutions fall short of achieving our system’s goals. Other solutions 
 we have examined use various technology for tracking such as: AI image 
-processing, GPS, Bluetooth, and Ultra-wideband.
+processing, GPS, Bluetooth, and Ultra-Wideband.
 
 One comparable solution that utilizes image processing methods is offered 
 by SIRIX. Their approach involves human and AI-assisted item tracking, 
@@ -352,104 +349,134 @@ site efficiency.
 \end{figure}
 
 \subsection{Tag}\label{AA}
-The Tag refers to the trackable device that will be attached to the tools on a worksite. The goal is for the Tags to be less than 31.9mm2, which is of a similar size to the Apple Airtag. The thickness of the Tags is aimed to be under 16mm, with the primary contributor to this size being the pouch cell 290mAh Lithium Polymer battery. The peak current draw of the Tag is 45mA and is out of the range that a coin cell could support, which led to the decision to use a LiPo that fits within our area size goals at 25 mm x 28mm. We are aiming for a one year battery life.
-The primary part of the Tag is the Qorvo DWM3001C. This module is driven by the nRF52833 MCU, and includes BLE, UWB, and accelerometer functionality. The DWM3001 provides UWB functionality and has an integrated PCB antenna which requires a keep-out zone in the Tag. BLE is provided by the nRF52833. This MCU is built on an ARM Cortex M4 and operates in the 2.4GHz band. This MCU is programmable over JTAG and thus requires a JTAG interface to be added to the Tag PCBs. The accelerometer is the LIS12DH, and is used to wake up the module upon motion detection. The module will set the interrupt pin on the DWM3001 high when there is motion detected. Otherwise, the Tag is in a low power mode to save battery life and is not receiving UWB pings. Therefore, before the tag goes to sleep the location needs to be checked to determine the resting location. The Tag has the BLE radio turned off until it exits the UWB perimeter, at which point an interrupt pin turns it on to integrate into the Apple Find My network. At this point, the UWB module turns off to conserve power. The accelerometer still regulates the power mode of the Tag depending on motion to conserve power. This device draws a lot of concepts from ECE 523 and ECE 304, both of which have a heavy focus on minimizing power consumption via software and component selection.
-The TPS79933 voltage regulator has an output of 3.3V when the input voltage is over 3.475V. This component is used in both the Tags and Anchors as both devices operate on a 3.7V input battery with 3.3V ideal operating voltage. 
+The Tag refers to the trackable device that will be attached to the tools 
+on a worksite. The goal is for the Tags to be less than 31.9mm2, which is 
+of a similar size to the Apple Airtag. The thickness of the Tags is aimed 
+to be under 16mm, with the primary contributor to this size being the 
+pouch cell 290mAh Lithium Polymer battery. The peak current draw of the 
+Tag is 45mA and is out of the range that a coin cell could support, 
+which led to the decision to use a LiPo that fits within our area size 
+goals at 25 mm x 28mm. We are aiming for a one year battery life.
+The primary part of the Tag is the Qorvo DWM3001C. This module is driven 
+by the nRF52833 MCU, and includes BLE, UWB, and accelerometer 
+functionality. The DWM3001 provides UWB functionality and has an 
+integrated PCB antenna which requires a keep-out zone in the Tag. 
+BLE is provided by the nRF52833. This MCU is built on an ARM Cortex 
+M4 and operates in the 2.4GHz band. This MCU is programmable over 
+JTAG and thus requires a JTAG interface to be added to the Tag PCBs. 
+The accelerometer is the LIS12DH, and is used to wake up the module 
+upon motion detection. The module will set the interrupt pin on the 
+DWM3001 high when there is motion detected. Otherwise, the Tag is in a 
+low power mode to save battery life and is not receiving UWB pings. 
+Therefore, before the tag goes to sleep the location needs to be checked 
+to determine the resting location. The Tag has the BLE radio turned off 
+until it exits the UWB perimeter, at which point an interrupt pin turns 
+it on to integrate into the Apple Find My network. At this point, the 
+UWB module turns off to conserve power. The accelerometer still regulates 
+the power mode of the Tag depending on motion to conserve power. This 
+device draws a lot of concepts from ECE 523 and ECE 304, both of which 
+have a heavy focus on minimizing power consumption via software and 
+component selection. The TPS79933 voltage regulator has an output of 
+3.3V when the input voltage is over 3.475V. This component is used in 
+both the Tags and Anchors as both devices operate on a 3.7V input battery 
+with 3.3V ideal operating voltage. 
 
 
 \subsection{Anchor}
-There needs to exist at least 3 anchors for the coordinates to be transmitted to the user. This is performed through multilateration. The Anchors use the same Qorvo DWM3001C modules as on the Tags as all of the submodules have a use case here too. The Anchors use UWB to ping the Tag and determine its location within the area defined by the proximity of the other anchors. They operate on this data using the nRF52833 MCU and send it to a host device over LoRaWAN. The RYLR998 LoRa module in the Anchors operates within the required range for LoRaWAN of 902.3 to 914.9 MHz. This module communicates with the MCU via UART. The use of these LoRa modules means that the Host Device does not need to be exactly on the site of the construction due to the kilometers of range that LoRa supports. We will build the LoRaWAN protocol on top of LoRa using the nRF52833 MCU. The use of this MCU also means that we can take advantage of the BLE it provides and use it for a variety of functions. The GPS coordinates of the Anchors must be known in order to get the real-world position of the Tags. We can also use BLE to communicate with an anchor to alert that a Tag that is in BLE mode has been returned to the UWB-supported area. These features result in  more power consumption than the Tags, so a 2.2Ah Lithium Ion battery is used. This is possible due to less size constraints for the Anchors than of the Tag. The size of the Anchor is not a specification that matters, however they will be able to be mounted on posts or stuck in different site locations depending on the desired use and area to cover.
-As stated before, the TPS79933 voltage regulator outputs 3.3V, which is the ideal operating voltage for the DWM3001C, along with the LoRa module. 
+There needs to exist at least 3 anchors for the coordinates to be 
+transmitted to the user. This is performed through multilateration. 
+The Anchors use the same Qorvo DWM3001C modules as on the Tags as all 
+of the submodules have a use case here too. The Anchors use UWB to ping 
+the Tag and determine its location within the area defined by the 
+proximity of the other anchors. They operate on this data using the 
+nRF52833 MCU and send it to a host device over LoRaWAN. The RYLR998 
+LoRa module in the Anchors operates within the required range for 
+LoRaWAN of 902.3 to 914.9 MHz. This module communicates with the MCU 
+via UART. The use of these LoRa modules means that the Host Device does 
+not need to be exactly on the site of the construction due to the 
+kilometers of range that LoRa supports. We will build the LoRaWAN 
+protocol on top of LoRa using the nRF52833 MCU. The use of this MCU 
+also means that we can take advantage of the BLE it provides and use 
+it for a variety of functions. The GPS coordinates of the Anchors must 
+be known in order to get the real-world position of the Tags. We can 
+also use BLE to communicate with an anchor to alert that a Tag that is 
+in BLE mode has been returned to the UWB-supported area. These features 
+result in  more power consumption than the Tags, so a 2.2Ah Lithium Ion 
+battery is used. This is possible due to less size constraints for the 
+Anchors than of the Tag. The size of the Anchor is not a specification 
+that matters, however they will be able to be mounted on posts or stuck 
+in different site locations depending on the desired use and area to cover.
+As stated before, the TPS79933 voltage regulator outputs 3.3V, which is 
+the ideal operating voltage for the DWM3001C, along with the LoRa module. 
 
 
 \subsection{Lora Dongle}
-This device is a RYLR998 operating over a USB - UART connection with the Host Device. It allows for the Host Device to receive the Tag coordinate data and operate on it. The size of this device should account for the LoRa module plus a USB/UART converter (CP2102N). The size should be similar to that of a USB hub, as to not be an inconvenience to have attached to a small host device. As such, the dimensions should be approximately 32 x 18 x 8 mm based on a combination of the component dimensions. 
-The Dongle receives power from the CP2102N over a wired USB-C connection, so there is no need for an external power supply. 
+This device is a RYLR998 operating over a USB - UART connection with the 
+Host Device. It allows for the Host Device to receive the Tag coordinate 
+data and operate on it. The size of this device should account for the 
+LoRa module plus a USB/UART converter (CP2102N). The size should be similar 
+to that of a USB hub, as to not be an inconvenience to have attached to a 
+small host device. As such, the dimensions should be approximately 32 x 18 
+x 8 mm based on a combination of the component dimensions. 
+The Dongle receives power from the CP2102N over a wired USB-C connection, 
+so there is no need for an external power supply. 
 
 
 \subsection{Host Device}
 
-This device can be whatever system a supervisor desires to use as long as it can support a physical USB/Serial connection, or do so using adapters. The Host Device is backhauling the location data of each Tag to a database where the history of the tag locations can be mapped out to determine the daily path. This information is also displayed in real time on a map of the desired area. The Host Device is also running the macless-haystack Find My server, which acts as a means for tracking the Tags that have left the UWB area and are now using BLE to integrate with the Apple Find My network. The tags all have unique IDs that can be linked to tools or equipment, making it easy to parse the data and determine what items have been in what location. 
+This device can be whatever system a supervisor desires to use as long as 
+it can support a physical USB/Serial connection, or do so using adapters. 
+The Host Device is backhauling the location data of each Tag to a database 
+where the history of the tag locations can be mapped out to determine the 
+daily path. This information is also displayed in real time on a map of 
+the desired area. The Host Device is also running the macless-haystack 
+Find My server, which acts as a means for tracking the Tags that have 
+left the UWB area and are now using BLE to integrate with the Apple Find 
+My network. The tags all have unique IDs that can be linked to tools or 
+equipment, making it easy to parse the data and determine what items have 
+been in what location. 
 
-
-
-\subsection{Authors and Affiliations}
-\textbf{The class file is designed for, but not limited to, six authors.} A 
-minimum of one author is required for all conference articles. Author names 
-should be listed starting from left to right and then moving down to the 
-next line. This is the author sequence that will be used in future citations 
-and by indexing services. Names should not be listed in columns nor group by 
-affiliation. Please keep your affiliations as succinct as possible (for 
-example, do not differentiate among departments of the same organization).
-
-\subsection{Identify the Headings}
-Headings, or heads, are organizational devices that guide the reader through 
-your paper. There are two types: component heads and text heads.
-
-Component heads identify the different components of your paper and are not 
-topically subordinate to each other. Examples include Acknowledgments and 
-References and, for these, the correct style to use is ``Heading 5''. Use 
-``figure caption'' for your Figure captions, and ``table head'' for your 
-table title. Run-in heads, such as ``Abstract'', will require you to apply a 
-style (in this case, italic) in addition to the style provided by the drop 
-down menu to differentiate the head from the text.
-
-Text heads organize the topics on a relational, hierarchical basis. For 
-example, the paper title is the primary text head because all subsequent 
-material relates and elaborates on this one topic. If there are two or more 
-sub-topics, the next level head (uppercase Roman numerals) should be used 
-and, conversely, if there are not at least two sub-topics, then no subheads 
-should be introduced.
-
-\subsection{Figures and Tables}
-\paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
-bottom of columns. Avoid placing them in the middle of columns. Large 
-figures and tables may span across both columns. Figure captions should be 
-below the figures; table heads should appear above the tables. Insert 
-figures and tables after they are cited in the text. Use the abbreviation 
-``Fig.~\ref{fig}'', even at the beginning of a sentence.
-
-
-
-\section*{Acknowledgment}
-
-The preferred spelling of the word ``acknowledgment'' in America is without 
-an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-acknowledgments in the unnumbered footnote on the first page.
-
-\section*{References}
-
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
-
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
 
 \begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+\bibitem{b1} ``2016 equipment theft report,'' 2016. [Online]. Available: https://www.ner.net/wp-content/uploads/2017/10/Annual-Theft-Report-2016.pdf. Accessed Oct. 19, 2024.
+\bibitem{b2} ``Crime in the construction industry,'' 2013. [Online]. Available: https://www.ciob.org/sites/default/files/. Accessed Oct. 19, 2024.
+\bibitem{b3} ``An exploratory look at thefts from construction sites,'' 2019. [Online]. http://ascpro0.ascweb.org/archives/cd/2019/paper/CPRT247002019.pdf. Accessed Oct. 19, 2024.
+\bibitem{b4} ``Remote Video Monitoring,'' SirixMonitoring, Sep. 13, 2024. [Online]. Available: https://sirixmonitoring.com/remote-video-monitoring/. Accessed Oct. 04, 2024.
+\bibitem{b5} ``Pros and Cons of Construction Equipment Tracking,'' Tool Tracking Software, Aug. 02, 2023. [Online]. Available:  https://gocodes.com/equipment-tracking-pros-cons/. Accessed: Oct. 04, 2024.
+\bibitem{b6} ``Airtag VS GPS tracker, what is the difference ?,'' Beepings.com, 2021. [Online]. Available:https://beepings.com/airtag-vs-tracker/. Accessed: Oct. 04, 2024.
+\bibitem{b7} ``Pozyx UWB Tags - Accurate ultra-wideband trackers,'' Pozyx.io, 2024. [Online]. Available: https://www.pozyx.io/products/hardware/. Accessed: Oct. 04. 2024.
 \end{thebibliography}
 \vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+
+\section*{Appendix}
+\setcounter{subsection}{0}
+\subsection{Design Alternatives}
+Before settling on our current design, we considered many alternatives. 
+In order to make our user-interface have real world terrain displayed 
+while tracking our tags, we need to find the coordinate positions of our 
+anchors. In order to do this, we originally considered putting GPS modules 
+on our anchors, but decided instead on creating a mobile app that can be 
+used to find the GPS of your phone when setting up the anchors. We decided 
+on this in order to save money, as individual GPS modules range from 
+\$20-\$40. We also considered purchasing a separate MCU, LoRa, and UWB 
+module to design our anchor PCBs. We found this design too complex and 
+instead decided on the same module as we are using in the Tags. We decided 
+on this current design because we want the tags and anchors to have the 
+same technology to be able to program them with the same libraries in 
+order expedite software development. Batteries have been a prominent 
+part of our design that we have put a lot of effort into deciding on. 
+Because we want the Tags to be small enough to go inside of tools without 
+manufacturers having to add room for them, we decided on very small 
+batteries inside the tag. We also considered doing energy harvesting 
+for the anchors to increase the battery life of them, but have decided 
+on large batteries for the anchors because they are less size constrained 
+compared to the Tags. In our original plan, we were going to backhaul our 
+data to a cloud database in order for processing. After some consideration, 
+we decided on sending the data to a self-hosted database to have increased 
+control over the hardware, software, and configurations, which allows us to 
+customize our database to meet our project’s needs. Having our own 
+self-hosted database can also allow us to implement our own security 
+measures, will be less expensive, and will have greater performance 
+optimized for our specific workload.
 
 \end{document}
