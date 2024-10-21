@@ -36,6 +36,11 @@
 \textit{CompE}\\
 \textit{Hardware Lead}
 
+\and 
+\IEEEauthorblockN{Jeremy Gummeson}
+\textit{Professor, ECE}\\
+\textit{Advisor}
+
 }
 
 \maketitle
@@ -64,12 +69,28 @@
 
 
 \section{Introduction}
-On constructions sites tools are constantly being misplaced causing workers to spend extra time searching and waiting before 
-returning to their assignments. Furthermore, in recent years research has 
-shown that theft on constructions sites has built up costs for construction 
-companies and slowing down projects, very detrimental for small companies. 
-Many different approaches have been taken to solve this 
-growing issue. 
+Modern construction sites heavily rely on the usage of battery operated 
+power tools, allowing construction workers to dynamically move throughout 
+a site without the need to route cables and power lines for their 
+equipment. This allows individual workers, as well as entire 
+construction firms, to be more efficient, eliminating the need to set 
+up power infrastructure at every new site, or re-work power infrastructure 
+when a site changes. However, this flexibility and ease of use create new 
+challenges to construction site efficiency. First of all, battery-powered 
+tools are often smaller and easier to misplace compared to their corded 
+predecessors, greatly reducing a firm’s overall efficiency. Second, 
+battery-powered tools are very valuable, with many cordless power tools 
+costing \$800+, greatly increasing the incentive for thieves to steal 
+cordless tools and accessories. In order to prevent inefficiencies caused 
+by misplaced tools and to deter common tool theft, a precise and scalable 
+tracking system needs to be implemented for the construction industry. 
+With this project, we propose a system that combines functionality of 
+existing item tracking and inventory management solutions, into a highly 
+precise and scalable solution specifically tailored to the construction 
+industry. While this solution is focused on preventing tool misplacement 
+and theft, we have also designed the system to be flexible, allowing 
+users to utilize the system to track and monitor equipment, materials, 
+or even individuals.
 
 \subsection{Significance}
 
@@ -137,47 +158,40 @@ aims to overcome. For one, GPS tracking is power-intensive, often requiring
 frequent battery replacements for the trackers. Additionally, GPS 
 tracking needs an unobstructed line-of-sight to function efficiently, 
 which can be compromised in dynamic construction environments. 
-Furthermore, our system is designed to operate in very rural construction 
-areas where satellite connectivity may be limited. Unlike GPS, which 
-requires a strong satellite connection for accurate tracking, 
-ultra-wideband (UWB) technology, which our system uses, does not rely on 
-satellites, making it more reliable in such environments.
 
-A common solution and a more reliable approach is using the Apple AirTags.
-In the Apple AirTags, there are BLE modules that help it communicate 
-with other iPhones to create the Find My network. Additionally, it has 
-UWB modules that allow the user to get a more accurate location of where 
-the tag is once the AirTag is close enough to the user’s iPhone [6]. This 
+Another popular solution is the Apple AirTag.
+The Apple AirTag, uses Bluetooth Low Energy (BLE) advertisements to connect
+with devices in the Find My network (iPhone, iPads, and Macbooks). 
+Additionally, it uses UWB to allow users to get a more accurate location of where 
+the tag is once the AirTag is close enough to the owner's iPhone [6]. This 
 creates a well-rounded system to let users get a general idea of where 
-their items are with a battery life of up to a year. The difference 
+their items are with a battery life of up to one year. The difference 
 between the BareTag and the AirTag is that the BareTag is used for 
 accurately tracking high-value items within the set UWB perimeter. 
 BareTag emphasizes the use of the UWB module so construction workers 
 can easily find their tools, along with an additional BLE module for 
-the Find My Network feature outside of the set perimeter. Unlike Airtag, 
+the Find My network features outside of the set perimeter. Unlike Airtag, 
 our system aims to not only track and retrieve items but also to accurately 
 and reliability track tools to optimize efficiency.
 
-The final solution takes a similar approach to BareTag. Pozyx tracks 
-items indoors by installing UWB anchors throughout the building, which 
-communicate with UWB tags. These anchors are height-adjustable and 
+The final solution, Pozyx, is most similar to the BareTag. Pozyx tracks 
+items indoors by installing UWB Anchors throughout the building, which 
+communicate with UWB Tags. These anchors are height-adjustable and 
 plugged into walls. Once configured and registered in the system, 
 items can be geofenced, and the collected data can be used to optimize 
 workflow and labor efficiency [7]. While Pozyx offers an effective 
 indoor tracking solution, it is less efficient in outdoor environments. 
 In locations like construction sites, where power availability may be 
-limited, anchor placement becomes a significant challenge. Additionally, 
-even though Pozyx’s UWB tags are advertised to have a battery life of over 
-five years, they are bulky and lack a low-power option. In contrast, 
-BareTag’s anchors come with pre-installed communication systems and 
-built-in batteries, making the system more portable and scalable. 
-Furthermore, BareTag’s tags feature a built-in accelerometer with an 
+limited, anchor placement becomes a significant challenge. In contrast, 
+BareTag’s Anchors are battery powered and easy to reconfigure, 
+making the system more portable and scalable. 
+Furthermore, BareTag’s Tags feature a built-in accelerometer with an 
 automatic sleep function to maximize power efficiency. This not only 
 extends battery life but also reduces the frequency of battery 
-replacements, saving time and resources. In summary, BareTag's anchors 
-do not rely on external power sources, and the tags are equipped with a 
-low-power solution, making them more suitable for outdoor and construction 
-site use compared to Pozyx’s solution.
+replacements, saving time and resources. In summary, BareTag's Anchors 
+do not rely on external power sources, and the Tags are equipped with a 
+low-power solution, making them more suitable for outdoor construction 
+site use compared to Pozyx.
 
 \subsection{Societal Impacts}
 
@@ -454,29 +468,30 @@ been in what location.
 Before settling on our current design, we considered many alternatives. 
 In order to make our user-interface have real world terrain displayed 
 while tracking our tags, we need to find the coordinate positions of our 
-anchors. In order to do this, we originally considered putting GPS modules 
-on our anchors, but decided instead on creating a mobile app that can be 
-used to find the GPS of your phone when setting up the anchors. We decided 
-on this in order to save money, as individual GPS modules range from 
-\$20-\$40. We also considered purchasing a separate MCU, LoRa, and UWB 
-module to design our anchor PCBs. We found this design too complex and 
-instead decided on the same module as we are using in the Tags. We decided 
-on this current design because we want the tags and anchors to have the 
-same technology to be able to program them with the same libraries in 
-order expedite software development. Batteries have been a prominent 
-part of our design that we have put a lot of effort into deciding on. 
-Because we want the Tags to be small enough to go inside of tools without 
-manufacturers having to add room for them, we decided on very small 
-batteries inside the tag. We also considered doing energy harvesting 
-for the anchors to increase the battery life of them, but have decided 
-on large batteries for the anchors because they are less size constrained 
-compared to the Tags. In our original plan, we were going to backhaul our 
-data to a cloud database in order for processing. After some consideration, 
-we decided on sending the data to a self-hosted database to have increased 
-control over the hardware, software, and configurations, which allows us to 
-customize our database to meet our project’s needs. Having our own 
-self-hosted database can also allow us to implement our own security 
-measures, will be less expensive, and will have greater performance 
-optimized for our specific workload.
+anchors. In order to do this, we originally considered putting GPS 
+modules on our anchors, but decided instead on creating a mobile app 
+that can be used to find the GPS of your phone when setting up the 
+anchors. We decided on this in order to save money, as individual GPS 
+modules range from $20-$40. We also considered purchasing a separate 
+MCU, LoRa, and UWB module to design our anchor PCBs. We found this 
+design too complex and instead decided on the same module as we are 
+using in the Tags. We decided on this current design because we want 
+the tags and anchors to have the same technology to be able to program 
+them with the same libraries in order expedite software development. 
+Batteries have been a prominent part of our design that we have put a 
+lot of effort into deciding on. Because we want the Tags to be small 
+enough to go inside of tools without manufacturers having to add room 
+for them, we decided on very small batteries inside the tag. We also 
+considered doing energy harvesting for the anchors to increase the 
+battery life of them, but have decided on large batteries for the 
+anchors because they are less size constrained compared to the Tags. 
+In our original plan, we were going to backhaul our data to a 
+self-hosted database in order for processing. After some consideration, 
+we decided that sending the data to a cloud database, such as AWS, 
+would be more beneficial for our project. Using a cloud server will 
+allow for scalability, decrease in cost, higher reliability, and 
+greater performance than a database we could host in-house. The cloud 
+database will also be easier for us to use because they come with 
+pre-existing features that will help us easily integrate our project with.
 
 \end{document}
