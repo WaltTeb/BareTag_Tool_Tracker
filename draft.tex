@@ -350,89 +350,90 @@ site efficiency.
 
 \subsection{Tag}\label{AA}
 The Tag refers to the trackable device that will be attached to the tools 
-on a worksite. The goal is for the Tags to be less than 31.9mm2, which is 
+on a worksite. The goal is for the Tags to be less than $31.9mm^2$, which is 
 of a similar size to the Apple Airtag. The thickness of the Tags is aimed 
-to be under 16mm, with the primary contributor to this size being the 
-pouch cell 290mAh Lithium Polymer battery. The peak current draw of the 
-Tag is 45mA and is out of the range that a coin cell could support, 
+to be under $16mm$, with the primary contributor to this size being the 
+pouch cell $290mAh$ Lithium Polymer battery. The peak current draw of the 
+Tag is $45mA$ and is out of the range that a coin cell could support, 
 which led to the decision to use a LiPo that fits within our area size 
-goals at 25 mm x 28mm. We are aiming for a one year battery life.
-The primary part of the Tag is the Qorvo DWM3001C. This module is driven 
-by the nRF52833 MCU, and includes BLE, UWB, and accelerometer 
-functionality. The DWM3001 provides UWB functionality and has an 
-integrated PCB antenna which requires a keep-out zone in the Tag. 
-BLE is provided by the nRF52833. This MCU is built on an ARM Cortex 
-M4 and operates in the 2.4GHz band. This MCU is programmable over 
-JTAG and thus requires a JTAG interface to be added to the Tag PCBs. 
+goals at $25 \ mm \ x \ 28\ mm$. We are aiming for a one year battery life.
+\\The primary part of the Tag is the Qorvo DWM3001C. This module is driven 
+by the nRF52833 MCU which includes BLE functioality. The DWM3001C also includes, 
+UWB and accelerometer modules. The UWB functionality is driven by the DWM3110,
+which has an integrated PCB antenna. BLE is provided by the nRF52833. This MCU is built on an ARM Cortex 
+M4 and operates at $2.4GHz$. This MCU is programmable over 
+SWD and thus requires a corresponding interface to be added to the PCBs. 
 The accelerometer is the LIS12DH, and is used to wake up the module 
 upon motion detection. The module will set the interrupt pin on the 
-DWM3001 high when there is motion detected. Otherwise, the Tag is in a 
-low power mode to save battery life and is not receiving UWB pings. 
+DWM3001C high when there is motion detected. Otherwise, the Tag is in a 
+low power mode and is not receiving UWB pings. 
 Therefore, before the tag goes to sleep the location needs to be checked 
-to determine the resting location. The Tag has the BLE radio turned off 
-until it exits the UWB perimeter, at which point an interrupt pin turns 
-it on to integrate into the Apple Find My network. At this point, the 
+to determine the last known resting location. The Tag has the BLE radio turned off 
+until it exits the UWB area, at which point an interrupt pin turns 
+it on to integrate the Tag into the Apple Find My network. At this point, the 
 UWB module turns off to conserve power. The accelerometer still regulates 
-the power mode of the Tag depending on motion to conserve power. This 
+the power mode of the Tag depending on motion to conserve power. This
 device draws a lot of concepts from ECE 523 and ECE 304, both of which 
 have a heavy focus on minimizing power consumption via software and 
 component selection. The TPS79933 voltage regulator has an output of 
-3.3V when the input voltage is over 3.475V. This component is used in 
-both the Tags and Anchors as both devices operate on a 3.7V input battery 
-with 3.3V ideal operating voltage. 
+$3.3V$ when the input voltage is over $3.475V$. This component is used in 
+both the Tags and Anchors as both devices operate on a $3.7V$ battery 
+with all modules operating at a $3.3V$ ideal voltage. 
 
 
 \subsection{Anchor}
-There needs to exist at least 3 anchors for the coordinates to be 
-transmitted to the user. This is performed through multilateration. 
+There needs to exist at least $3$ anchors for the coordinates of a Tag to be 
+transmitted to the Host Device, which are calculated through multilateration. 
 The Anchors use the same Qorvo DWM3001C modules as on the Tags as all 
 of the submodules have a use case here too. The Anchors use UWB to ping 
 the Tag and determine its location within the area defined by the 
-proximity of the other anchors. They operate on this data using the 
-nRF52833 MCU and send it to a host device over LoRaWAN. The RYLR998 
-LoRa module in the Anchors operates within the required range for 
-LoRaWAN of 902.3 to 914.9 MHz. This module communicates with the MCU 
+proximity of the other anchors. They process this data using the 
+nRF52833 MCU and send it to a host device over LoRaWAN for coordinate computation. 
+The RYLR998 LoRa module in the Anchors operates within the operating range of 
+LoRaWAN: $902.3 MHz$ to $914.9 MHz$. This module communicates with the MCU 
 via UART. The use of these LoRa modules means that the Host Device does 
-not need to be exactly on the site of the construction due to the 
+not need to be on the site of the construction due to the 
 kilometers of range that LoRa supports. We will build the LoRaWAN 
-protocol on top of LoRa using the nRF52833 MCU. The use of this MCU 
-also means that we can take advantage of the BLE it provides and use 
+protocol on top of LoRa using the nRF52833 MCUs and Host Device. The use of the nRF52833 
+means that we can take advantage of the BLE it provides and use 
 it for a variety of functions. The GPS coordinates of the Anchors must 
-be known in order to get the real-world position of the Tags. We can 
-also use BLE to communicate with an anchor to alert that a Tag that is 
-in BLE mode has been returned to the UWB-supported area. These features 
+be known in order to get the real-world position of the Tags, and we can achieve
+this through a mobile app that will communicate with the Anchors over Bluetooth. 
+This operation will occur during the setup and positioning of the Anchors. We can also
+use BLE to communicate with an Anchor to alert that a Tag in 
+BLE mode has been returned within range of the Anchors. These features 
 result in  more power consumption than the Tags, so a 2.2Ah Lithium Ion 
 battery is used. This is possible due to less size constraints for the 
-Anchors than of the Tag. The size of the Anchor is not a specification 
-that matters, however they will be able to be mounted on posts or stuck 
-in different site locations depending on the desired use and area to cover.
+Anchors than of the Tag. The Anchors are not constrained by size, and therefore we 
+do not have any strict specifications for its dimensions.
 As stated before, the TPS79933 voltage regulator outputs 3.3V, which is 
-the ideal operating voltage for the DWM3001C, along with the LoRa module. 
+the ideal operating voltage for the DWM3001C and LoRa module. 
 
 
 \subsection{Lora Dongle}
-This device is a RYLR998 operating over a USB - UART connection with the 
-Host Device. It allows for the Host Device to receive the Tag coordinate 
-data and operate on it. The size of this device should account for the 
-LoRa module plus a USB/UART converter (CP2102N). The size should be similar 
-to that of a USB hub, as to not be an inconvenience to have attached to a 
-small host device. As such, the dimensions should be approximately 32 x 18 
-x 8 mm based on a combination of the component dimensions. 
-The Dongle receives power from the CP2102N over a wired USB-C connection, 
-so there is no need for an external power supply. 
-
+This device is a RYLR998 operating over a USB/UART connection with the 
+Host Device. The Dongle allows the Host Device to receive the Tag location data in 
+reference to each Anchor, which the Host Device will then perform the multilateration algorithm on.
+The size of this device should be similar 
+to that of a commonly used USB hub, as to not be an inconvenience to have attached to a 
+small host device. The dimensions will be approximately $32 \ mm\  x \ 18 \ mm \
+x \ 8 \ mm$ based on a combination of the Dongle component dimensions, which are the LoRa 
+module and a USB/Serial converter. 
+\\ The Dongle receives power over USB from the Host Device, which the serial converter will
+drop to $3.3V$ for the ideal operating voltage of the LoRa module.
 
 \subsection{Host Device}
 
 This device can be whatever system a supervisor desires to use as long as 
-it can support a physical USB/Serial connection, or do so using adapters. 
-The Host Device is backhauling the location data of each Tag to a database 
-where the history of the tag locations can be mapped out to determine the 
-daily path. This information is also displayed in real time on a map of 
+it can support a USB/Serial connection, or do so using adapters. The Host Device
+performs the multilateration algorithms based on the data it receives from the LoRa Dongle.
+The calculations get backhauled to a cloud database 
+where the history of Tag locations can be mapped out to determine 
+daily paths. This information is also displayed locally on a map of 
 the desired area. The Host Device is also running the macless-haystack 
-Find My server, which acts as a means for tracking the Tags that have 
-left the UWB area and are now using BLE to integrate with the Apple Find 
-My network. The tags all have unique IDs that can be linked to tools or 
+server, which acts as a means for tracking the Tags that have 
+left the UWB area and are using BLE to integrate with the Apple Find 
+My network. The Tags all have unique IDs that can be linked to tools or 
 equipment, making it easy to parse the data and determine what items have 
 been in what location. 
 
