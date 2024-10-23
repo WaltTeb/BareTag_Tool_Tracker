@@ -1,0 +1,8 @@
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\To Check\Ultiboard\TC2030-MCP-NL - Silkscreen Top.gbr' ----   Sat Aug 06 12:30:12 2011
+
+D10   --> D100
+D11   --> D101
+D12   --> D102
+-----------------------------------------------------------------

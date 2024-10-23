@@ -1,0 +1,43 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'Tag-Connect.LYT'.
+CADCAM generated at 4:31:57 PM on Tuesday, June 23, 2009.
+
+File List
+---------
+Top Copper              : Tag-Connect - CADCAM Top Copper.TXT
+Bottom Copper           : Tag-Connect - CADCAM Bottom Copper.TXT
+Top Silk Screen         : Tag-Connect - CADCAM Top Silk Screen.TXT
+Top Solder Resist       : Tag-Connect - CADCAM Top Solder Resist.TXT
+Bottom Solder Resist    : Tag-Connect - CADCAM Bottom Solder Resist.TXT
+Top SMT Paste Mask      : Tag-Connect - CADCAM Top SMT Paste Mask.TXT
+Bottom SMT Paste Mask   : Tag-Connect - CADCAM Bottom SMT Paste Mask.TXT
+Keepout                 : Tag-Connect - CADCAM Keepout.TXT
+Drill                   : Tag-Connect - CADCAM Drill.TXT
+
+Photoplotter Setup
+------------------
+Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height
+
+D10	CIRCLE	D=104th                                     FLASH
+D11	CIRCLE	D=45th                                      FLASH
+D12	CIRCLE	D=31th                                      FLASH
+D13	CIRCLE	D=0                                         DRAW
+D14	CIRCLE	D=110th                                     FLASH
+D15	CIRCLE	D=51th                                      FLASH
+D16	CIRCLE	D=41th                                      FLASH
+
+NC Drill Setup
+--------------
+Format: ASCII, 2.4, imperial, absolute, eob=<CR><LF>, no zero suppression.
+Notes:  Tool sizes are diameters. Layer sets are in brackets - 0=TOP, 15=BOTTOM, 1-14=INNER.
+
+T01	93.5th (0-15)
+T02	35th (0-15)
+
+
+[END OF FILE]

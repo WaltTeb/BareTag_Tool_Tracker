@@ -1,0 +1,20 @@
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\Eagle\GERBERS\TC2050 top solder mask.tsm' ----   Wed Aug 10 15:49:14 2011
+
+D10   --> D100
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\Eagle\GERBERS\TC2050 top keepout.tko' ----   Wed Aug 10 15:49:14 2011
+
+D10   --> D101
+D11   --> D102
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\Eagle\GERBERS\TC2050 top silk screen.tss' ----   Wed Aug 10 15:49:14 2011
+
+D10   --> D103
+D11   --> D104
+-----------------------------------------------------------------

@@ -1,0 +1,20 @@
+G04 DipTrace 2.0*
+%INTop Assy.gbr*%
+%MOIN*%
+%ADD10C,0.0098*%
+%ADD11C,0.006*%
+%ADD12C,0.003*%
+%ADD13C,0.0374*%
+%ADD14C,0.008*%
+%ADD15C,0.0093*%
+%FSLAX44Y44*%
+%SFA1B1*%
+%OFA0B0*%
+G04*
+G70*
+G90*
+G75*
+G01*
+%LNTopAssy*%
+%LPD*%
+M02*

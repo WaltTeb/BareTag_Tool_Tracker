@@ -1,0 +1,147 @@
+name: "TC2030-MCP-NL-ALT"
+author: "Guy Fernando"
+source: "Tag Connect"
+description: "TC2030-MCP-NL PCB ALTERNATIVE FOOTPRINT"
+  units: MIL
+  sel_rect: -70.5 -110.5 270.5 110.5
+  ref_text: 50 0 -180 0 5
+  value_text: 100 0 -300 0 10
+  centroid: 0 100 0 0
+  n_pins: 11
+    pin: "1" 0 50 -25 90
+      top_pad: 1 31 0 0 0
+      top_paste: 1 31 0 0 0
+    pin: "3" 0 100 -25 90
+      top_pad: 1 31 0 0 0
+      top_paste: 1 31 0 0 0
+    pin: "5" 0 150 -25 90
+      top_pad: 1 31 0 0 0
+      top_paste: 1 31 0 0 0
+    pin: "6" 0 150 25 90
+      top_pad: 1 31 0 0 0
+      top_paste: 1 31 0 0 0
+    pin: "4" 0 100 25 90
+      top_pad: 1 31 0 0 0
+      top_paste: 1 31 0 0 0
+    pin: "2" 0 50 25 90
+      top_pad: 1 31 0 0 0
+      top_paste: 1 31 0 0 0
+    pin: "7" 37 0 0 0
+      top_pad: 0 31 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 0 0 0 0 0
+    pin: "8" 37 200 -40 0
+      top_pad: 0 31 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 0 0 0 0 0
+    pin: "9" 37 200 40 0
+      top_pad: 0 31 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 0 0 0 0 0
+    pin: "10" 0 0 0 0
+      top_paste: 0 31 0 0 0
+      bottom_pad: 1 121 0 0 0
+      bottom_paste: 1 121 0 0 0
+    pin: "11" 0 200 0 0
+      top_paste: 0 31 0 0 0
+      bottom_pad: 5 201 60.5 60.5 0
+      bottom_paste: 5 201 60.5 60.5 0
+
+name: "TC2030-MCP-NL"
+author: "Guy Fernando"
+source: "Tag Connect"
+description: "TC2030-MCP-NL PCB FOOTPRINT"
+units: MIL
+sel_rect: -28.5 -68.5 228.5 68.5
+ref_text: 50 0 -180 0 5
+value_text: 100 0 -300 0 10
+centroid: 0 100 0 0
+n_pins: 9
+pin: "1" 0 50 -25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "3" 0 100 -25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "5" 0 150 -25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "6" 0 150 25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "4" 0 100 25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "2" 0 50 25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "7" 37 0 0 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "8" 37 200 -40 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "9" 37 200 40 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+
+name: "TC2030-MCP"
+author: "Guy Fernando"
+source: "Tag Connect"
+description: "TC2030-MCP PCB FOOTPRINT"
+units: MIL
+sel_rect: -57 -157 228.5 157
+ref_text: 50 0 -230 0 5
+value_text: 100 0 -360 0 10
+centroid: 0 100 0 0
+n_pins: 13
+pin: "1" 0 50 -25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "3" 0 100 -25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "5" 0 150 -25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "6" 0 150 25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "4" 0 100 25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "2" 0 50 25 90
+top_pad: 1 31 0 0 0
+top_paste: 1 31 0 0 0
+pin: "7" 37 0 0 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "8" 37 200 -40 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "9" 37 200 40 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "10" 94 0 -100 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "11" 94 125 -100 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "12" 94 0 100 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+pin: "13" 94 125 100 0
+top_pad: 0 31 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 0 0 0 0
+

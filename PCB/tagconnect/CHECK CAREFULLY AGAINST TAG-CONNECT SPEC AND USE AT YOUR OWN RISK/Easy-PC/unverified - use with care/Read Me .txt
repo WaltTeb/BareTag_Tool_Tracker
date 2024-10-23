@@ -1,0 +1,11 @@
+
+
+The 6 files constitute a LIBRARY folder within Easy PC with the footprint, schematic and component data for Tag-Connect.
+
+There are two versions. One version is ready labelled with pin names to suit AVR. 
+
+
+These files kindly supplied by David Godfrey of It's Designs, England.
+
+Not yet verified by Tag-Connect.
+

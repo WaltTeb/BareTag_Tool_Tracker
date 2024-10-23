@@ -1,0 +1,194 @@
+PLOT REPORT
+-----------
+
+Report File    : C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo (PCB - PLOT REPORT).txt
+Report Written : Thursday, December 17, 2009
+Design Path    : C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo.pcb
+Design Title   : 
+Created        : 12/17/2009 9:42:05 PM
+Last Saved     : 12/17/2009 9:44:40 PM
+Editing Time   : 2 min
+Units          : thou (precision 2)
+
+DEVICE SETTINGS
+---------------
+
+---------------
+Gerber Settings
+---------------
+
+    Leading zero suppression.
+    G01 assumed throughout.
+    Line termination <*> <CR> <LF>.
+    2.3 format absolute inches.
+    Format commands defined in Gerber file.
+    Aperture table defined in Gerber file.
+
+--------------
+Drill Settings
+--------------
+
+    Excellon Format 1
+    Format 2.3 absolute in inches.
+    No zero suppression.
+
+
+PLOTS OUTPUT
+------------
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Top Silk.gbr"
+
+    Layers:
+    -------
+    Top Silk
+    Board Outlines
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D10       Round 5
+    D77       Round 1
+
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Top Copper.gbr"
+
+    Layers:
+    -------
+    Top Copper
+    Board Outlines
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D10       Round 5
+    D135       Round 42
+    D136       Round 100
+    D137       Round 31
+
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Top Copper (Resist).gbr"
+
+    Layers:
+    -------
+    Top Copper
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D138       Round 52
+    D139       Round 110
+    D140       Round 41
+
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Top Copper (Paste).gbr"
+
+    Layers:
+    -------
+    Top Copper
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D138       Round 38
+    D139       Round 96
+    D140       Round 27
+
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Dimensions.gbr"
+
+    Layers:
+    -------
+    Dimensions
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D10       Round 1
+    D11       Round 8
+    D12       Round 5
+
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Bottom Copper (Resist).gbr"
+
+    Layers:
+    -------
+    Bottom Copper
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D13       Round 52
+    D14       Round 110
+    D15       Round 41
+
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Bottom Copper (Paste).gbr"
+
+    Layers:
+    -------
+    Bottom Copper
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D138       Round 38
+    D139       Round 96
+    D140       Round 27
+
+
+NC Drill Output
+---------------
+
+    Output:
+    -------
+    Plated Round Drill Holes
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Drill Data - Through Hole.drl"
+
+
+    Tool             Size        Count  ID
+    --------------------------------------
+    T001        00.037 in            6   AF
+    T002        00.093 in            4   AP
+    --------------------------------------
+    All                             10
+    --------------------------------------
+
+Gerber Output
+-------------
+
+    "C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo - Drill Ident Drawing - Through Hole.gbr"
+
+    Layers:
+    -------
+
+    Drill Ident Drawing
+    -------------------
+
+    Drill     Plated    Size      Shape     ID        
+    --------------------------------------------------
+    37        Y         100       Round     AF        
+    93        Y         100       Round     AP        
+    --------------------------------------------------
+
+    D-Code    Shape  (thou)
+    -----------------------
+    D12       Round 5
+    D16       Round 100
+
+
+End Of Report.
