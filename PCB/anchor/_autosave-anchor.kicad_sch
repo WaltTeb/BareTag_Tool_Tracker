@@ -6155,10 +6155,22 @@
 		)
 	)
 	(junction
+		(at 142.24 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "059bb521-0dcd-4876-9b3a-5c5e8364c162")
+	)
+	(junction
 		(at 218.44 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23fc3400-0830-4410-bcd2-6dfc1c7e0878")
+	)
+	(junction
+		(at 205.74 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b62bad3-8ba5-47df-a810-2066467ad2ad")
 	)
 	(junction
 		(at 139.7 104.14)
@@ -6420,7 +6432,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 46.99) (xy 144.78 46.99)
+			(xy 127 46.99) (xy 142.24 46.99)
 		)
 		(stroke
 			(width 0)
@@ -6470,7 +6482,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 144.78) (xy 76.2 144.78)
+			(xy 209.55 144.78) (xy 78.74 144.78)
 		)
 		(stroke
 			(width 0)
@@ -6547,6 +6559,16 @@
 			(type default)
 		)
 		(uuid "2a905d6a-45ac-45fe-b6db-1145367ddd0e")
+	)
+	(wire
+		(pts
+			(xy 76.2 154.94) (xy 223.52 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bf2c7af-c87a-4314-9dc4-0f20f2e52dab")
 	)
 	(wire
 		(pts
@@ -6657,16 +6679,6 @@
 			(type default)
 		)
 		(uuid "503a8fd1-eda7-4751-84fa-b9570b96c7ff")
-	)
-	(wire
-		(pts
-			(xy 76.2 95.25) (xy 76.2 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "538c8411-b265-4fc2-890f-666cca895543")
 	)
 	(wire
 		(pts
@@ -6810,13 +6822,13 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 154.94) (xy 78.74 154.94)
+			(xy 78.74 95.25) (xy 78.74 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "87b363b1-de38-49ac-920c-3e5486093cad")
+		(uuid "87ef2372-9b55-427a-921a-ad722a7a40ab")
 	)
 	(wire
 		(pts
@@ -6920,6 +6932,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 95.25) (xy 76.2 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afd63255-5e9f-4202-a520-49dc2251d553")
+	)
+	(wire
+		(pts
 			(xy 54.61 95.25) (xy 54.61 107.95)
 		)
 		(stroke
@@ -6937,6 +6959,16 @@
 			(type default)
 		)
 		(uuid "b8a628e9-6d32-4041-8009-6fcebf0c38e5")
+	)
+	(wire
+		(pts
+			(xy 142.24 46.99) (xy 144.78 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bae8884f-d943-4efa-8e4d-1ad75dbd3d60")
 	)
 	(wire
 		(pts
@@ -7037,16 +7069,6 @@
 			(type default)
 		)
 		(uuid "e9e139cd-ce88-4444-ac38-301f9fa33597")
-	)
-	(wire
-		(pts
-			(xy 78.74 95.25) (xy 78.74 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea3610bc-985e-4dbd-9522-c1898e2bca5c")
 	)
 	(wire
 		(pts
@@ -9313,6 +9335,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 142.24 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e609193b-80b9-45f1-b8c8-368307ec6a99")
+		(property "Reference" "TP2"
+			(at 140.208 37.338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP Bat"
+			(at 140.208 39.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 142.24 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba64ecbc-a4f9-4ca9-abcd-4febc9f64a77")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 127 54.61 0)
 		(unit 1)
@@ -9441,6 +9529,73 @@
 			(project "anchor"
 				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 205.74 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f4c40d75-ed8e-4d01-a466-c904c4404cc0")
+		(property "Reference" "TP3"
+			(at 208.28 42.4179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Vreg Test"
+			(at 208.28 44.9579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 205.74 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54d50629-eaf4-4669-889b-d5fa25aaafba")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
