@@ -7506,6 +7506,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 49.53) (xy 120.65 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1659bbff-4c1b-4724-b88d-c6fbda841075")
+	)
+	(wire
+		(pts
 			(xy 215.9 80.01) (xy 207.01 80.01)
 		)
 		(stroke
@@ -7546,6 +7556,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 67.31) (xy 120.65 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2514a841-0161-44ae-bed7-a6c185c2b06c")
+	)
+	(wire
+		(pts
 			(xy 229.87 64.77) (xy 229.87 69.85)
 		)
 		(stroke
@@ -7583,6 +7603,16 @@
 			(type default)
 		)
 		(uuid "2e4f383b-09a1-4d0b-8a6a-ce53c727b47b")
+	)
+	(wire
+		(pts
+			(xy 120.65 69.85) (xy 161.29 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3254af74-ccf7-4d09-abbe-f2a4b55db5cf")
 	)
 	(wire
 		(pts
@@ -7726,13 +7756,13 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 69.85) (xy 120.65 69.85)
+			(xy 129.54 49.53) (xy 129.54 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6e4e532f-8cd1-4c34-9b2b-d051a50f4c5a")
+		(uuid "6a269bbf-1c86-4b90-bf07-8d99f7495424")
 	)
 	(wire
 		(pts
@@ -7873,16 +7903,6 @@
 			(type default)
 		)
 		(uuid "b7431ae0-c40b-421b-92ee-b889f5661eb7")
-	)
-	(wire
-		(pts
-			(xy 129.54 49.53) (xy 129.54 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf68dc44-8c7a-4d51-9eda-3da88020cc38")
 	)
 	(wire
 		(pts
@@ -8063,16 +8083,6 @@
 			(type default)
 		)
 		(uuid "f151a146-4786-4266-93f5-46941c207497")
-	)
-	(wire
-		(pts
-			(xy 120.65 49.53) (xy 120.65 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5825098-1673-47e4-905a-8fe2f29134a2")
 	)
 	(wire
 		(pts
@@ -9031,6 +9041,76 @@
 			(project ""
 				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 129.54 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1cccc332-3a57-4564-9e3a-2e676429a1cc")
+		(property "Reference" "R8"
+			(at 132.08 62.2299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 132.08 64.7699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.556 63.754 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 129.54 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f8ad47fe-51c5-4056-a71e-c9ceea2e3e3e")
+		)
+		(pin "1"
+			(uuid "12b28fd8-dea2-44ae-b5d3-9e469c2da84c")
+		)
+		(instances
+			(project ""
+				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -10408,13 +10488,13 @@
 			)
 		)
 		(pin "2"
-			(uuid "236d9eef-a326-472f-8895-d7e122add62b")
+			(uuid "236d9eef-a326-472f-8895-d7e122add62c")
 		)
 		(pin "1"
-			(uuid "a2b006d5-b421-47fd-b52a-f753152cc0eb")
+			(uuid "a2b006d5-b421-47fd-b52a-f753152cc0ec")
 		)
 		(pin "3"
-			(uuid "24598009-ac48-41e9-bb6e-59e5e098cf29")
+			(uuid "24598009-ac48-41e9-bb6e-59e5e098cf2a")
 		)
 		(instances
 			(project ""
@@ -10829,6 +10909,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 120.65 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aecfe29f-df6e-40c7-a5a3-9c7f910a2107")
+		(property "Reference" "R7"
+			(at 115.57 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k8"
+			(at 115.062 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.666 63.754 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 120.65 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f8ad47fe-51c5-4056-a71e-c9ceea2e3e3e")
+		)
+		(pin "1"
+			(uuid "12b28fd8-dea2-44ae-b5d3-9e469c2da84c")
+		)
+		(instances
+			(project ""
+				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 129.54 45.72 90)
 		(unit 1)
@@ -10884,10 +11033,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "0f7f38ad-7477-47ec-964a-eef055bee89a")
+			(uuid "0f7f38ad-7477-47ec-964a-eef055bee89b")
 		)
 		(pin "1"
-			(uuid "2c677af9-ed60-47fe-86dc-01fbdf32a003")
+			(uuid "2c677af9-ed60-47fe-86dc-01fbdf32a004")
 		)
 		(instances
 			(project ""
