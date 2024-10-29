@@ -8600,7 +8600,7 @@
 		)
 		(uuid "2a93d6f5-8a17-4e54-b335-1dcd74c86516")
 	)
-	(text "Vin and Voltage Regulator"
+	(text "Power Inputs"
 		(exclude_from_sim no)
 		(at 86.106 152.654 0)
 		(effects
