@@ -9136,7 +9136,7 @@
 		)
 		(uuid "3a19a00c-b26d-49fe-a51c-fe7cc23a3e36")
 	)
-	(label "Vreg"
+	(label "Vreg +3.3V"
 		(at 158.75 228.6 180)
 		(fields_autoplaced yes)
 		(effects
@@ -9230,7 +9230,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "150060RS75000:WL-SMCW_0603"
 			(at 128.27 80.01 0)
 			(effects
 				(font
@@ -9368,7 +9368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07100KL:RESC1005X40"
 			(at 249.936 162.814 90)
 			(effects
 				(font
@@ -9437,7 +9437,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_LiteOn_LTST-C235KGKRKT"
+		(property "Footprint" "APHBM2012LSURKSYKC:LED_APHBM2012LSURKSYKC"
 			(at 278.13 111.252 0)
 			(effects
 				(font
@@ -9502,7 +9502,7 @@
 				)
 			)
 		)
-		(property "Value" "DWM3001C UWB"
+		(property "Value" "`"
 			(at 192.024 117.094 0)
 			(effects
 				(font
@@ -9510,7 +9510,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DWM3001C:DWM3001C"
+		(property "Footprint" "Altium:DWM3001C"
 			(at 190.5 112.268 0)
 			(effects
 				(font
@@ -10096,7 +10096,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2784fe20-60ae-435d-9802-2210749a7e2d")
 		(property "Reference" "#FLG04"
 			(at 137.16 145.415 0)
@@ -10108,7 +10107,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 137.16 142.24 0)
+			(at 131.064 146.558 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10181,7 +10180,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 273.05 135.89 0)
 			(effects
 				(font
@@ -10345,7 +10344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RK73B1ETTP182J:RESC1005X40N"
 			(at 120.396 99.314 90)
 			(effects
 				(font
@@ -10479,7 +10478,7 @@
 				)
 			)
 		)
-		(property "Footprint" "digikey-footprints:Switch_Tactile_SMD_4.5x4.5mm_TL3315NF160Q"
+		(property "Footprint" "TL3315NF160Q:SW_TL3315NF160Q"
 			(at 261.62 88.9 0)
 			(effects
 				(font
@@ -10637,7 +10636,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150"
+		(property "Value" "150K"
 			(at 269.494 96.52 0)
 			(effects
 				(font
@@ -10646,7 +10645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07150RL:RESC1005X40N"
 			(at 276.606 95.504 90)
 			(effects
 				(font
@@ -10913,7 +10912,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "150060RS75000:WL-SMCW_0603"
 			(at 119.38 80.01 0)
 			(effects
 				(font
@@ -10982,7 +10981,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "digikey-footprints:PinHeader_2x1mm_P2mm_SMD_RA"
+		(property "Footprint" "S2B_PH_SM4_TB:JST_S2B-PH-SM4-TB"
 			(at 48.26 231.14 0)
 			(effects
 				(font
@@ -11143,7 +11142,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RT0402BRD071K5L:RESC1005X35N"
 			(at 246.126 109.474 90)
 			(effects
 				(font
@@ -11345,7 +11344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07100KL:RESC1005X40"
 			(at 246.126 162.814 90)
 			(effects
 				(font
@@ -11415,7 +11414,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 149.5552 143.51 0)
 			(effects
 				(font
@@ -12222,7 +12221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RT0402BRD071K5L:RESC1005X35N"
 			(at 249.936 109.474 90)
 			(effects
 				(font
@@ -12291,7 +12290,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 138.176 66.294 0)
 			(effects
 				(font
@@ -12455,7 +12454,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:DDC5"
+		(property "Footprint" "TPS79933DDCR (2):volt_reg"
 			(at 80.01 228.6 0)
 			(effects
 				(font
@@ -12535,7 +12534,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 109.474 78.486 0)
 			(effects
 				(font
@@ -12701,7 +12700,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 270.764 172.466 0)
 			(effects
 				(font
@@ -12802,7 +12801,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 335.026 94.234 0)
 			(effects
 				(font
@@ -13035,7 +13034,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RK73B1ETTP182J:RESC1005X40N"
 			(at 129.286 99.314 90)
 			(effects
 				(font
@@ -13102,7 +13101,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro-Minature"
 			(at 50.8 223.52 0)
 			(effects
 				(font
@@ -13317,7 +13316,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 123.444 125.984 0)
 			(effects
 				(font
@@ -13772,7 +13771,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro-Minature"
 			(at 50.8 231.14 0)
 			(effects
 				(font
@@ -13906,7 +13905,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 54.864 218.694 0)
 			(effects
 				(font
@@ -14071,7 +14070,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 293.37 121.92 0)
 			(effects
 				(font
@@ -14361,7 +14360,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "820"
+		(property "Value" "820K"
 			(at 281.686 97.028 0)
 			(effects
 				(font
@@ -14370,7 +14369,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07820KL:RESC1005X40N"
 			(at 281.686 95.504 90)
 			(effects
 				(font
@@ -14439,7 +14438,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "imported:GRM155C80J225KE95D"
+		(property "Footprint" "GRM155C80J225KE95D:CAPC1005X55N"
 			(at 141.9352 241.3 0)
 			(effects
 				(font
