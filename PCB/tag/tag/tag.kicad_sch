@@ -9,7 +9,7 @@
 		(date "2024-10-24")
 		(rev "1")
 		(company "SDP Team 3")
-		(comment 1 "Authors: Connor McGarry and Sean Brown")
+		(comment 1 "Authors: Connor McGarry, Sean Brown, Walter Tebbetts, Ken Su")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_ARM_JTAG_SWD_10"
@@ -19,8 +19,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at -2.54 16.51 0)
+			(property "Reference" "J3"
+				(at -11.43 1.2701 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -29,15 +29,15 @@
 				)
 			)
 			(property "Value" "Conn_ARM_JTAG_SWD_10"
-				(at -2.54 13.97 0)
+				(at 14.732 30.988 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right bottom)
+					(justify right)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD"
 				(at 0 0 0)
 				(effects
 					(font
@@ -256,7 +256,7 @@
 						)
 					)
 				)
-				(pin output line
+				(pin bidirectional line
 					(at 12.7 2.54 180)
 					(length 2.54)
 					(name "SWCLK/TCK"
@@ -8653,17 +8653,6 @@
 		)
 		(uuid "1de5cbdd-ab4e-475e-99d8-faede6b2d002")
 	)
-	(label "LED GPIO Wires"
-		(at 147.32 69.85 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "40dcb200-ca12-4d0f-b5bf-34624eff90a4")
-	)
 	(label "Vreg +3.3V"
 		(at 31.75 52.07 270)
 		(fields_autoplaced yes)
@@ -8729,6 +8718,17 @@
 			(justify left bottom)
 		)
 		(uuid "cc98e264-96f7-4437-9c71-416275045329")
+	)
+	(label "3001vdd"
+		(at 125.73 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd7cd208-68f7-41ef-8231-1bb3593bf29d")
 	)
 	(label "RST"
 		(at 224.79 57.15 180)
@@ -8801,7 +8801,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 261.366 59.944 90)
 			(effects
 				(font
@@ -8860,7 +8860,7 @@
 				)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "Vgnd"
 			(at 20.574 180.34 90)
 			(effects
 				(font
@@ -8868,7 +8868,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 27.94 171.45 0)
 			(effects
 				(font
@@ -9098,7 +9098,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "imported:GRM155C80J225KE95D"
 			(at 125.4252 113.03 0)
 			(effects
 				(font
@@ -9167,7 +9167,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 234.696 127.254 90)
 			(effects
 				(font
@@ -9369,7 +9369,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 130.556 63.754 90)
 			(effects
 				(font
@@ -9675,7 +9675,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 230.886 127.254 90)
 			(effects
 				(font
@@ -9744,7 +9744,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "imported:SAMTEC_TSM-102-01-X-SV"
 			(at 255.524 136.906 0)
 			(effects
 				(font
@@ -9845,7 +9845,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 136.8552 113.03 0)
 			(effects
 				(font
@@ -9981,7 +9981,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
+		(property "Footprint" ""
 			(at 72.39 95.25 0)
 			(effects
 				(font
@@ -9990,7 +9990,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf"
+		(property "Datasheet" "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/2020/12/EC-6Pin_7_9.pdf"
 			(at 72.39 92.71 0)
 			(effects
 				(font
@@ -10457,7 +10457,7 @@
 				)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "Vbatt"
 			(at 20.828 170.434 90)
 			(effects
 				(font
@@ -10465,7 +10465,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 27.94 168.91 0)
 			(effects
 				(font
@@ -10531,7 +10531,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "imported:SAMTEC_TSM-102-01-X-SV"
 			(at 110.744 49.276 0)
 			(effects
 				(font
@@ -10688,8 +10688,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 126.492 163.068 0)
+		(property "Value" "Vreg"
+			(at 128.27 162.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10697,7 +10697,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 135.89 168.91 0)
 			(effects
 				(font
@@ -11189,7 +11189,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "imported:WL-SMCW_0603"
 			(at 120.65 50.8 0)
 			(effects
 				(font
@@ -11258,7 +11258,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 234.696 73.914 90)
 			(effects
 				(font
@@ -11458,7 +11458,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "imported:SAMTEC_TSM-102-01-X-SV"
 			(at 139.446 37.084 0)
 			(effects
 				(font
@@ -11558,7 +11558,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 121.666 63.754 90)
 			(effects
 				(font
@@ -11692,7 +11692,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "imported:WL-SMCW_0603"
 			(at 129.54 50.8 0)
 			(effects
 				(font
@@ -11926,7 +11926,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 266.446 59.944 90)
 			(effects
 				(font
@@ -12184,7 +12184,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LTST-C235KGKRKT"
+		(property "Value" "APHBM2012LSURKSYKC"
 			(at 254.508 67.31 90)
 			(effects
 				(font
@@ -12193,7 +12193,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_LiteOn_LTST-C235KGKRKT"
+		(property "Footprint" "imported:LED_APHBM2012LSURKSYKC"
 			(at 262.89 75.692 0)
 			(effects
 				(font
@@ -12202,7 +12202,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2009-0219/LTST-C235KGKRKT.pdf"
+		(property "Datasheet" ""
 			(at 262.89 75.692 0)
 			(effects
 				(font
@@ -12405,7 +12405,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 230.886 73.914 90)
 			(effects
 				(font
@@ -12605,7 +12605,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "imported:SAMTEC_TSM-102-01-X-SV"
 			(at 110.744 95.504 0)
 			(effects
 				(font
