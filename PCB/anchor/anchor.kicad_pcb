@@ -12,7 +12,7 @@
 		(date "2024-10-30")
 		(rev "Version 1")
 		(company "SDP Team 3")
-		(comment 1 "Authors: Connor McGarry and Sean Brown")
+		(comment 1 "Authors: Connor McGarry, Sean Brown, Walter Tebbetts, Ken Su")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -565,7 +565,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 0 1.5 360)
+			(at 0 1.5 0)
 			(layer "F.Fab")
 			(uuid "18ec8ea3-2157-4a45-82a5-e4d03afef4d0")
 			(effects
@@ -576,7 +576,7 @@
 			)
 		)
 		(property "Footprint" "150060RS75000:WL-SMCW_0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a253d042-075b-4952-8fde-e98562bc0d5c")
@@ -588,7 +588,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "828f98ef-d485-4dd5-ae52-a8d2e902305f")
@@ -600,7 +600,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a0db8ec7-cb47-4ae0-86c6-eb2952e4da7f")
@@ -749,7 +749,7 @@
 			(uuid "f7a22fb5-5d00-4609-86a4-550183092f40")
 		)
 		(fp_text user "+"
-			(at 1 1 360)
+			(at 1 1 0)
 			(layer "F.SilkS")
 			(uuid "f13f88e1-230e-4588-9c51-64176d226708")
 			(effects
@@ -760,7 +760,7 @@
 			)
 		)
 		(fp_text user "+"
-			(at 2 0 360)
+			(at 2 0 0)
 			(layer "F.Fab")
 			(uuid "41ee5562-f15a-4e76-9716-a8156a662221")
 			(effects
@@ -3340,7 +3340,7 @@
 			)
 		)
 		(property "Value" "TSM-102-01-X-SV"
-			(at 1.9 5.46 360)
+			(at 1.9 5.46 0)
 			(layer "F.Fab")
 			(uuid "210a77b5-522b-448f-a352-afba73da458a")
 			(effects
@@ -3351,7 +3351,7 @@
 			)
 		)
 		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c51862c8-2c1a-4782-85e6-985c5103cdef")
@@ -3363,7 +3363,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e569f115-a015-4b54-a7d3-755cca2cae6d")
@@ -3375,7 +3375,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c23ae2e6-17ad-441d-ad50-94125f9c671f")
@@ -4486,7 +4486,7 @@
 		(at 189 80)
 		(descr "<b>RESISTOR</b>")
 		(property "Reference" "R2"
-			(at -0.235005 -0.885039 360)
+			(at -0.235005 -0.885039 0)
 			(layer "F.SilkS")
 			(uuid "b0bd4f8b-3cec-4ce4-9771-ff12fe26dccb")
 			(effects
@@ -4497,7 +4497,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 0.966242 0.906164 360)
+			(at 0.966242 0.906164 0)
 			(layer "F.Fab")
 			(uuid "3ec4592a-56de-4539-bf95-85028cce9133")
 			(effects
@@ -4508,7 +4508,7 @@
 			)
 		)
 		(property "Footprint" "RC0402FR_07100KL:RESC1005X40"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "53d43cf6-0870-4a5f-ac74-d3ceccb26443")
@@ -4520,7 +4520,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2165bb69-02fe-425b-b473-ae42463e7cf5")
@@ -4532,7 +4532,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "04d1e6f6-9467-4778-9071-d3db7dce9c88")
@@ -4669,7 +4669,7 @@
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C8"
-			(at 1.29 -0.01 360)
+			(at 1.29 -0.01 0)
 			(layer "F.SilkS")
 			(uuid "de566acc-d912-4dc3-9725-3d3257e99ed6")
 			(effects
@@ -4938,7 +4938,7 @@
 		(uuid "4602b264-ec1e-4ccd-9660-4150b479e52a")
 		(at 189.565 78)
 		(property "Reference" "R1"
-			(at 0.29 -0.88 360)
+			(at 0.29 -0.88 0)
 			(layer "F.SilkS")
 			(uuid "b8a4fe94-08b1-40e6-a476-fd8525df1b11")
 			(effects
@@ -4949,7 +4949,7 @@
 			)
 		)
 		(property "Value" "1K5"
-			(at 2.04 0.88 360)
+			(at 2.04 0.88 0)
 			(layer "F.Fab")
 			(uuid "5ee64a68-35ed-4222-9367-3f316b8e8179")
 			(effects
@@ -4960,7 +4960,7 @@
 			)
 		)
 		(property "Footprint" "RT0402BRD071K5L:RESC1005X35N"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d8853fb-9324-4be6-88b8-ce5508f197ee")
@@ -4972,7 +4972,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8c4edc93-fc32-492d-ac54-bf26d73332ff")
@@ -4984,7 +4984,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cb7ba81d-2732-4bdc-8e6c-ab483674b3ee")
@@ -5380,7 +5380,7 @@
 		(uuid "66c74ff0-cdcb-4e1d-b21f-b00ef0e76377")
 		(at 150.235 88.15 -90)
 		(property "Reference" "J3"
-			(at -3.37 -0.965 360)
+			(at -3.37 -0.965 0)
 			(layer "F.SilkS")
 			(uuid "1b2fa172-24da-4be9-83da-a191bf4798b4")
 			(effects
@@ -6037,7 +6037,7 @@
 		(uuid "70d062aa-86aa-44a5-afb6-c8f43fcf647a")
 		(at 192.565 78)
 		(property "Reference" "R3"
-			(at 0.29 -0.88 360)
+			(at 0.29 -0.88 0)
 			(layer "F.SilkS")
 			(uuid "25ea4bc0-46db-4019-9fdc-102ea0ca7ece")
 			(effects
@@ -6048,7 +6048,7 @@
 			)
 		)
 		(property "Value" "1K5"
-			(at 2.04 0.88 360)
+			(at 2.04 0.88 0)
 			(layer "F.Fab")
 			(uuid "4398d012-690e-44c0-bb41-fa78eeb314d6")
 			(effects
@@ -6059,7 +6059,7 @@
 			)
 		)
 		(property "Footprint" "RT0402BRD071K5L:RESC1005X35N"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ef7b2fb0-98a7-4385-954c-3df29a77d1ca")
@@ -6071,7 +6071,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d820ba65-15b7-4835-b697-9f19ac31e2e5")
@@ -6083,7 +6083,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d5490e8b-62db-4a2e-b874-b73d1fa758e3")
@@ -7102,7 +7102,7 @@
 			)
 		)
 		(property "Value" "TL3315NF160Q"
-			(at 5.938 3.55 360)
+			(at 5.938 3.55 0)
 			(layer "F.Fab")
 			(uuid "ac49aef4-16cc-4f9b-80ad-cd797980e436")
 			(effects
@@ -7113,7 +7113,7 @@
 			)
 		)
 		(property "Footprint" "TL3315NF160Q:SW_TL3315NF160Q"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "77977cc0-be70-461e-99b5-6179eef174f0")
@@ -7125,7 +7125,7 @@
 			)
 		)
 		(property "Datasheet" "http://spec_sheets.e-switch.com/specs/P010337.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4ddc098c-6414-4575-b901-f0454efa0fa8")
@@ -7137,7 +7137,7 @@
 			)
 		)
 		(property "Description" "SWITCH TACTILE SPST-NO 0.05A 15V"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0ad8dc6-7932-4c4a-9352-0d93b673a07e")
@@ -7808,7 +7808,7 @@
 			)
 		)
 		(property "Value" "TSM-102-01-X-SV"
-			(at 0.27 5.46 360)
+			(at 0.27 5.46 0)
 			(layer "F.Fab")
 			(uuid "1354d960-ef2f-4671-85f9-b26b829d71fc")
 			(effects
@@ -7819,7 +7819,7 @@
 			)
 		)
 		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "adaf8ae3-5efd-42c4-b52c-b1a77c1e6557")
@@ -7831,7 +7831,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4b0fd024-3fa7-4d57-b3cc-24554408d553")
@@ -7843,7 +7843,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f597f417-38d7-4574-8644-4cb35602a63a")
@@ -8673,7 +8673,7 @@
 		(uuid "cb66054b-57ad-4ecf-a8ac-2f04013798ff")
 		(at 145.22 81.73)
 		(property "Reference" "R7"
-			(at -0.14 0.74 360)
+			(at -0.14 0.74 0)
 			(layer "F.SilkS")
 			(uuid "33734093-bd02-4224-b0b3-1b7f7c09548c")
 			(effects
@@ -8684,7 +8684,7 @@
 			)
 		)
 		(property "Value" "1k8"
-			(at 1.4384 0.7468 360)
+			(at 1.4384 0.7468 0)
 			(layer "F.Fab")
 			(uuid "2955079b-c52b-4632-91e4-d37fff2809ba")
 			(effects
@@ -8695,7 +8695,7 @@
 			)
 		)
 		(property "Footprint" "RK73B1ETTP182J:RESC1005X40N"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d1e5ad4d-dcf7-49d2-83a3-ad2cabd56710")
@@ -8707,7 +8707,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f0ac64f4-4a01-4eb8-8f0e-191b1291c5d2")
@@ -8719,7 +8719,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cc99ff73-ccbd-427d-81df-72b353ef5494")
@@ -9540,7 +9540,7 @@
 		(at 192 80)
 		(descr "<b>RESISTOR</b>")
 		(property "Reference" "R4"
-			(at -0.235005 -0.885039 360)
+			(at -0.235005 -0.885039 0)
 			(layer "F.SilkS")
 			(uuid "dd691e86-14c3-451f-94ef-4fcd14a7732b")
 			(effects
@@ -9551,7 +9551,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 0.966242 0.906164 360)
+			(at 0.966242 0.906164 0)
 			(layer "F.Fab")
 			(uuid "3e3f44d0-5745-4c06-af4f-941ebd0494a5")
 			(effects
@@ -9562,7 +9562,7 @@
 			)
 		)
 		(property "Footprint" "RC0402FR_07100KL:RESC1005X40"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7c1def23-5d0b-4749-8a04-28e437a2bfcb")
@@ -9574,7 +9574,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7f526bf2-b56e-4800-9942-9662fa5ca310")
@@ -9586,7 +9586,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c6c793da-8b79-4a5e-9a78-1ff5581c4109")
