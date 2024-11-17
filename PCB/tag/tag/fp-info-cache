@@ -1,4 +1,4 @@
-24968917095278348
+24975839278764669
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -97830,7 +97830,7 @@ edgeconnect
 
 0
 9
-9
+6
 digikey-footprints
 3-SIP_Module_TM1000Q
 
@@ -101080,8 +101080,36 @@ Zigbee_Module_MRF24J40MD
 12
 12
 imported
+Edge-Connect-THT
+
+
+0
+6
+6
+imported
 GRM155C80J225KE95D
 
+
+0
+2
+2
+imported
+LED_APHBM2012LSURKSYKC
+
+
+0
+4
+4
+imported
+SAMTEC_TSM-102-01-X-SV
+
+
+0
+2
+2
+imported
+WL-SMCW_0603
+<B>WL-SMCW SMT Mono-color Chip LED Waterclear<Br><Br></B>Size: 0603, SMT, 2pins<Br>1.6x0.8x0.7mm(LXWXH)
 
 0
 2

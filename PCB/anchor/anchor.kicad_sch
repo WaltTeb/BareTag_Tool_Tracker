@@ -1743,403 +1743,6 @@
 				)
 			)
 		)
-		(symbol "SM02B-SRSS-TB:SM02B-SRSS-TB_LFSN"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J1"
-				(at 7.366 3.81 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SM02B-SRSS-TB LFSN"
-				(at -10.922 -9.144 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Connector_JST:CONN_SM02B-SRSS-TB_JST"
-				(at 7.874 6.096 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "SM02B-SRSS-TB LFSN"
-				(at 9.144 8.382 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "SM02B-SRSS-TB (LF)(SN)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CONN_SM02B-SRSS-TB_JST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SM02B-SRSS-TB_LFSN_1_1"
-				(polyline
-					(pts
-						(xy 5.08 -5.08) (xy 12.7 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 5.08 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -3.3867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -1.6933)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 -0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -5.08) (xy 12.7 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_out line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "SM02B-SRSS-TB_LFSN_1_2"
-				(polyline
-					(pts
-						(xy 5.08 -5.08) (xy 12.7 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 5.08 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 8.89 -3.3867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 8.89 -1.6933)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 8.89 -0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 8.89 0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -5.08) (xy 12.7 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "TPS79933DDCR:TPS79933DDCR"
 			(pin_names
 				(offset 0.254)
@@ -2352,6 +1955,230 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "dk_Rectangular-Connectors-Headers-Male-Pins:S2B-PH-SM4-TB_LF__SN_"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -2.54 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "S2B-PH-SM4-TB_LF__SN_"
+				(at 1.27 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "digikey-footprints:PinHeader_2x1mm_P2mm_SMD_RA"
+				(at 5.08 5.08 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+				(at 5.08 7.62 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "CONN HEADER SMD R/A 2POS 2MM"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Digi-Key_PN" "455-1749-1-ND"
+				(at 5.08 10.16 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "MPN" "S2B-PH-SM4-TB(LF)(SN)"
+				(at 5.08 12.7 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Category" "Connectors, Interconnects"
+				(at 5.08 15.24 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Family" "Rectangular Connectors - Headers, Male Pins"
+				(at 5.08 17.78 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "DK_Datasheet_Link" "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+				(at 5.08 20.32 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "DK_Detail_Page" "/product-detail/en/jst-sales-america-inc/S2B-PH-SM4-TB(LF)(SN)/455-1749-1-ND/926846"
+				(at 5.08 22.86 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "CONN HEADER SMD R/A 2POS 2MM"
+				(at 5.08 25.4 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "JST Sales America Inc."
+				(at 5.08 27.94 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Status" "Active"
+				(at 5.08 30.48 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "455-1749-1-ND PH"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "S2B-PH-SM4-TB_LF__SN__1_1"
+				(rectangle
+					(start -1.27 0)
+					(end 3.81 -2.54)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -0.254 -1.143)
+					(end 0.254 -1.651)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 2.286 -1.143)
+					(end 2.794 -1.651)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 2.54 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3318,6 +3145,102 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -7612,10 +7535,22 @@
 		(uuid "0e202736-5ab0-4381-a251-2d448f91192c")
 	)
 	(junction
+		(at 50.8 236.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1b50a0f6-68a0-460b-a409-f98514a705ea")
+	)
+	(junction
 		(at 148.59 241.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23fc3400-0830-4410-bcd2-6dfc1c7e0878")
+	)
+	(junction
+		(at 77.47 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2e231768-1b97-47e5-bd07-f8b23647aef4")
 	)
 	(junction
 		(at 278.13 85.09)
@@ -7624,16 +7559,16 @@
 		(uuid "31531058-3e73-424d-8a5d-d51eda733c25")
 	)
 	(junction
+		(at 137.16 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31973726-9629-4969-8247-16c2cad11df6")
+	)
+	(junction
 		(at 280.67 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "383cff9d-8c76-41bb-9fa5-b66e406b8a75")
-	)
-	(junction
-		(at 74.93 228.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4e187046-909d-4112-9ed2-a517a7c9b7d2")
 	)
 	(junction
 		(at 325.12 124.46)
@@ -7666,6 +7601,12 @@
 		(uuid "59ea35f2-ecfc-45c6-af41-1adeb6e2aa73")
 	)
 	(junction
+		(at 151.13 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "64b89d75-34d7-4bda-9daa-9a1bd04f752d")
+	)
+	(junction
 		(at 72.39 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7676,6 +7617,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "908e1452-04ae-4eba-bf99-cd9a3b567764")
+	)
+	(junction
+		(at 118.11 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9158667d-d871-4214-bddf-9552195325db")
 	)
 	(junction
 		(at 227.33 92.71)
@@ -7708,10 +7655,10 @@
 		(uuid "d26a13bf-0ccb-4c5f-b4c5-7f2d856b3be0")
 	)
 	(junction
-		(at 57.15 236.22)
+		(at 69.85 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "df7feaf6-156b-4f7c-a683-b646823df841")
+		(uuid "d760a423-aed3-4e9a-83ef-c03c03eb34ef")
 	)
 	(junction
 		(at 325.12 118.11)
@@ -7726,7 +7673,7 @@
 		(uuid "e882c6fe-4eac-4b52-9234-8d47cc33b305")
 	)
 	(junction
-		(at 57.15 228.6)
+		(at 50.8 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ead942b8-8f3b-43a5-9329-0bc07ede0ce4")
@@ -7897,7 +7844,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 228.6) (xy 59.69 228.6)
+			(xy 50.8 228.6) (xy 59.69 228.6)
 		)
 		(stroke
 			(width 0)
@@ -7917,16 +7864,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 143.51) (xy 137.16 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08d91dbf-a121-4f39-827a-70edb96cd60e")
-	)
-	(wire
-		(pts
 			(xy 161.29 90.17) (xy 168.91 90.17)
 		)
 		(stroke
@@ -7934,16 +7871,6 @@
 			(type default)
 		)
 		(uuid "0afee657-279d-431a-a9df-c3a3ad14b4ec")
-	)
-	(wire
-		(pts
-			(xy 115.57 135.89) (xy 128.27 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b6bad9d-e5a3-4ba1-a962-929bb2c2f732")
 	)
 	(wire
 		(pts
@@ -8067,6 +7994,26 @@
 	)
 	(wire
 		(pts
+			(xy 77.47 228.6) (xy 80.01 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "201c8a85-f7b6-402a-ab7f-94adef5f9518")
+	)
+	(wire
+		(pts
+			(xy 118.11 135.89) (xy 128.27 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22c1eacc-d2cb-47a4-a854-a37c6820b658")
+	)
+	(wire
+		(pts
 			(xy 386.08 115.57) (xy 386.08 146.05)
 		)
 		(stroke
@@ -8107,7 +8054,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 240.03) (xy 74.93 228.6)
+			(xy 77.47 240.03) (xy 77.47 228.6)
 		)
 		(stroke
 			(width 0)
@@ -8227,7 +8174,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 228.6) (xy 74.93 228.6)
+			(xy 72.39 228.6) (xy 77.47 228.6)
 		)
 		(stroke
 			(width 0)
@@ -8267,6 +8214,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 143.51) (xy 137.16 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "470944a3-5f8d-4b5b-8a50-75f795084be2")
+	)
+	(wire
+		(pts
 			(xy 275.59 118.11) (xy 267.97 118.11)
 		)
 		(stroke
@@ -8284,16 +8241,6 @@
 			(type default)
 		)
 		(uuid "48750759-345b-4d7e-8311-d8231855f729")
-	)
-	(wire
-		(pts
-			(xy 74.93 228.6) (xy 80.01 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b6e9096-fb4d-4b1b-a73f-5661da72b9a0")
 	)
 	(wire
 		(pts
@@ -8347,7 +8294,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 118.11) (xy 151.13 135.89)
+			(xy 151.13 118.11) (xy 151.13 124.46)
 		)
 		(stroke
 			(width 0)
@@ -8377,6 +8324,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 124.46) (xy 151.13 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "594f87f9-f941-448d-b924-ccdab7e46157")
+	)
+	(wire
+		(pts
 			(xy 325.12 90.17) (xy 325.12 99.06)
 		)
 		(stroke
@@ -8384,6 +8341,16 @@
 			(type default)
 		)
 		(uuid "5c6ed58a-5df5-4f33-8694-c375843c5397")
+	)
+	(wire
+		(pts
+			(xy 69.85 228.6) (xy 72.39 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cfd59fb-c807-4069-9f1e-f6d99eab69f4")
 	)
 	(wire
 		(pts
@@ -8447,6 +8414,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 241.3) (xy 50.8 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67499c4b-3127-4304-8122-05a200342994")
+	)
+	(wire
+		(pts
 			(xy 227.33 96.52) (xy 227.33 92.71)
 		)
 		(stroke
@@ -8454,6 +8431,16 @@
 			(type default)
 		)
 		(uuid "67b6886b-18bc-4fa0-a468-920858df66bb")
+	)
+	(wire
+		(pts
+			(xy 115.57 135.89) (xy 118.11 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69971f90-99b3-4a35-b328-3e697bf914cd")
 	)
 	(wire
 		(pts
@@ -8507,7 +8494,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 240.03) (xy 74.93 240.03)
+			(xy 135.89 240.03) (xy 77.47 240.03)
 		)
 		(stroke
 			(width 0)
@@ -8687,16 +8674,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 143.51) (xy 137.16 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a27106e7-ff69-4a7f-a33d-28c21d087876")
-	)
-	(wire
-		(pts
 			(xy 135.89 228.6) (xy 148.59 228.6)
 		)
 		(stroke
@@ -8707,7 +8684,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 228.6) (xy 57.15 233.68)
+			(xy 50.8 228.6) (xy 50.8 233.68)
 		)
 		(stroke
 			(width 0)
@@ -8857,7 +8834,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 228.6) (xy 72.39 228.6)
+			(xy 62.23 228.6) (xy 69.85 228.6)
 		)
 		(stroke
 			(width 0)
@@ -9063,7 +9040,7 @@
 		)
 		(uuid "14b247aa-c2b0-4b87-ad4f-ad0fe696ba0a")
 	)
-	(text "Vin and Voltage Regulator"
+	(text "Power Inputs"
 		(exclude_from_sim no)
 		(at 97.282 204.216 0)
 		(effects
@@ -9093,7 +9070,7 @@
 		)
 		(uuid "6c4b463b-9411-4e86-b631-cc61a21ff0ec")
 	)
-	(label "RX (BIDIRECTIONAL)"
+	(label "LoRa RX"
 		(at 386.08 146.05 90)
 		(fields_autoplaced yes)
 		(effects
@@ -9104,7 +9081,7 @@
 		)
 		(uuid "1536260f-2f6e-4f3e-8208-0ca823256365")
 	)
-	(label "TX (BIDIRECTIONAL)"
+	(label "LoRa TX"
 		(at 243.84 130.81 180)
 		(fields_autoplaced yes)
 		(effects
@@ -9126,7 +9103,7 @@
 		)
 		(uuid "2293d531-ec12-4975-a98e-3f07d2a696fe")
 	)
-	(label "RX (BIDIRECTIONAL)"
+	(label "LoRa RX"
 		(at 243.84 125.73 180)
 		(fields_autoplaced yes)
 		(effects
@@ -9148,7 +9125,7 @@
 		)
 		(uuid "39e83f6d-44a9-4445-b662-d8831faf8d9c")
 	)
-	(label "SWD_CLK (IN)"
+	(label "SWD_CLK"
 		(at 133.35 92.71 0)
 		(fields_autoplaced yes)
 		(effects
@@ -9159,7 +9136,7 @@
 		)
 		(uuid "3a19a00c-b26d-49fe-a51c-fe7cc23a3e36")
 	)
-	(label "Vreg"
+	(label "Vreg +3.3V"
 		(at 158.75 228.6 180)
 		(fields_autoplaced yes)
 		(effects
@@ -9192,7 +9169,7 @@
 		)
 		(uuid "94315a24-438a-44c4-9dcf-5e24e1a8c5a8")
 	)
-	(label "TX (BIDIRECTIONAL)"
+	(label "LoRa TX"
 		(at 388.62 146.05 90)
 		(fields_autoplaced yes)
 		(effects
@@ -9203,7 +9180,7 @@
 		)
 		(uuid "b7e32800-3d5f-488b-b00f-461cefd1f633")
 	)
-	(label "SWD_CLK (OUT)"
+	(label "SWD_CLK"
 		(at 71.12 102.87 180)
 		(fields_autoplaced yes)
 		(effects
@@ -9253,7 +9230,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "150060RS75000:WL-SMCW_0603"
 			(at 128.27 80.01 0)
 			(effects
 				(font
@@ -9322,7 +9299,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "GRM155R71C104KA88J:CAPC1005X55N"
 			(at 365.4552 133.35 0)
 			(effects
 				(font
@@ -9391,7 +9368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07100KL:RESC1005X40"
 			(at 249.936 162.814 90)
 			(effects
 				(font
@@ -9460,7 +9437,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_LiteOn_LTST-C235KGKRKT"
+		(property "Footprint" "APHBM2012LSURKSYKC:LED_APHBM2012LSURKSYKC"
 			(at 278.13 111.252 0)
 			(effects
 				(font
@@ -9525,7 +9502,7 @@
 				)
 			)
 		)
-		(property "Value" "DWM3001C UWB"
+		(property "Value" "`"
 			(at 192.024 117.094 0)
 			(effects
 				(font
@@ -9533,7 +9510,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DWM3001C:DWM3001C"
+		(property "Footprint" "Altium:DWM3001C"
 			(at 190.5 112.268 0)
 			(effects
 				(font
@@ -9708,6 +9685,72 @@
 			(project "anchor"
 				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 151.13 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "11cc0ece-a0f4-489e-a45a-ac6279e46bc1")
+		(property "Reference" "#FLG02"
+			(at 151.13 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 151.13 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 151.13 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 151.13 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "03ff7faf-0a65-4a91-818f-3ef59d5a5ce1")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -10003,7 +10046,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "GRM155R60J106ME05D:CAPC1005X70N"
 			(at 359.1052 133.35 0)
 			(effects
 				(font
@@ -10046,6 +10089,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 137.16 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2784fe20-60ae-435d-9802-2210749a7e2d")
+		(property "Reference" "#FLG04"
+			(at 137.16 145.415 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 131.064 146.558 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 137.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d34cc9ac-b735-4215-b820-398195e66636")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "dk_Transistors-FETs-MOSFETs-Single:IRLML2402TRPBF")
 		(at 267.97 140.97 0)
 		(unit 1)
@@ -10072,7 +10180,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 273.05 135.89 0)
 			(effects
 				(font
@@ -10236,7 +10344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RK73B1ETTP182J:RESC1005X40N"
 			(at 120.396 99.314 90)
 			(effects
 				(font
@@ -10370,7 +10478,7 @@
 				)
 			)
 		)
-		(property "Footprint" "digikey-footprints:Switch_Tactile_SMD_4.5x4.5mm_TL3315NF160Q"
+		(property "Footprint" "TL3315NF160Q:SW_TL3315NF160Q"
 			(at 261.62 88.9 0)
 			(effects
 				(font
@@ -10528,7 +10636,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150"
+		(property "Value" "150K"
 			(at 269.494 96.52 0)
 			(effects
 				(font
@@ -10537,7 +10645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07150RL:RESC1005X40N"
 			(at 276.606 95.504 90)
 			(effects
 				(font
@@ -10574,6 +10682,138 @@
 			(project "anchor"
 				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 69.85 228.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4199a131-dbb5-42f6-8b44-42bb85eb3b13")
+		(property "Reference" "#FLG01"
+			(at 69.85 226.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 69.85 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 69.85 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89efd195-162d-47c7-8341-77fed680e003")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 118.11 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "49d30ac0-6a28-4c37-bf90-40ecd695d0d2")
+		(property "Reference" "#FLG03"
+			(at 118.11 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 117.856 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 118.11 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "45504d79-b8dd-45ec-a1dd-b72fbdbbae9f")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -10672,7 +10912,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "150060RS75000:WL-SMCW_0603"
 			(at 119.38 80.01 0)
 			(effects
 				(font
@@ -10715,6 +10955,167 @@
 		)
 	)
 	(symbol
+		(lib_id "dk_Rectangular-Connectors-Headers-Male-Pins:S2B-PH-SM4-TB_LF__SN_")
+		(at 53.34 236.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "58c727ad-5358-4ec7-8686-caef288cede8")
+		(property "Reference" "J3"
+			(at 56.388 235.966 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "S2B-PH-SM4-TB_LF__SN_"
+			(at 51.308 239.014 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "S2B_PH_SM4_TB:JST_S2B-PH-SM4-TB"
+			(at 48.26 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+			(at 45.72 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "CONN HEADER SMD R/A 2POS 2MM"
+			(at 53.34 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digi-Key_PN" "455-1749-1-ND"
+			(at 43.18 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "MPN" "S2B-PH-SM4-TB(LF)(SN)"
+			(at 40.64 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Category" "Connectors, Interconnects"
+			(at 38.1 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Family" "Rectangular Connectors - Headers, Male Pins"
+			(at 35.56 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "DK_Datasheet_Link" "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+			(at 33.02 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "DK_Detail_Page" "/product-detail/en/jst-sales-america-inc/S2B-PH-SM4-TB(LF)(SN)/455-1749-1-ND/926846"
+			(at 30.48 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "CONN HEADER SMD R/A 2POS 2MM"
+			(at 27.94 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST Sales America Inc."
+			(at 25.4 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Status" "Active"
+			(at 22.86 231.14 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8d588fbb-ccf2-46a4-b9b9-f0baecd0fffd")
+		)
+		(pin "1"
+			(uuid "f3e70407-be3b-4b1c-ad52-72b9767d3fd0")
+		)
+		(instances
+			(project ""
+				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 245.11 109.22 0)
 		(unit 1)
@@ -10741,7 +11142,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RT0402BRD071K5L:RESC1005X35N"
 			(at 246.126 109.474 90)
 			(effects
 				(font
@@ -10943,7 +11344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07100KL:RESC1005X40"
 			(at 246.126 162.814 90)
 			(effects
 				(font
@@ -11013,7 +11414,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 149.5552 143.51 0)
 			(effects
 				(font
@@ -11326,77 +11727,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SM02B-SRSS-TB:SM02B-SRSS-TB_LFSN")
-		(at 57.15 233.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "76031505-8aa2-4750-bc34-4ad5e0eda517")
-		(property "Reference" "J3"
-			(at 64.516 229.87 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SM02B-SRSS-TB LFSN"
-			(at 46.228 242.824 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:CONN_SM02B-SRSS-TB_JST"
-			(at 65.024 227.584 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "SM02B-SRSS-TB LFSN"
-			(at 66.294 225.298 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 57.15 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c8fddb70-f8f9-4a5c-adc6-9c4604535ea8")
-		)
-		(pin "2"
-			(uuid "3e6600e6-398c-4a82-8401-e73acd312375")
-		)
-		(instances
-			(project "anchor"
-				(path "/d60525eb-0f59-4f61-9b85-36ffaff6c19a"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 41.91 120.65 0)
 		(unit 1)
@@ -11488,7 +11818,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "GRM155R60J106ME05D:CAPC1005X70N"
 			(at 138.1252 143.51 0)
 			(effects
 				(font
@@ -11624,7 +11954,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "GRM155R60J106ME05D:CAPC1005X70N"
 			(at 326.0852 135.89 0)
 			(effects
 				(font
@@ -11891,7 +12221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RT0402BRD071K5L:RESC1005X35N"
 			(at 249.936 109.474 90)
 			(effects
 				(font
@@ -11960,7 +12290,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 138.176 66.294 0)
 			(effects
 				(font
@@ -12051,8 +12381,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Vbatt+3.3V"
-			(at 67.056 224.282 0)
+		(property "Value" "Vbatt +3.7V"
+			(at 70.612 225.552 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12124,7 +12454,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:DDC5"
+		(property "Footprint" "TPS79933DDCR (2):volt_reg"
 			(at 80.01 228.6 0)
 			(effects
 				(font
@@ -12204,7 +12534,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 109.474 78.486 0)
 			(effects
 				(font
@@ -12370,7 +12700,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 270.764 172.466 0)
 			(effects
 				(font
@@ -12471,7 +12801,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 335.026 94.234 0)
 			(effects
 				(font
@@ -12704,7 +13034,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RK73B1ETTP182J:RESC1005X40N"
 			(at 129.286 99.314 90)
 			(effects
 				(font
@@ -12748,7 +13078,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 57.15 228.6 90)
+		(at 50.8 228.6 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12756,7 +13086,7 @@
 		(dnp no)
 		(uuid "acf338c8-9f3f-4de6-ab1e-0610fc7c7afd")
 		(property "Reference" "TP2"
-			(at 41.148 229.108 90)
+			(at 34.798 229.108 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12764,15 +13094,15 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 47.752 229.108 90)
+			(at 41.402 229.108 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 57.15 223.52 0)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro-Minature"
+			(at 50.8 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12781,7 +13111,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.15 223.52 0)
+			(at 50.8 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12790,7 +13120,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 57.15 228.6 0)
+			(at 50.8 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12917,7 +13247,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "imported:GRM155C80J225KE95D"
+		(property "Footprint" "GRM155C80J225KE95D:CAPC1005X55N"
 			(at 147.6248 228.6 0)
 			(effects
 				(font
@@ -12986,7 +13316,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 123.444 125.984 0)
 			(effects
 				(font
@@ -13418,7 +13748,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 57.15 236.22 90)
+		(at 50.8 236.22 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13426,7 +13756,7 @@
 		(dnp no)
 		(uuid "e1a2e2d0-c26e-4c4f-a913-689698a65848")
 		(property "Reference" "TP3"
-			(at 40.894 236.728 90)
+			(at 34.544 236.728 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13434,15 +13764,15 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 48.006 236.474 90)
+			(at 41.656 236.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 57.15 231.14 0)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro-Minature"
+			(at 50.8 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13451,7 +13781,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.15 231.14 0)
+			(at 50.8 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13460,7 +13790,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 57.15 236.22 0)
+			(at 50.8 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13575,7 +13905,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TSM-102-01-X-SV:SAMTEC_TSM-102-01-X-SV"
+		(property "Footprint" "TSM_102_01_L_SV:SAMTEC_TSM-102-01-X-SV"
 			(at 54.864 218.694 0)
 			(effects
 				(font
@@ -13650,7 +13980,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 57.15 236.22 0)
+		(at 50.8 241.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13658,7 +13988,7 @@
 		(dnp no)
 		(uuid "e90a412f-1752-4b0e-91a5-af84e82fdb7a")
 		(property "Reference" "#PWR04"
-			(at 57.15 242.57 0)
+			(at 50.8 247.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13667,7 +13997,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 57.404 240.538 0)
+			(at 51.054 245.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13675,7 +14005,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 57.15 236.22 0)
+			(at 50.8 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13684,7 +14014,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 57.15 236.22 0)
+			(at 50.8 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13693,7 +14023,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 57.15 236.22 0)
+			(at 50.8 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13740,7 +14070,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "digikey-footprints:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 293.37 121.92 0)
 			(effects
 				(font
@@ -13904,7 +14234,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "GRM1555C1H470JA01D:CAPC1005X55N"
 			(at 373.0752 133.35 0)
 			(effects
 				(font
@@ -14030,7 +14360,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "820"
+		(property "Value" "820K"
 			(at 281.686 97.028 0)
 			(effects
 				(font
@@ -14039,7 +14369,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RC0402FR_07820KL:RESC1005X40N"
 			(at 281.686 95.504 90)
 			(effects
 				(font
@@ -14108,7 +14438,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "imported:GRM155C80J225KE95D"
+		(property "Footprint" "GRM155C80J225KE95D:CAPC1005X55N"
 			(at 141.9352 241.3 0)
 			(effects
 				(font
