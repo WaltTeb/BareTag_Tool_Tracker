@@ -27,7 +27,6 @@
 #include <shared_functions.h>
 #include "app_uart.h"
 #include "nrf_delay.h"
-#include "deca_probe_interface.h"
 
 #if defined(TWR_UART_TEST)
 
@@ -38,7 +37,7 @@ extern void test_run_info(unsigned char *data);
 
 // UART config pre-processor directives
 #define INIT_ERROR "UART INIT ERROR"
-#define TX_DELAY   1000
+#define TX_DELAY   500
 
 #define UART_TXPIN 19 // P0.19 on DWM3001
 #define UART_RXPIN 15 // P0.15 on DWM3001
@@ -47,6 +46,8 @@ extern void test_run_info(unsigned char *data);
 static const app_uart_flow_control_t flow_control = APP_UART_FLOW_CONTROL_DISABLED;
 
 unsigned char lora_uart_str[32];
+unsigned int distance_val_len;
+uint16_t random_delay;
 
 
 /* Default communication configuration. We use default non-STS DW mode. */
@@ -65,6 +66,23 @@ static dwt_config_t config = {
     DWT_STS_LEN_64,   /* STS length see allowed values in Enum dwt_sts_lengths_e */
     DWT_PDOA_M0       /* PDOA mode off */
 };
+
+/* Experimental high power config -- trying to increase range */
+// static dwt_config_t config = {
+//     5,                /* Channel number. */
+//     DWT_PLEN_4096,     /* Preamble length. Used in TX only. */
+//     DWT_PAC32,         /* Preamble acquisition chunk size. Used in RX only. */
+//     9,                /* TX preamble code. Used in TX only. */
+//     9,                /* RX preamble code. Used in RX only. */
+//     3,                /* 0 to use standard 8 symbol SFD, 1 to use non-standard 8 symbol, 2 for non-standard 16 symbol SFD and 3 for 4z 8 symbol SDF type */
+//     DWT_BR_850K,       /* Data rate. */
+//     DWT_PHRMODE_STD,  /* PHY header mode. */
+//     DWT_PHRRATE_STD,  /* PHY header rate. */
+//     4073,    /* SFD timeout (preamble length + 1 + SFD length - PAC size). Used in RX only. */
+//     DWT_STS_MODE_OFF, /* STS disabled */
+//     DWT_STS_LEN_2048,   /* STS length see allowed values in Enum dwt_sts_lengths_e */
+//     DWT_PDOA_M0       /* PDOA mode off */
+// };
 
 static app_uart_comm_params_t uart_config = {
     .rx_pin_no = UART_RXPIN,                       // Use pin 19 as RX pin
@@ -134,13 +152,35 @@ void uart_event_handler(app_uart_evt_t * p_event){
  *
  * @note May want to remove the nrf_delay_us() at the end - currently just ensures data is clear
 */
-void uart_put_string(const char *str, uint32_t len){
-    uint32_t i;
-    for(i=0; i<len; i++){
-        while(app_uart_put(str[i]) != NRF_SUCCESS);
-        nrf_delay_us(100);
+void uart_put_string(const char *str){
+    while(*str){
+        while(app_uart_put(*str) != NRF_SUCCESS){
+            nrf_delay_us(100);
+        }
+        str++;
+        nrf_delay_us(500);
     }
+    nrf_delay_ms(2);
     return;
+}
+
+/**
+ * @breif Function to return the length of a distance float -- needed for transmitting distance measurement over LoRa
+ *
+ * @param flt -- float distance value
+ *
+ * @note Assumes float always has 2 decimal points - consistent with our distance measurements (always out of cm)
+ */
+int get_dist_len(float flt){
+	int int_part = flt;
+	int ten = 10;
+	char char_cnt = 1;
+
+	while((int_part % ten != int_part) || (char_cnt>4)){
+		char_cnt++;
+		ten = ten*10;
+	}
+	return char_cnt+3;
 }
 
 /*! ------------------------------------------------------------------------------------------------------------------
@@ -280,8 +320,9 @@ int twr_uart_example(void)
                     test_run_info((unsigned char *)dist_str);
 
                     /* Transmit computed distance over UART */
-                    snprintf(lora_uart_str, sizeof(lora_uart_str), "AT+SEND=50,4,%1.2f\r\n", distance);
-                    uart_put_string((const char *) lora_uart_str, sizeof(lora_uart_str));
+                    distance_val_len = get_dist_len(distance);
+                    snprintf(lora_uart_str, sizeof(lora_uart_str), "AT+SEND=50,%d,%3.2f\r\n", distance_val_len, distance);
+                    uart_put_string((const char *) lora_uart_str);
                     test_run_info((unsigned char *) lora_uart_str);
                 }
             }
@@ -293,7 +334,10 @@ int twr_uart_example(void)
         }
 
         /* Execute a delay between ranging exchanges. */
-        Sleep(RNG_DELAY_MS);
+        // Sleep(RNG_DELAY_MS);
+        random_delay = rand();
+        random_delay = random_delay % (((1500 + 1) - 500) + 500);
+        Sleep(random_delay);
     }
 }
 #endif

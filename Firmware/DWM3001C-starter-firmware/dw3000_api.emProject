@@ -257,6 +257,7 @@
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_gpiote.c" />
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uarte.c"/>
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uart.c"/>
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_rng.c"/>
           <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_clock.c" />
           <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_uart.c" />
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_clock.c" />

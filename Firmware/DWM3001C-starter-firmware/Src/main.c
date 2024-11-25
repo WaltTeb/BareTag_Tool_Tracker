@@ -108,7 +108,7 @@ int main(void)
     // extern int tx_wait_resp(void); tx_wait_resp();
     // extern int tx_wait_resp_int(void); tx_wait_resp_int();
     // extern int rx_send_resp(void); rx_send_resp();
-    // extern int ss_twr_responder(void); ss_twr_responder();
+    // extern int ss_twr_responder(void); ss_twr_responder(); // The code we are using to test our Tags
     // extern int ss_twr_initiator(void); ss_twr_initiator();
     // extern int ss_twr_initiator_sts(void); ss_twr_initiator_sts();
     // extern int ss_twr_responder_sts(void); ss_twr_responder_sts();
