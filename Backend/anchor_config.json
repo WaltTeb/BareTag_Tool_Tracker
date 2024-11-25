@@ -3,18 +3,18 @@
   "anchors": [
     {
       "anchor_id": 80,
-      "x_coord": 0.0,
+      "x_coord": 4.5,
       "y_coord": 0.0
     },
     {
       "anchor_id": 0,
-      "x_coord": 2.4,
+      "x_coord": 0.0,
       "y_coord": 0.0
     },
     {
       "anchor_id": 20,
       "x_coord": 0.0,
-      "y_coord": 6.0
+      "y_coord": 5.5
     }
   ]
 }
