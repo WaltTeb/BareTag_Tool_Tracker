@@ -29,7 +29,7 @@
 \and
 \IEEEauthorblockN{Ken Su}
 \textit{CompE}\\
-\textit{Budget Lead}
+\textit{Budget Lead} 
 
 \and
 \IEEEauthorblockN{Connor McGarry}
@@ -60,10 +60,10 @@
     to a tool. Each Anchor can then calculate its distance to a Tag, relaying
     that information to a Base station over Long Range(LoRa) radio. The 
     base station runs the aggregated distance data through a multilateration
-    algorithm that can calculate the Tag's location with $\pm$ 10 cm accuracy.
+    algorithm that can calculate the Tag's location with 50 cm accuracy.
     The calculated location is then output to a local terminal, as well as 
     uploaded to a cloud database for future reference. Altogether, the BareTag Tool-Tracker
-    is highly accurate ($\pm$ 10 cm), low-power (1 year of battery life), and
+    is highly accurate (50 cm), low-power (1 year of battery life), and
     scalable (increase range by adding additional Anchors).
 \end{abstract}
 
@@ -258,11 +258,14 @@ aims to achieve by the time that we have a finalized product.
     Confirm tracking accuracy in scenarios with different saturations 
     of Find My devices by comparing with AirTags in the same location.\\
     \hline
-    Should easily be scalable to increase the range of the UWB perimeter 
-    by adding more Anchors at desired locations.
+    Able to increase range of the UWB perimeter by adding more Anchors.
     &
     Demonstrate that a Tag’s trackable range in the UWB zone increases 
     when adding a new Anchor.\\
+    \hline
+    Create a user-friendly GUI that displays geographical locations of multiple Tags.
+    &
+    Have a non-team member use our application and easily track Tags spread around a zone.\\
     \hline
 \end{tabular}
 \end{table}
@@ -450,6 +453,132 @@ left the UWB area and are using BLE to integrate with the Apple Find
 My network. The Tags all have unique IDs that can be linked to tools or 
 equipment, making it easy to parse the data and determine what items have 
 been in what location. 
+\subsection{3D Localization}
+To find the z-coordinate of the Tag using only three Anchors, 
+we need the distances between the Anchors and the distances between 
+the Tag and Anchors. The shape the Anchors and Tag form is known as a 
+tetrahedral. Using the volume and the base area of the tetrahedral we 
+are able to find the height which represents the Tag’s z-coordinate. 
+In [8] we know that using Heron’s formula on the distances between the 
+Anchors we can get the area of the base
+\[S_{ABC} = \sqrt{(p - AB)\cdot(p-AC)\cdot(p-BC)}\]
+and using Euler’s formula we can get the volume of the tetrahedral.
+\[V_{HABC}^2 = \frac{1}{36}
+\begin{vmatrix}
+    a^2 & \frac{a^2+b^2-n^2}{2} & \frac{a^2+c^2-m^2}{2} \\
+    \frac{a^2+b^2-n^2}{2} & b^2 & \frac{b^2+c^2-l^2}{2} \\
+    \frac{a^2+c^2-m^2}{2} & \frac{b^2+c^2-l^2}{2} & c^2
+\end{vmatrix}\]
+
+By rearranging the formula for finding the volume of a pyramid
+\[V_{HABC} = \frac{1}{3}S_{ABC} \cdot H\]
+
+we get the height of the tetrahedral as a function of volume and base.
+\[H = 3 \cdot \frac{V_{HABC}}{S_{ABC}}\]
+Then, using the volume and area that we previously calculated, 
+we get the height of the tetrahedral, which is also the z-coordinate of
+the Tag. To validate that this method works we ran a simulation through 
+Blender and confirmed that the equations do indeed give us the correct 
+z-coordinate.
+
+\section{THE PROTOTYPE}
+\subsection{Prototype Overview}
+The prototype currently consists of 3 hardware components, each with 
+associated software to control their functionality. The 3 hardware 
+components are the Tag, the Anchor, and a LoRa dongle connected to the 
+host computer.
+The Tag consists of a DWM3001C UWB, BLE, and IMU combo module, along with 
+associated programming headers, debug LEDs, and a 290 mAh LiPo battery. 
+The DWM3001C allows us to use one module as our MCU and host device for 
+all radios and other peripherals required for our design. The DWM3001C 
+along with associated passive components are mounted on a custom SMT PCB 
+to make the Tag. 
+The Anchor also consists of a DWM3001C, as well as a RYLR998 LoRa radio, 
+along with a programming header, debug LEDs, and a 2200 mAh LiIon battery. 
+The RYLR998 is a hobbyist LoRa radio that allows us to transmit 256 byte 
+packets wirelessly from our Anchors to the host computer. These packets 
+communicate measured distance between Anchor and Tag, as well as data about 
+the current state of the Anchor. Same as the Tag, the DWM3001C and RYLR998 
+along with associated passive components are housed on a custom SMT PCB to 
+make the Anchor. Anchors are mounted on metal poles that allow for fast 
+reconfiguration and ease of testing indoors and outdoors. 
+The LoRa dongle connected to the host computer is a generic USB TTL to 
+UART converter connected to a RYLR998. The host computer runs a custom 
+Python script that gathers distance data from all 3 Anchors to perform a 
+trilateration algorithm to pinpoint the Tag’s current location. Anchors 
+run a custom firmware that has them send a UWB ping to the Tag around once 
+every second. A randomized delay is put between pings in order to prevent 
+two different Anchors from pinging the Tag at that same time. Once receiving 
+a distance measurement from the Tag, each Anchor relays this information to 
+the host computer using the RYLR998, controlling the module over UART. The 
+Tags run a simple custom firmware, responding to UWB pings whenever one is 
+received. Combining these hardware and software components we get a complete 
+prototype that can find a Tag’s location in real time with 50 cm accuracy.
+
+\subsection{List of Hardware and Software}
+Hardware:
+\begin{itemize}
+    \item Qorvo DWM3001C
+    \item Reyax RYLR998
+    \item 3.7V 290mAh LiPo
+    \item 3.7 2200mAh LiIon
+    \item USB-A to UART Converter
+    \item Raspberry Pi 4B
+    \item Tag-Connect Edge-Connect Programmer
+    \item SEGGER JLink Edu Mini
+\end{itemize}
+
+Software:
+\begin{itemize}
+    \item Docker
+    \item Xcode
+    \item Serial Monitor
+    \item Debian Linux
+\end{itemize}
+
+\subsection{Custom Hardware}
+We designed two custom PCBs to act as the Tag and Anchors of our system. 
+In our current system, we were able to trilaterally locate the custom PCB 
+Tag with 3 Anchors: two Qorvo DWM3001CDK development boards and one of our 
+custom PCB Anchors. Our main goal when creating our Tag PCB was to make it 
+as small as possible. We eventually want these Tags to be placeable inside 
+of tools. In our first revision, we were able to minimize the size of the Tag 
+to approximately 26.8 by 31.6 mm squared. We were also able to successfully 
+program our DWM3001C with the Edge-Connect seen in Fig 5 attached to the 
+castellated edges of our Tag PCB. Because of this, we will be able to remove 
+the 10-pin programming header seein in Fig. 3 to reduce the size of the Tag 
+PCB in our second revision.
+
+While the Tag and Anchor PCBs look quite different, they are populated with 
+very similar components. The major difference between the two is the LoRa 
+module that can be seen extending off the left side of the Anchor PCB in Fig. 
+4. The LoRa module on the Anchor is used to communicate distance  measurements 
+from the Anchors to a base station in order to perform our trilateration 
+algorithm and locate the Tag.
+
+While we were able to integrate our PCBs to make a functioning system, we 
+still had some issues that we plan to address in our next revisions. The 
+battery connectors into the PCBs on the Tags and the Anchors are facing 
+into other components on the board, making it difficult to connect and 
+disconnect our batteries to them. Our LEDs were meant to flash during 
+transmission and reception of Ultra-Wideband pings on the Anchor and the 
+Tag. While this was not achieved, the main functionality of our PCBs were 
+not impacted. The UWB antenna on the Anchor PCB is on the opposite side of 
+the LoRa antenna because we were originally worried about signals interfering 
+with each other from the two different modules. In our next revision, we will 
+have both antennas facing up to have them in their ideal orientation for 
+transmitting and receiving signals. With this modification, we will be able to 
+maximize the area where we can precisely locate our Tag with Ultra-Wideband 
+pings. As you can see in Fig. 3 and Fig. 4, there are many more components on 
+each of our boards. These include resistors to limit current flow into certain 
+components, capacitors to reduce noise from input voltage, and LEDs that were 
+meant to be used to help us debug our system. Most importantly, we had a 
+voltage regulator to limit the input voltage into our Qorvo module to its 
+preferred 3.3 volts. We also have many test points that helped us debug our 
+system which we will remove in future revisions. Overall, our first revisions 
+of our custom PCBs worked well enough for our prototype to function properly.
+
+
 
 
 \begin{thebibliography}{00}
