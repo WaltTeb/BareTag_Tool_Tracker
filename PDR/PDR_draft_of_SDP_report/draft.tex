@@ -544,9 +544,9 @@ custom PCB Anchors. Our main goal when creating our Tag PCB was to make it
 as small as possible. We eventually want these Tags to be placeable inside 
 of tools. In our first revision, we were able to minimize the size of the Tag 
 to approximately 26.8 by 31.6 mm squared. We were also able to successfully 
-program our DWM3001C with the Edge-Connect seen in Fig 5 attached to the 
+program our DWM3001C with the Edge-Connect seen in Fig. 4 attached to the 
 castellated edges of our Tag PCB. Because of this, we will be able to remove 
-the 10-pin programming header seein in Fig. 3 to reduce the size of the Tag 
+the 10-pin programming header seein in Fig. 2 to reduce the size of the Tag 
 PCB in our second revision.
 
 While the Tag and Anchor PCBs look quite different, they are populated with 
@@ -569,7 +569,7 @@ with each other from the two different modules. In our next revision, we will
 have both antennas facing up to have them in their ideal orientation for 
 transmitting and receiving signals. With this modification, we will be able to 
 maximize the area where we can precisely locate our Tag with Ultra-Wideband 
-pings. As you can see in Fig. 3 and Fig. 4, there are many more components on 
+pings. As you can see in Fig. 2 and Fig. 3, there are many more components on 
 each of our boards. These include resistors to limit current flow into certain 
 components, capacitors to reduce noise from input voltage, and LEDs that were 
 meant to be used to help us debug our system. Most importantly, we had a 
@@ -578,7 +578,117 @@ preferred 3.3 volts. We also have many test points that helped us debug our
 system which we will remove in future revisions. Overall, our first revisions 
 of our custom PCBs worked well enough for our prototype to function properly.
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=3]{mdr_tag_picture.png}
+\caption{Populated Tag PCB}
+\end{center}
+\end{figure}
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=3]{mdr_anchor_picture.png}
+\caption{Populated Anchor PCB}
+\end{center}
+\end{figure}
+
+\subsection{Prototype Functionality}
+In accordance with our hardware block diagrams in Fig 2, the PCBs all work 
+as intended. The modules and batteries communicate as per design. Fig. 4 
+depicts the Edge-Connect programmer pins pressed to the edge of the Tag PCB. 
+This method of programming proved to work, and we were successfully able to 
+flash firmware to the nRF52833.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=1]{mdr_edge_connect.png}
+\caption{Edge-Connect Programmer on Tag castellated edges}
+\end{center}
+\end{figure}
+
+\subsection{Prototype Performance}
+Our Prototype met all of our proposed MDR deliverables. We were able to 
+integrate our two custom PCBs into our proposed system to track one custom 
+Tag. Although the LEDs on our PCBs did not function properly, they did not 
+cause any performance issues. Looking back at our complete design 
+specifications, our current Prototype is well on its way to achieve them. 
+For starters, we were able to track a Tag with 50 cm accuracy within a 
+predefined 10 x 10 m zone. Although this is much smaller than our system’s 
+final goal, we believe that we could have had a larger range if we had the 
+space to do so. Our system was also capable of tracking a Tag outside the 
+UWB zone using the Apple Find My network. A major performance metric that 
+we evaluated is the battery life of our system. As previously stated, our 
+design goal is to have an available system for ~1 year without the need for 
+replacing any batteries. To test our current system’s battery life, we 
+analyzed the current draw of our devices when the system was operating. 
+Fig. 5 shows the power consumption of our singular Tag PCB while it is 
+only transmitting Bluetooth Low Energy signals. For the majority of the 
+time, the Tag is idle, but it wakes up and sends a bluetooth signal 
+approximately every 5 seconds. In BLE mode, our Tag consumed 60.73 
+microamps, giving it an approximate battery life of 200 days with a 
+290 mAh battery attached to it. This was the expected power consumption 
+for our Tag in BLE mode. While our Prototype’s battery life performed well 
+in BLE mode, it did not perform close to how we want it to when sending 
+Ultra-Wideband pings. In Fig. 6, the power consumption of the Tag in UWB 
+mode can be seen changing as it switches from waiting to receive UWB pings 
+to sending them. Our Tag in UWB mode has an average current draw of 51.63 
+mA. With the 290 mAh battery our current system has attached to a Tag, its 
+battery life is under 6 hours. This battery life is well below our system’s 
+desired battery life, but there are many software power optimizations possible
+for our system.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=1]{mdr_ble_power_consumption.png}
+\caption{Power consumption of Tag in BLE mode}
+\end{center}
+\end{figure}
+
+Lastly, we analyzed the power consumption of one of our Anchors. 
+Similarly to the Tag, our custom PCB Anchor had an average current 
+consumption of 49.23 mA. The Anchor acts as the main transmitter of the 
+signals while the Tag is the main receiver. Although our Anchor has a 
+similar current draw, it has a much longer battery life because our 
+current Anchor has a 2200 mAh battery attached to it. We are less worried 
+with the current draw of our Anchors because they are not size constrained, 
+allowing us to connect many batteries to them. 
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.45]{mdr_uwb_tag_power_consumption.png}
+\caption{Power consumption of Tag in UWB Mode}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.45]{mdr_uwb_anchor_power_consumption.png}
+\caption{Power consumption of Anchor in UWB Mode}
+\end{center}
+\end{figure}
+
+\section{CONCLUSION}
+As of now, the project operates in the following states:
+\begin{itemize}
+    \item Full programming control over Tag and Anchor rev.1 PCBs
+    \item Tag lasts 4775.23 hours in BLE mode
+    \item Tag lasts 5.62 hours in UWB mode
+    \item Anchor lasts 44.7 hours
+    \item Anchors send Tag location over LoRa to host device
+    \item Find My server runs on Raspberry Pi
+\end{itemize}
+
+\section*{ACKNOWLEDGMENTS}
+We thank our advisor Professor Jeremy Gummesson for the endless 
+advice and support throughout the design process. We also thank 
+our evaluators Professor Tilman Wolf and Professor David McLaughlin 
+for essential feedback from each quarterly presentation. Of course, 
+thank you to all of the course coordinators for ensuring that the 
+necessary support has been available. Additionally, thank you to 
+Baird Soules and M5 staff for supplying a productive engineering 
+environment for prototyping and rework, and for many important 
+components that we used in our project.
 
 
 \begin{thebibliography}{00}
@@ -623,5 +733,90 @@ allow for scalability, decrease in cost, higher reliability, and
 greater performance than a database we could host in-house. The cloud 
 database will also be easier for us to use because it comes with 
 pre-existing features that will make project integration easier.
+
+\subsection{Technical Standards}
+Bluetooth Low Energy, specified by IEEE 802.15.1, is used for our Tags to 
+communicate with nearby Apple Find My ‘finder’ devices to send data to the 
+Apple Find My network for global location tracking.
+
+Ultra-Wideband is used by our Tags and Anchors for local location tracking 
+with 50cm accuracy. Our application of UWB is specified in IEEE P802.15.14, 
+which describes UWB used for Ad Hoc precision tracking. This spec builds on 
+other specs of importance such as IEEE 802.15.4.
+
+LoRa, discussed in IEEE spec P1451.5.5 , is used for sending data to the 
+Base Device. We have chosen to not implement LoRaWAN due to the features of 
+our transceiver modules, the minimal amount data we are sending, and a desire 
+to not use additional hardware such as a LoRaWAN gateway.
+
+Our chosen RF emitters all adhere to FCC guidelines as defined in FCC 47 
+CFR Part 15, which states that any radiator must be licensed unless it
+meets 47 CFR 15, unless otherwise given specific approval by the FCC. 
+FCC certifications can be found on the product pages for all of our 
+hardware radiators.
+
+\subsection{Testing Methods}
+Apple Find My integration has been tested through validating location 
+data displayed on a locally hosted GUI provided by [9]. 
+
+UWB tracking has been tested with 3 Anchors and 1 Tag as of MDR. 50cm 
+accuracy has been noted. This was performed through the manual creation 
+of a coordinate system in an indoor open-field environment, and moving 
+the Tag to different positions in the grid.
+
+\subsection{Project Expenditures}
+\begin{center}
+\includegraphics[scale=0.35]{mdr_project_expenditures.png}
+\end{center}
+
+\subsection{Project Management}
+Team communication is done through text and Discord. We meet on a weekly 
+basis both with each other and Professor Gummeson. GitHub and Google Drive 
+are used as our version control platforms. Each team member has a unique 
+skill-set that makes up for what another lacks, making the team dynamic 
+optimal for a complex project. The experience of our team is evenly balanced 
+with backgrounds in hardware and software, which is reflected in the 
+designated project roles. 
+
+\begin{itemize}
+    \item Sean Brown - Logistics Lead and Hardware Support
+    \item Connor McGarry - Hardware Lead
+    \item Ken Su - Budget Lead and Software Support
+    \item Walter Tebbetts - Software Lead
+\end{itemize}
+
+Varying levels of class workload makes it difficult for progress reports 
+occasionally, but we try to log our progress for team review as best as 
+possible. Each team member exercises leadership skills when another is too 
+busy with external responsibilities to work on their designated part of the 
+project for a while. Each team member understanding every aspect of the 
+project has been important in helping each other out and making up for 
+occasional slow progress. The largest hurdle we have overcome thus far is 
+that of individual motivation and understanding of a team project. Some of 
+us had not worked on a project of this scale before and therefore have 
+needed to learn how to make careful decisions that affect other team members. 
+Taking accountability in a team is another skill we are learning, as there 
+have been a number of errors made where the best solution was to admit to 
+the issue as soon as possible, and then collaborate on how to solve it. 
+
+\subsection{Beyond the Classroom}
+Classes that have been essential to this project so far have been ECE523, 
+ECE325, ECE304 and ECE545. These classes relate to embedded system power 
+management and networking, both of which are integral to the design of our 
+project. We plan on having discussions with the professors of these classes 
+as we progress in our development.
+
+We have had to do more detailed data sheet analysis than what we did in 
+ECE304, and Digikey has been an essential resource for component sourcing 
+and information retrieval. 
+
+We have used a variety of unfamiliar software and hardware in the project, 
+all of which have required detailed research and experimentation. Since we 
+have taken inspiration from GtHub projects, we have also spent a lot of time 
+analyzing unfamiliar code to make sure we understand what we are using, and 
+ensuring we are able to edit it according to our desired optimizations. 
+
+
+
 
 \end{document}
