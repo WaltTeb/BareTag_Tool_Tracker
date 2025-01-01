@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "PRT-12807"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-12-24-06:03:57)
+    (mountForm default
+        (footprintRef "HDRV6W82P254_2X3_762X500X884P")
+        (spec "System")
+    )
+)

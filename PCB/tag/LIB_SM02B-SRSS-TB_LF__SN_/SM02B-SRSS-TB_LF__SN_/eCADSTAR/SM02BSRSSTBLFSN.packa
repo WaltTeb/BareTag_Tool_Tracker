@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "SM02B-SRSS-TB_LF__SN_"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2024-12-08-03:25:20)
+    (mountForm default
+        (footprintRef "SM02BSRSSTBLFSN")
+        (spec "System")
+    )
+)

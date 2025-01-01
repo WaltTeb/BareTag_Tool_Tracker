@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'PRT_12807'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "SparkFun", "PRT-12807" (!) = "", "HDRV6W82P254_2X3_762X500X884P", "Header, Vertical", "474-PRT-12807", "https://www.mouser.co.uk/ProductDetail/SparkFun/PRT-12807?qs=WyAARYrbSnYnpz4kKzOm4A%3D%3D", "SparkFun Accessories Header - 2x3 (Male, 0.1\")", "https://cdn.sparkfun.com/datasheets/Prototyping/00989.pdf", "8.84 mm"
+END_PART
+
+END.

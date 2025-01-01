@@ -1,0 +1,9 @@
+Manufacturer=SparkFun
+PartNumber=PRT-12807
+PartCategory=Connector
+PackageCategory=Header, Vertical
+PinCount=6
+Version=4.1
+Released=2020-12-24 06:03:57
+Downloaded=2024-12-28 18:54:59
+3D=Y

@@ -1,0 +1,16 @@
+.PRT-12807 :1 ;SparkFun Accessories Header - 2x3 (Male, 0.1\")
+HDRV6W82P254_2X3_762X500X884P
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4" 5="5" 6="6"
+*MXP 6
+*DFN PRT-12807
+~!Mouser Part Number (474-PRT-12807)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/SparkFun/PRT-12807?qs=WyAARYrbSnYnpz4kKzOm4A%3D%3D)
+~!Manufacturer_Name (SparkFun)
+~!Manufacturer_Part_Number (PRT-12807)
+~!Link Datasheet (https://cdn.sparkfun.com/datasheets/Prototyping/00989.pdf)
+~!Height (8.84mm)
+~!3D_Model (PRT-12807)
+PRT-12807
+1.1!U 3.1!U 5.1!U 2.1!U 4.1!U 6.1!U 

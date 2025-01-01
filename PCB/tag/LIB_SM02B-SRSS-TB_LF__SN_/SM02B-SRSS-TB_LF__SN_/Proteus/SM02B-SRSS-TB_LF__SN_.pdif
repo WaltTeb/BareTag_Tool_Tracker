@@ -1,0 +1,137 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "SM02B-SRSS-TB_LF__SN_"
+   (description "SH Series 2 Position 1 mm Pitch Surface Mount Side Entry Shrouded Header")
+   (family "CON")
+   (package "SM02BSRSSTBLFSN")
+   (attribute "Datasheet Link" "http://www.jst-mfg.com/product/pdf/eng/eSH.pdf")
+   (attribute "Geometry.Height" "2.95mm")
+   (attribute "Mouser Part Number" "N/A")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/JST-Commercial/SM02B-SRSS-TBLFSN?qs=IKkN%2F947nfBJBdlb%252BYi4ow%3D%3D")
+   (attribute "Manufacturer_Name" "JST (JAPAN SOLDERLESS TERMINALS)")
+   (attribute "Manufacturer_Part_Number" "SM02B-SRSS-TB(LF)(SN)")
+   (gate
+    (symbol "SM02B-SRSS-TB_LF__SN_")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "MP1" 3 PS)
+    (pin "MP2" 4 PS)
+   )
+  )
+  (symbol "SM02B-SRSS-TB_LF__SN_"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 700 100) (pt 700 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 900 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 900 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "SM02BSRSSTBLFSN"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2 1.963)
+      (pt 2 1.963)
+      (pt 2 -2.287)
+      (pt -2 -2.287)
+      (pt -2 1.963))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -3.4 4.063)
+      (pt 3.4 4.063)
+      (pt 3.4 -3.487)
+      (pt -3.4 -3.487)
+      (pt -3.4 4.063))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -0.8 -2.287)
+      (pt 0.8 -2.287))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.2 1.963)
+      (pt -2 1.963)
+      (pt -2 -0.2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 1.2 1.963)
+      (pt 2 1.963)
+      (pt 2 -0.2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -0.5 3.6)
+      (arc (pt -0.500 3.600) (pt -0.550 3.500) (pt -0.450 3.600) (start 180.0) (sweep 90.0))
+      (pt -0.5 3.5)
+      (arc (pt -0.500 3.500) (pt -0.550 3.500) (pt -0.450 3.600) (start 180.0) (sweep -90.0))
+      (pt -0.5 3.6))))
+   (leg 1 (pt -0.500 2.287) (padstack 0))
+   (leg 2 (pt 0.500 2.287) (padstack 0))
+   (leg 3 (pt -1.800 -1.587) (padstack 3))
+   (leg 4 (pt 1.800 -1.587) (padstack 4))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.600 1.550 0 0 90.000))
+   )
+   (padstack 3
+    (plated false)
+    (pad (layer TCOP) (rectf 1.200 1.800 0 0 90.000))
+   )
+   (padstack 4
+    (plated false)
+    (pad (layer TCOP) (rectf 1.200 1.800 0 0 90.000))
+   )
+   (model "SM02B-SRSS-TB_LF__SN_.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)
