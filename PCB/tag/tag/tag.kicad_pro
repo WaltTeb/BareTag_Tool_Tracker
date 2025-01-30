@@ -479,7 +479,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "~/Documents/sdp/BareTag_Tool_Tracker/PCB/tag/tag/plots",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

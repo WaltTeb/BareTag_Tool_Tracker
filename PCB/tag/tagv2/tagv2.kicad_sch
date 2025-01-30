@@ -870,23 +870,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "D"
-				(at -5.08 6.35 0)
+			(property "Reference" "D1"
+				(at -5.08 3.81 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "LTST-C235KGKRKT"
-				(at 0 -5.715 0)
+			(property "Value" "APHBM2012LSURKSYKC"
+				(at -7.62 -8.382 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" "LED_SMD:LED_LiteOn_LTST-C235KGKRKT"
+			(property "Footprint" "imported:LED_APHBM2012LSURKSYKC"
 				(at 0.762 0 0)
 				(effects
 					(font
@@ -895,7 +897,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2009-0219/LTST-C235KGKRKT.pdf"
+			(property "Datasheet" ""
 				(at 0.762 0 0)
 				(effects
 					(font
@@ -1084,9 +1086,9 @@
 			)
 			(symbol "LTST-C235KGKRKT_1_1"
 				(pin input line
-					(at 7.62 -2.54 180)
+					(at -7.62 -2.54 0)
 					(length 2.54)
-					(name "K2"
+					(name "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1102,9 +1104,9 @@
 					)
 				)
 				(pin input line
-					(at -7.62 -2.54 0)
+					(at 7.62 -2.54 180)
 					(length 2.54)
-					(name "A2"
+					(name "K2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1120,9 +1122,9 @@
 					)
 				)
 				(pin input line
-					(at -7.62 2.54 0)
+					(at 7.62 2.54 180)
 					(length 2.54)
-					(name "A1"
+					(name "K1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1138,9 +1140,9 @@
 					)
 				)
 				(pin input line
-					(at 7.62 2.54 180)
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "K1"
+					(name "A1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2520,50 +2522,43 @@
 				)
 			)
 		)
-		(symbol "imported:PRT-12807"
+		(symbol "imported:54202-T0804LF"
+			(pin_names
+				(offset 1.016)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 16.51 7.62 0)
+				(at -8.12 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left bottom)
 				)
 			)
-			(property "Value" "PRT-12807"
-				(at 16.51 5.08 0)
+			(property "Value" "54202-T0804LF"
+				(at -7.62 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify left bottom)
 				)
 			)
-			(property "Footprint" "HDRV6W82P254_2X3_762X500X884P"
-				(at 16.51 -94.92 0)
+			(property "Footprint" "54202-T0804LF:AMPHENOL_54202-T0804LF"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://cdn.sparkfun.com/datasheets/Prototyping/00989.pdf"
-				(at 16.51 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "SparkFun Accessories Header - 2x3 (Male, 0.1\\\")"
-				(at 11.43 10.922 0)
+			(property "Datasheet" ""
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2571,60 +2566,69 @@
 					(hide yes)
 				)
 			)
-			(property "Height" "8.84"
-				(at 16.51 -394.92 0)
+			(property "Description" ""
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "474-PRT-12807"
-				(at 16.51 -494.92 0)
+			(property "PARTREV" "AC"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/SparkFun/PRT-12807?qs=WyAARYrbSnYnpz4kKzOm4A%3D%3D"
-				(at 16.51 -594.92 0)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Name" "SparkFun"
-				(at 16.51 -694.92 0)
+			(property "SNAPEDA_PN" "54202-T0804LF"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "PRT-12807"
-				(at 16.51 -794.92 0)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "9.85mm"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
+					(justify bottom)
 					(hide yes)
 				)
 			)
-			(symbol "PRT-12807_1_1"
+			(property "MANUFACTURER" "AMPHENOL ICC / FCI"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "54202-T0804LF_0_0"
 				(rectangle
-					(start 5.08 2.54)
-					(end 15.24 -7.62)
+					(start -7.62 -5.08)
+					(end 7.62 7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2633,110 +2637,330 @@
 						(type background)
 					)
 				)
+				(rectangle
+					(start -6.985 -2.8575)
+					(end -5.3975 -2.2225)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -6.985 -0.3175)
+					(end -5.3975 0.3175)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -6.985 2.2225)
+					(end -5.3975 2.8575)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -6.985 4.7625)
+					(end -5.3975 5.3975)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -2.54) (xy -5.715 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -5.715 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 2.54) (xy -5.715 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 5.08) (xy -5.715 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -2.54) (xy 5.715 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 5.715 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 2.54) (xy 5.715 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 5.715 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.3975 -2.8575)
+					(end 6.985 -2.2225)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 5.3975 -0.3175)
+					(end 6.985 0.3175)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 5.3975 2.2225)
+					(end 6.985 2.8575)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 5.3975 4.7625)
+					(end 6.985 5.3975)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(pin passive line
-					(at 0 0 0)
+					(at -12.7 5.08 0)
 					(length 5.08)
-					(name "1"
+					(name "A1"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "1"
+					(number "A1"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 20.32 0 180)
+					(at -12.7 2.54 0)
 					(length 5.08)
-					(name "2"
+					(name "A2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "2"
+					(number "A2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 0 -2.54 0)
+					(at -12.7 0 0)
 					(length 5.08)
-					(name "3"
+					(name "A3"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "3"
+					(number "A3"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 20.32 -2.54 180)
+					(at -12.7 -2.54 0)
 					(length 5.08)
-					(name "4"
+					(name "A4"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "4"
+					(number "A4"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 0 -5.08 0)
+					(at 12.7 5.08 180)
 					(length 5.08)
-					(name "5"
+					(name "B1"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "5"
+					(number "B1"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 20.32 -5.08 180)
+					(at 12.7 2.54 180)
 					(length 5.08)
-					(name "6"
+					(name "B2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
-					(number "6"
+					(number "B2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 5.08)
+					(name "B3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "B3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -2.54 180)
+					(length 5.08)
+					(name "B4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "B4"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -2955,102 +3179,6 @@
 								(size 1.27 1.27)
 							)
 						)
-					)
-				)
-			)
-		)
-		(symbol "power:PWR_FLAG"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 			)
@@ -7272,12 +7400,6 @@
 		(uuid "9ba321b9-2f7d-4f1b-a142-7054e40e4bda")
 	)
 	(junction
-		(at 120.65 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9dcf9420-f9be-4529-ac0a-ed6fb3e31709")
-	)
-	(junction
 		(at 229.87 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7481,6 +7603,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 82.55) (xy 161.29 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08bc8c5e-f4fa-4b73-b752-30efe1743031")
+	)
+	(wire
+		(pts
 			(xy 71.12 33.02) (xy 71.12 45.72)
 		)
 		(stroke
@@ -7491,7 +7623,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 124.46) (xy 68.58 124.46)
+			(xy 78.74 124.46) (xy 71.12 124.46)
 		)
 		(stroke
 			(width 0)
@@ -7711,7 +7843,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 119.38) (xy 68.58 119.38)
+			(xy 78.74 119.38) (xy 71.12 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7738,16 +7870,6 @@
 			(type default)
 		)
 		(uuid "49e0a1c7-e8f3-4dd3-8c3b-3e537381619a")
-	)
-	(wire
-		(pts
-			(xy 120.65 82.55) (xy 161.29 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b3e6a79-ce72-4128-831c-fcf86b32fb4b")
 	)
 	(wire
 		(pts
@@ -7821,7 +7943,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 121.92) (xy 48.26 121.92)
+			(xy 34.29 121.92) (xy 45.72 121.92)
 		)
 		(stroke
 			(width 0)
@@ -7831,7 +7953,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 124.46) (xy 48.26 124.46)
+			(xy 34.29 124.46) (xy 45.72 124.46)
 		)
 		(stroke
 			(width 0)
@@ -7848,6 +7970,16 @@
 			(type default)
 		)
 		(uuid "75ce81a9-84c2-485d-b872-0eb6199f78ae")
+	)
+	(wire
+		(pts
+			(xy 78.74 116.84) (xy 71.12 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76c4536c-246c-462c-9552-8d2571852851")
 	)
 	(wire
 		(pts
@@ -7891,7 +8023,17 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 121.92) (xy 68.58 121.92)
+			(xy 34.29 119.38) (xy 45.72 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b1a1e61-ec05-41fc-9d81-b84072aa2c40")
+	)
+	(wire
+		(pts
+			(xy 78.74 121.92) (xy 71.12 121.92)
 		)
 		(stroke
 			(width 0)
@@ -8041,7 +8183,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 119.38) (xy 48.26 119.38)
+			(xy 34.29 116.84) (xy 45.72 116.84)
 		)
 		(stroke
 			(width 0)
@@ -8290,8 +8432,8 @@
 		(uuid e41a1d73-cb47-4479-ab0f-8ad5081adf19)
 	)
 	(rectangle
-		(start 19.05 93.98)
-		(end 99.06 143.51)
+		(start 29.21 104.14)
+		(end 88.9 135.89)
 		(stroke
 			(width 0)
 			(type default)
@@ -8310,6 +8452,16 @@
 			)
 		)
 		(uuid "2a93d6f5-8a17-4e54-b335-1dcd74c86516")
+	)
+	(text "Debugging Header"
+		(exclude_from_sim no)
+		(at 59.436 100.33 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "4b3d4980-71ec-4303-a049-b785cf5309ea")
 	)
 	(text "Power Inputs"
 		(exclude_from_sim no)
@@ -8354,7 +8506,7 @@
 		(uuid "11251fc0-c7de-4a20-bbf9-1b4b2c53913d")
 	)
 	(label "RX"
-		(at 36.83 124.46 0)
+		(at 34.29 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8408,6 +8560,17 @@
 		)
 		(uuid "2e0bcbb1-c026-4ce3-af45-7a9cb21fa4d0")
 	)
+	(label "GND"
+		(at 78.74 116.84 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "36f93504-8371-466d-b2d3-1e7ff7a6a17e")
+	)
 	(label "wakeup"
 		(at 180.34 115.57 90)
 		(fields_autoplaced yes)
@@ -8442,7 +8605,7 @@
 		(uuid "4648fe7b-4646-47f5-ab58-3abb5da106ee")
 	)
 	(label "wakeup"
-		(at 76.2 119.38 180)
+		(at 78.74 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8464,7 +8627,7 @@
 		(uuid "54c75e0f-d776-48a5-922f-8802488e771f")
 	)
 	(label "TX"
-		(at 36.83 121.92 0)
+		(at 34.29 121.92 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8486,7 +8649,7 @@
 		(uuid "70b523a1-7226-4fbf-baba-2ecb1daf2619")
 	)
 	(label "inject_VBAT"
-		(at 36.83 119.38 0)
+		(at 34.29 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8497,7 +8660,7 @@
 		(uuid "72eac993-85ae-46cb-ab38-b5cb9529eee8")
 	)
 	(label "SLC"
-		(at 76.2 124.46 180)
+		(at 78.74 124.46 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8530,7 +8693,7 @@
 		(uuid "85a0ab75-be19-4ee7-811a-c0897e9a5371")
 	)
 	(label "SDA"
-		(at 76.2 121.92 180)
+		(at 78.74 121.92 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8583,6 +8746,17 @@
 			(justify right bottom)
 		)
 		(uuid "bc0d6511-a38a-417c-854a-015fa4c38d2e")
+	)
+	(label "RST"
+		(at 34.29 119.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be2b01ba-12de-4d8b-99b8-875406577529")
 	)
 	(label "SWD_DIO"
 		(at 54.61 57.15 180)
@@ -9598,72 +9772,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 120.65 82.55 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3a0d2a61-6fbd-4ec9-b434-3ac114270d27")
-		(property "Reference" "#FLG01"
-			(at 120.65 84.455 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 115.824 86.106 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 120.65 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 120.65 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 120.65 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8a079531-851c-485d-ab9b-593c7d721f07")
-		)
-		(instances
-			(project ""
-				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Conn_ARM_SWD_TagConnect_TC2030-NL")
 		(at 73.66 55.88 0)
 		(unit 1)
@@ -10514,6 +10622,143 @@
 			(project ""
 				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "imported:54202-T0804LF")
+		(at 58.42 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9ad35c4e-feea-4d29-9012-2b26c47562a7")
+		(property "Reference" "J5"
+			(at 58.42 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "54202-T0804LF"
+			(at 58.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "imported:AMPHENOL_54202-T0804LF"
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "AC"
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "54202-T0804LF"
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "9.85mm"
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "AMPHENOL ICC / FCI"
+			(at 58.42 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "B1"
+			(uuid "51137b3a-1c5a-4b5d-ae45-7370af27dc7f")
+		)
+		(pin "B2"
+			(uuid "20b78e03-3825-417f-b32c-fc6263d41f6c")
+		)
+		(pin "A1"
+			(uuid "bb419001-7b18-4f57-9903-536b540a7ca9")
+		)
+		(pin "A3"
+			(uuid "a9c6647b-dc65-4ce5-949a-05263a89bba0")
+		)
+		(pin "A2"
+			(uuid "c3177793-7c16-493d-9f80-7a90722841fb")
+		)
+		(pin "B3"
+			(uuid "53cfbade-7236-4a4b-966f-6128e88cbec7")
+		)
+		(pin "B4"
+			(uuid "03d44585-7c1a-4df5-a747-0b73fdb69add")
+		)
+		(pin "A4"
+			(uuid "8866e3d9-a8a2-4763-b9d4-32132a0530df")
+		)
+		(instances
+			(project ""
+				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -11689,138 +11934,6 @@
 			(project ""
 				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
 					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "imported:PRT-12807")
-		(at 48.26 119.38 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f9843dc6-9fc5-4e78-a9cd-51a9757a7081")
-		(property "Reference" "J4"
-			(at 58.42 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PRT-12807"
-			(at 58.42 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "imported:2*3male"
-			(at 64.77 214.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn.sparkfun.com/datasheets/Prototyping/00989.pdf"
-			(at 64.77 314.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "SparkFun Accessories Header - 2x3 (Male, 0.1\\\")"
-			(at 59.69 108.458 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "8.84"
-			(at 64.77 514.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "474-PRT-12807"
-			(at 64.77 614.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/SparkFun/PRT-12807?qs=WyAARYrbSnYnpz4kKzOm4A%3D%3D"
-			(at 64.77 714.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "SparkFun"
-			(at 64.77 814.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "PRT-12807"
-			(at 64.77 914.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "9024b74a-60d9-468a-bf11-f76414b9ff26")
-		)
-		(pin "1"
-			(uuid "3fbd4e2b-2286-4462-bc15-575a364227b2")
-		)
-		(pin "2"
-			(uuid "1654c485-a1db-410e-a80d-f5910456efac")
-		)
-		(pin "5"
-			(uuid "242edbd2-9c0f-4c6a-aecb-206a20d4e5f1")
-		)
-		(pin "4"
-			(uuid "33a44992-a418-475d-af8c-8f9460828746")
-		)
-		(pin "6"
-			(uuid "a3614e76-bd72-4d5c-a0ad-91cd238f6fcd")
-		)
-		(instances
-			(project ""
-				(path "/a33ba61a-a364-42a4-8098-b44cce0b54f2"
-					(reference "J4")
 					(unit 1)
 				)
 			)
