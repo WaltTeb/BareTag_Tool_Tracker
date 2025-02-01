@@ -3,7 +3,6 @@
 
 Item locating and theft prevention system built around the DWM3001C using Ultra Wideband, BLE, and LoRa technologies.
 
-
 ## Hardware
 
 Qorvo DWM3001C - UWB & BLE SoC  
