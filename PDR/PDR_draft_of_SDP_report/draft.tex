@@ -392,10 +392,10 @@ UWB module turns off to conserve power. The accelerometer still regulates
 the power mode of the Tag depending on motion to conserve power. This
 device draws a lot of concepts from ECE 523 and ECE 304, both of which 
 have a heavy focus on minimizing power consumption via software and 
-component selection. The TPS79933 volTage regulator has an output of 
-$3.3V$ when the input volTage is over $3.475V$. This component is used in 
+component selection. The TPS79933 voltage regulator has an output of 
+$3.3V$ when the input voltage is over $3.475V$. This component is used in 
 both the Tags and Anchors as both devices operate on a $3.7V$ battery 
-with all modules operating at a $3.3V$ ideal volTage. 
+with all modules operating at a $3.3V$ ideal voltage. 
 
 
 \subsection{Anchor}
@@ -423,8 +423,8 @@ result in  more power consumption than the Tags, so a 2.2Ah Lithium Ion
 battery is used. This is possible due to less size constraints for the 
 Anchors than of the Tag. The Anchors are not constrained by size, and therefore we 
 do not have any strict specifications for its dimensions.
-As stated before, the TPS79933 volTage regulator outputs 3.3V, which is 
-the ideal operating volTage for the DWM3001C and LoRa module. 
+As stated before, the TPS79933 voltage regulator outputs 3.3V, which is 
+the ideal operating voltage for the DWM3001C and LoRa module. 
 
 
 \subsection{Lora Dongle}
@@ -437,7 +437,7 @@ small host device. The dimensions will be approximately $32 \ mm\  x \ 18 \ mm \
 x \ 8 \ mm$ based on a combination of the Dongle component dimensions, which are the LoRa 
 module and a USB/Serial converter. 
 \\ The Dongle receives power over USB from the Host Device, which the serial converter will
-drop to $3.3V$ for the ideal operating volTage of the LoRa module.
+drop to $3.3V$ for the ideal operating voltage of the LoRa module.
 
 \subsection{Host Device}
 
