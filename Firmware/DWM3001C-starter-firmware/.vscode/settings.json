@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "custom_board.h": "c",
-        "example_selection.h": "c",
-        "port.h": "c"
-    }
-}

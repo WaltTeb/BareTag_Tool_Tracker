@@ -2,9 +2,9 @@
   "lora_usb_port": "ttyUSB0",
   "anchors": [
     {
-      "anchor_id": 80,
-      "x_coord": 4.5,
-      "y_coord": 0.0
+      "anchor_id": 50,
+      "x_coord": 0.0,
+      "y_coord": 10.0
     },
     {
       "anchor_id": 0,
@@ -12,9 +12,9 @@
       "y_coord": 0.0
     },
     {
-      "anchor_id": 20,
-      "x_coord": 0.0,
-      "y_coord": 5.5
+      "anchor_id": 30,
+      "x_coord": 7.1,
+      "y_coord": 0
     }
   ]
 }

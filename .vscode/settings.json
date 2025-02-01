@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "example_selection.h": "c",
+        "deca_device_api.h": "c",
+        "nrf_delay.h": "c",
+        "app_uart.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/waltertebbetts/Documents/SDP/BareTag_Tool_Tracker/haystack/macless_haystack/linux"
+}
