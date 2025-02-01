@@ -1,3 +1,4 @@
-# SPD_PDR_report_draft
-PDR draft of SDP final report
-Testing a push to prod
+# Baretag Tool-Tracker
+Item locating and theft prevention system using Ultra Wideband, LoRa, and BLE technologies.
+# Hardware
+DWM3001C, RYLR998
