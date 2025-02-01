@@ -44,7 +44,7 @@ KiCad - PCB design
  
 # Setup
 
-Run the shell script that we have not made yet to install project dependencies
-
+Run the shell script that we have yet to make in order to install project dependencies
+This will create a working project development environment
 
 
