@@ -39,6 +39,8 @@ J-Flash Lite - Flashing firmware to DWM3001C
 SQLite - Database management  
 
 Electron - App development  
+
+KiCad  
  
 # Setup
 
