@@ -23,3 +23,22 @@ Tag-Connect Edge-Connect Programmer - Programming Tag PCBs
 
 SEGGER JLink Edu Mini - Programming Anchor PCBs  
 
+## Software
+
+SEGGER Embedded Studio  
+
+nRF5 SDK  
+
+Xcode  
+
+Debian Linux  
+
+J-Flash Lite  
+
+SQLite  
+
+Electron  
+
+
+
+
