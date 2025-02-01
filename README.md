@@ -40,7 +40,7 @@ SQLite - Database management
 
 Electron - App development  
 
-KiCad  
+KiCad - PCB design   
  
 # Setup
 
