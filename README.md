@@ -25,19 +25,20 @@ SEGGER JLink Edu Mini - Programming Anchor PCBs
 
 ## Software
 
-SEGGER Embedded Studio  
+SEGGER Embedded Studio - Build environement  
 
-nRF5 SDK  
+nRF5 SDK - Nordic libraries for nRF52833  
 
-Xcode  
+Xcode - UI/UX  
 
-Debian Linux  
+Debian Linux - Light distro for NUC  
 
-J-Flash Lite  
+J-Flash Lite - Flashing firmware to DWM3001C  
 
-SQLite  
+SQLite - Database management  
 
-Electron  
+Electron - App development  
+ 
 
 
 
