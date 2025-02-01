@@ -6,7 +6,7 @@ Item locating and theft prevention system built around the DWM3001C using Ultra 
 
 ## Hardware
 
-Qorvo DWM3001C - UWB & BLE SoC  
+Qorvo DWM3001C - UWB & BLE SoC using nRF52833 and Qorvo DWM3000  
 
 Reyax RYLR998 - LoRa  
 
