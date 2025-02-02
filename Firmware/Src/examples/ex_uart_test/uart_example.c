@@ -15,6 +15,7 @@ extern void test_run_info(unsigned char *data);
 #define INIT_ERROR "UART INIT ERROR"
 #define TX_DELAY   500
 #define NUM_DELAYS 8
+#define MAX_BUF_SIZE 32
 
 #define UART_TXPIN 19 // P0.19 on DWM3001
 #define UART_RXPIN 15 // P0.15 on DWM3001
@@ -22,11 +23,14 @@ extern void test_run_info(unsigned char *data);
 // Set UART flow control to false, not needed for a single user (our case)
 static const app_uart_flow_control_t flow_control = APP_UART_FLOW_CONTROL_DISABLED;
 
-// unsigned int delays[] = {100, 200, 300, 400, 500, 600, 700, 800};
-// unsigned int cur_delay = 0;
-// unsigned int cal_delay;
+char err_buf[MAX_BUF_SIZE];
+
 uint8_t rand_delay;
-char tx_str[20];
+char tx_str[MAX_BUF_SIZE];
+char rx_buf[MAX_BUF_SIZE];
+uint8_t rx_byte;
+char rx_indx = 0;
+char rx_flag = 0;
 
 static app_uart_comm_params_t config = {
     .rx_pin_no = UART_RXPIN,                       // Use pin 19 as RX pin
@@ -40,7 +44,59 @@ static app_uart_comm_params_t config = {
 
 
 void uart_event_handler(app_uart_evt_t * p_event){
-    // Handle the UART event (Do nothing.)
+    // Handle the UART event 
+    switch(p_event->evt_type){
+        case APP_UART_DATA_READY:
+            test_run_info((const char*) "APP UART DATA READY -- NO FIFO");
+            break;
+        
+        case APP_UART_FIFO_ERROR:
+            /**
+             * TODO: Connect this with the appropriate error in nrf_error.h -> use some sort of patern matching to output a string indicating the error
+             */
+            sprintf(err_buf, "APP UART FIFO ERROR: %d", p_event->data.error_code);
+            test_run_info((const char*) err_buf);
+            break;
+            
+        case APP_UART_COMMUNICATION_ERROR:
+            /**
+             * TODO: Apparently, this error is stored in nrf5x_bitfields.h, I can't find this file... 
+             */
+            sprintf(err_buf, "APP UART COMMS ERROR: %d", p_event->data.error_communication);
+            test_run_info((const char*) err_buf);
+            break;
+
+        case APP_UART_TX_EMPTY:
+            test_run_info((const char*) "UART TX EMPTY");
+            break;
+
+        case APP_UART_DATA:
+            while(app_uart_get(&rx_byte) != NRF_SUCCESS){
+                nrf_delay_us(100);
+            }
+            rx_buf[rx_indx] = rx_byte;
+
+            if(rx_indx == MAX_BUF_SIZE-2){
+                rx_indx = 0;
+                test_run_info((const char*) "REACHED MAX BUF SIZE");
+            }
+            else if(rx_buf[rx_indx] == '\n'){
+                rx_buf[++rx_indx] = '\0'; // Null terminate the received string
+                rx_flag = 1; // Set rx_flag to indicate a string has been received
+                rx_indx = 0; // Reset the rx_buf indx to 0
+            }else{
+                rx_indx++; // Increment rx_indx to receive next byte into rx_buf
+            }
+
+            sprintf(err_buf, "RX DATA = %c", rx_byte);
+            test_run_info((const char*) err_buf);
+            break;
+
+        default:
+            test_run_info((const char*) "UART EVENT DEFAULT");
+            break;
+    }
+
     return;
 }
 
@@ -86,13 +142,15 @@ int uart_example(void){
 
     Sleep(200); // Allow everything to get setup -- idk if this is actually helping
 
-    // Main control loop - just outputs "Hello\r\n" at 1 hz
+    // Main control loop - just outputs what was received on the UART buffer
     while(1){
-        snprintf(tx_str, sizeof(tx_str), "Rand=%i\r\n", rand_delay);
-        uart_put_string((const char *) tx_str);
-        Sleep(TX_DELAY + rand_delay);
-        rand_delay = rand();
-        test_run_info((const char *) "HELLO!");
+        if(rx_flag){
+            strncpy(tx_str, rx_buf, sizeof(rx_buf));
+            uart_put_string((const char*) tx_str);
+            Sleep(50);
+            rx_flag = 0;
+        }
+        
     }
 
     return 0;
