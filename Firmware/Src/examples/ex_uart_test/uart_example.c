@@ -13,8 +13,6 @@ extern void test_run_info(unsigned char *data);
 
 #define APP_NAME   "UART        V1.0"
 #define INIT_ERROR "UART INIT ERROR"
-#define TX_DELAY   500
-#define NUM_DELAYS 8
 #define MAX_BUF_SIZE 32
 
 #define UART_TXPIN 19 // P0.19 on DWM3001
@@ -42,10 +40,16 @@ static app_uart_comm_params_t config = {
     .baud_rate = UART_BAUDRATE_BAUDRATE_Baud115200 // Baud rate set to 115200
 };
 
-
+/** @brief Function to handle UART events, including: UART_RX, UART_TX complete, and UART errors 
+ * 
+ * @param p_event -- ptr to app_uart_evt_t struct -- detailed in app_uart.h file
+ * 
+ * @note has TODOs that should be addressed -- not urgent
+ */
 void uart_event_handler(app_uart_evt_t * p_event){
     // Handle the UART event 
     switch(p_event->evt_type){
+        //UART RX a byte if FIFO enabled -- FIFO not currently enabled
         case APP_UART_DATA_READY:
             test_run_info((const char*) "APP UART DATA READY -- NO FIFO");
             break;
@@ -66,10 +70,12 @@ void uart_event_handler(app_uart_evt_t * p_event){
             test_run_info((const char*) err_buf);
             break;
 
+        // When UART finished TXing a byte -- for debugging
         case APP_UART_TX_EMPTY:
             test_run_info((const char*) "UART TX EMPTY");
             break;
 
+        // UART RX a byte
         case APP_UART_DATA:
             while(app_uart_get(&rx_byte) != NRF_SUCCESS){
                 nrf_delay_us(100);
@@ -103,7 +109,6 @@ void uart_event_handler(app_uart_evt_t * p_event){
 /** @brief Function for putting an entire String over UART TX
  *
  * @param str -- pointer to String to be transmitted
- * @param len -- length of the String to be transmitted
  *
  * @note May want to remove the nrf_delay_us() at the end - currently just ensures data is clear
 */
