@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Adafruit CP2102N Friend")(type "KiCad")(uri "$(KIPRJMOD)/Adafruit CP2102N Friend.pretty")(options "")(descr ""))
-)
