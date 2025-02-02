@@ -1,0 +1,11 @@
+;LEADER: 12 
+;HEADER: 
+;CODE  : ASCII 
+;FILE  : TEST-1-4.drl for board TEST.brd ... layers TOP and BOTTOM
+;   Holesize 1. = 37.400000 Tolerance = +0.000000/-0.000000 PLATED MILS Quantity = 3
+%
+G90
+X05390Y04260
+X05590Y04220
+X05590Y04300
+M30

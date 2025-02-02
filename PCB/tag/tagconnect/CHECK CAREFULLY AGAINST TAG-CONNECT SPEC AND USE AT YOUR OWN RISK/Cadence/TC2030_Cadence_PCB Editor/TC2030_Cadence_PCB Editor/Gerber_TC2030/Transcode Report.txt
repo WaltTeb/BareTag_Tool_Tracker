@@ -1,0 +1,22 @@
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\Cadence\TC2030_Cadence_PCB Editor\TC2030_Cadence_PCB Editor\Gerber_TC2030\DRILL.art' ----   Fri Jun 22 03:23:11 2012
+
+D11   --> D100
+D10   --> D101
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\Cadence\TC2030_Cadence_PCB Editor\TC2030_Cadence_PCB Editor\Gerber_TC2030\SOLDERMASK_BOTTOM.art' ----   Fri Jun 22 03:23:11 2012
+
+D11   --> D102
+D10   --> D103
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\neil\Documents\Tag-Connect\Footprint Decals\Cadence\TC2030_Cadence_PCB Editor\TC2030_Cadence_PCB Editor\Gerber_TC2030\SOLDERMASK_TOP.art' ----   Fri Jun 22 03:23:11 2012
+
+D11   --> D104
+D10   --> D105
+D12   --> D106
+-----------------------------------------------------------------

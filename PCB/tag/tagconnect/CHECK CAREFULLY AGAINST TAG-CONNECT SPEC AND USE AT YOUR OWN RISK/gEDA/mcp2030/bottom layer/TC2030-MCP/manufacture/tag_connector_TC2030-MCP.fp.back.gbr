@@ -1,0 +1,21 @@
+G04 start of page 3 for group 1 idx 1 *
+G04 Title: (unknown), solder *
+G04 Creator: pcb 20100929 *
+G04 CreationDate: Sun 02 Oct 2011 19:41:43 GMT UTC *
+G04 For: rudolf *
+G04 Format: Gerber/RS-274X *
+G04 PCB-Dimensions: 29501 32001 *
+G04 PCB-Coordinate-Origin: lower left *
+%MOIN*%
+%FSLAX25Y25*%
+%LNBACK*%
+%ADD11C,0.0390*%
+%ADD12C,0.0935*%
+%ADD13C,0.0310*%
+G54D13*X11000Y13501D03*
+X16000D03*
+X21000D03*
+Y18501D03*
+X16000D03*
+X11000D03*
+G54D11*G54D12*M02*

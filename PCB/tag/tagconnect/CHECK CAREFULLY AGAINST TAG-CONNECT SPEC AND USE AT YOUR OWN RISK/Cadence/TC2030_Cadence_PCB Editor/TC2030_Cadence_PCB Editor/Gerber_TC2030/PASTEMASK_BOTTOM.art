@@ -1,0 +1,19 @@
+G04 ================== begin FILE IDENTIFICATION RECORD ==================*
+G04 Layout Name:  TC2030.brd*
+G04 Film Name:    PASTEMASK_BOTTOM*
+G04 File Format:  Gerber RS274X*
+G04 File Origin:  Cadence Allegro 16.3-p003*
+G04 Origin Date:  Fri Jun 22 11:33:17 2012*
+G04 *
+G04 Layer:  PIN/PASTEMASK_BOTTOM*
+G04 *
+G04 Offset:    (0.000 0.000)*
+G04 Mirror:    No*
+G04 Mode:      Positive*
+G04 Rotation:  0*
+G04 FullContactRelief:  No*
+G04 UndefLineWidth:     0.100*
+G04 ================== end FILE IDENTIFICATION RECORD ====================*
+%FSLAX54Y54*MOMM*%
+%IR0*IPPOS*OFA0.00000B0.00000*MIA0B0*SFA1.00000B1.00000*%
+M02*

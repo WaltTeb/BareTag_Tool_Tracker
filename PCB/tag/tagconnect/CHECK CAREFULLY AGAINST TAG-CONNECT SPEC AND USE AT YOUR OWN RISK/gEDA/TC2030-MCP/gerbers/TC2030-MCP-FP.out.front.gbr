@@ -1,0 +1,21 @@
+G04 start of page 2 for group 0 idx 0 *
+G04 Title: (unknown), component *
+G04 Creator: pcb 20081128 *
+G04 CreationDate: Fri Jul 30 01:32:59 2010 UTC *
+G04 For: emaste *
+G04 Format: Gerber/RS-274X *
+G04 PCB-Dimensions: 26625 29350 *
+G04 PCB-Coordinate-Origin: lower left *
+%MOIN*%
+%FSLAX24Y24*%
+%LNFRONT*%
+%ADD11C,0.0310*%
+%ADD12C,0.0935*%
+%ADD13C,0.0390*%
+G54D11*X967Y1217D03*
+Y1717D03*
+X1467Y1217D03*
+Y1717D03*
+X1967Y1217D03*
+Y1717D03*
+G54D12*G54D13*G54D12*M02*

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1734028-1
+D Body Features: Shell Plating Material Nickel over Copper | Connector Profile Standard | Configuration Features: Number of Mounting Legs 2 | Number of Ports 1 | Number of Positions 4 | Contact Features: Contact Mating Area Plating Material Thickness .76 MICM | Contact Mating Area Plating Material Gold Flash over Palladium Nickel | Contact Mating Area Plating Material Thickness 29.92 MICIN | Contact Current Rating (Max) 1.5 AMP | Dimensions: PCB Thickness (Recommended) .063 INCH | PCB Thickness (Recommended) 
+K
+F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=7-1773442-0&DocType=Data%20Sheet&DocLang=English&PartCntxt=1734028-1&DocFormat=pdf
+$ENDCMP
+#
+#End Doc Library

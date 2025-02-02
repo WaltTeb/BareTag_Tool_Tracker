@@ -1,0 +1,23 @@
+G04 start of page 5 for group -4063 idx -4063 *
+G04 Title: (unknown), componentmask *
+G04 Creator: pcb 20100929 *
+G04 CreationDate: Sun 02 Oct 2011 19:47:05 GMT UTC *
+G04 For: rudolf *
+G04 Format: Gerber/RS-274X *
+G04 PCB-Dimensions: 27001 15001 *
+G04 PCB-Coordinate-Origin: lower left *
+%MOIN*%
+%FSLAX25Y25*%
+%LNFRONTMASK*%
+%ADD12C,0.0390*%
+%ADD13C,0.0410*%
+G54D12*X3500Y7501D03*
+X23500Y3501D03*
+Y11501D03*
+G54D13*X8500Y5001D03*
+X13500D03*
+X18500D03*
+Y10001D03*
+X13500D03*
+X8500D03*
+M02*

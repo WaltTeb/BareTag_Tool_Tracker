@@ -1,0 +1,57 @@
+Sign-off Checks Report
+----------------------
+
+Report File    : C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo (PCB - Sign-off Checks Report).txt
+Report Written : Thursday, December 17, 2009
+Design Path    : C:\Documents and Settings\chris\My Documents\TC2030-Demo\TC2030-Demo.pcb
+Design Title   : 
+Created        : 12/17/2009 9:42:05 PM
+Last Saved     : 12/17/2009 9:44:40 PM
+Editing Time   : 2 min
+Units          : thou (precision 2)
+
+Results
+-------
+
+
+No errors found
+
+Accepted Errors already in the design
+-------------------------------------
+
+No errors found
+
+Settings
+--------
+
+Spacings
+    Tracks                             No
+    Pads and Vias                      No
+    Shapes                             No
+    Text                               No
+    Board                              No
+    Drills                             No
+    Components                         No
+
+Manufacturing
+    Drill Breakout                     No
+    Drill Backoff                      No
+    Silkscreen Overlap                 No
+    Wires                              No
+    Component Height                   No
+    Copper Text In Board               No
+    Min Track Width                    No
+    Neck Length                        No
+    Min Annular Ring                   No
+    Min Paste Size                     No
+    Vias In Pads                       No
+    Unplated Vias                      No
+    Unplated Pads With Inner Tracks    No
+
+Nets
+    Net Completion                     No
+    Dangling Tracks                    No
+    Net Track Length Differences       No
+
+
+End Of Report.

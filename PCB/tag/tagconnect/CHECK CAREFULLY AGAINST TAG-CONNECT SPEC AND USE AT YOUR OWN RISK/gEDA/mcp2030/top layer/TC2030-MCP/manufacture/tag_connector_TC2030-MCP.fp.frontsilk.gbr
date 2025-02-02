@@ -1,0 +1,17 @@
+G04 start of page 7 for group -4079 idx -4079 *
+G04 Title: (unknown), topsilk *
+G04 Creator: pcb 20100929 *
+G04 CreationDate: Sun 02 Oct 2011 19:46:32 GMT UTC *
+G04 For: rudolf *
+G04 Format: Gerber/RS-274X *
+G04 PCB-Dimensions: 29501 32001 *
+G04 PCB-Coordinate-Origin: lower left *
+%MOIN*%
+%FSLAX25Y25*%
+%LNFRONTSILK*%
+%ADD16C,0.0100*%
+G54D16*X500Y501D02*Y31501D01*
+X29000Y501D02*X500D01*
+X29000Y31501D02*Y501D01*
+X500Y31501D02*X29000D01*
+M02*

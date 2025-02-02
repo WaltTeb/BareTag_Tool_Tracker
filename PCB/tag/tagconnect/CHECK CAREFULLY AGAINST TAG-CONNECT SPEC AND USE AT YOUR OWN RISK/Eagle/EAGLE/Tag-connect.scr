@@ -1,0 +1,329 @@
+# Library script
+# 
+# Exported from C:/Projects/PCBLibrary/tag.lbr at 7/15/2009 7:44:30 AM
+# 
+# EAGLE Version 5.6.0 Copyright (c) 1988-2009 CadSoft
+# 
+Set Wire_Bend 2;
+# Grid changed to 'mm' to avoid loss of precision!
+Grid mm;
+Layer   1 Top;
+Layer   2 Route2;
+Layer   3 Route3;
+Layer   4 Route4;
+Layer   5 Route5;
+Layer   6 Route6;
+Layer   7 Route7;
+Layer   8 Route8;
+Layer   9 Route9;
+Layer  10 Route10;
+Layer  11 Route11;
+Layer  12 Route12;
+Layer  13 Route13;
+Layer  14 Route14;
+Layer  15 Route15;
+Layer  16 Bottom;
+Layer  17 Pads;
+Layer  18 Vias;
+Layer  19 Unrouted;
+Layer  20 Dimension;
+Layer  21 tPlace;
+Layer  22 bPlace;
+Layer  23 tOrigins;
+Layer  24 bOrigins;
+Layer  25 tNames;
+Layer  26 bNames;
+Layer  27 tValues;
+Layer  28 bValues;
+Layer  29 tStop;
+Layer  30 bStop;
+Layer  31 tCream;
+Layer  32 bCream;
+Layer  33 tFinish;
+Layer  34 bFinish;
+Layer  35 tGlue;
+Layer  36 bGlue;
+Layer  37 tTest;
+Layer  38 bTest;
+Layer  39 tKeepout;
+Layer  40 bKeepout;
+Layer  41 tRestrict;
+Layer  42 bRestrict;
+Layer  43 vRestrict;
+Layer  44 Drills;
+Layer  45 Holes;
+Layer  46 Milling;
+Layer  47 Measures;
+Layer  48 Document;
+Layer  49 Reference;
+Layer  51 tDocu;
+Layer  52 bDocu;
+Layer  91 Nets;
+Layer  92 Busses;
+Layer  93 Pins;
+Layer  94 Symbols;
+Layer  95 Names;
+Layer  96 Values;
+Layer  97 Info;
+Layer  98 Guide;
+Description '';
+
+Edit 'ICSP.sym';
+Pin 'VPP/MCLR' Pas None Short R0 Both 0 (-12.7 7.62);
+Pin 'VDD' Pwr None Short R0 Both 0 (-12.7 5.08);
+Pin 'VSS(GND)' Pwr None Short R0 Both 0 (-12.7 2.54);
+Pin 'ICSP_DAT/PGD' I/O None Short R0 Both 0 (-12.7 0);
+Pin 'ICSP_CLK/PGC' Out None Short R0 Both 0 (-12.7 -2.54);
+Pin 'LVP' I/O None Short R0 Both 0 (-12.7 -5.08);
+Layer 94;
+Change Style Continuous;
+Wire  0.254 (-10.16 10.16) (-10.16 -7.62) (8.89 -7.62) (8.89 10.16) \
+      (-10.16 10.16);
+Layer 94;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (6.096 7.62) -90 (6.604 8.128) -90 (7.112 7.62) -90 (6.604 7.112) -90 \
+      (6.096 7.62);
+Layer 94;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (4.572 7.62) -90 (5.08 8.128) -90 (5.588 7.62) -90 (5.08 7.112) -90 \
+      (4.572 7.62);
+Layer 94;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (6.096 6.096) -90 (6.604 6.604) -90 (7.112 6.096) -90 (6.604 5.588) -90 \
+      (6.096 6.096);
+Layer 94;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (4.572 6.096) -90 (5.08 6.604) -90 (5.588 6.096) -90 (5.08 5.588) -90 \
+      (4.572 6.096);
+Layer 94;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (4.572 4.572) -90 (5.08 5.08) -90 (5.588 4.572) -90 (5.08 4.064) -90 \
+      (4.572 4.572);
+Layer 94;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (6.096 4.572) -90 (6.604 5.08) -90 (7.112 4.572) -90 (6.604 4.064) -90 \
+      (6.096 4.572);
+Layer 94;
+Circle 0.254 (5.842 9.144) (6.4099 9.144);
+Layer 94;
+Circle 0.254 (4.826 3.048) (5.3939 3.048);
+Layer 94;
+Circle 0.254 (6.858 3.048) (7.4259 3.048);
+
+Edit 'TC2030-MCP-NL.pac';
+Description '\
+<B>TAG-CONNECT ISP Connector</B><BR><BR><I>Manufacturer:</I> <a href="www.tag-connect.com">Tag-Connect</a><BR>\n\
+<BR>Cable for easy In-Circuit PCB Programming. Designed for Microchip ICD2, suitable for many others.<BR>\n\
+<TABLE cellspacing=0 cellpadding=0 border=0>\n\
+<TR><TD width=20></TD><TD>\n\
+<TABLE cellspacing=0 cellpadding=1 border=1>\n\
+<TR bgcolor=silver><TD align=center>PAD</TD><TD align=center>Description</TD></TR>\n\
+<TR><TD align=center>1</TD><TD>MCLR/Vpp</TD></TR>\n\
+<TR><TD align=center>2</TD><TD>Vdd</TD></TR>\n\
+<TR><TD align=center>3</TD><TD>GND</TD></TR>\n\
+<TR><TD align=center>4</TD><TD>PGD (ISPDAT)</TD></TR>\n\
+<TR><TD align=center>5</TD><TD>PGC (ISPCLK)</TD></TR>\n\
+<TR><TD align=center>6</TD><TD>nc (used for LVP)</TD></TR>\n\
+</TABLE>\n\
+</TD></TR></TABLE><BR><BR>\n\
+©2009 ROFA.cz';
+Hole 0.95 (0 0);
+Hole 0.95 (5.08 -1.016);
+Hole 0.95 (5.08 1.016);
+Layer 1;
+Smd '2' 0.7874 0.7874 -100 R0 NOCREAM (1.27 0.635);
+Layer 1;
+Smd '4' 0.7874 0.7874 -100 R0 NOCREAM (2.54 0.635);
+Layer 1;
+Smd '6' 0.7874 0.7874 -100 R0 NOCREAM (3.81 0.635);
+Layer 1;
+Smd '5' 0.7874 0.7874 -100 R0 NOCREAM (3.81 -0.635);
+Layer 1;
+Smd '3' 0.7874 0.7874 -100 R0 NOCREAM (2.54 -0.635);
+Layer 1;
+Smd '1' 0.7874 0.7874 -100 R0 NOCREAM (1.27 -0.635);
+Layer 39;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.0254  (1.27 -0.2413) (1.6637 -0.2413) (1.6637 -0.635) (2.1463 -0.635) \
+      (2.1463 -0.2413) (2.9337 -0.2413) (2.9337 -0.635) (3.4163 -0.635) \
+      (3.4163 -0.2413) (3.81 -0.2413) (3.81 0.2413) (3.4163 0.2413) \
+      (3.4163 0.635) (2.9337 0.635) (2.9337 0.2413) (2.1463 0.2413) \
+      (2.1463 0.635) (1.6637 0.635) (1.6637 0.2413) (1.27 0.2413) \
+      (1.27 -0.2413);
+Layer 25;
+Change Size 1.27;
+Change Ratio 8;
+Change Font Proportional;
+Text '>name' R0 (-0.635 1.27);
+
+Edit 'TC2030-MCP-NL-CP.pac';
+Description '\
+<B>TAG-CONNECT ISP Connector</B><BR><I>- with alignment pins</I><BR><BR><I>Manufacturer:</I> <a href="www.tag-connect.com">Tag-Connect</a><BR>\n\
+<BR>Cable for easy In-Circuit PCB Programming. Designed for Microchip ICD2, suitable for many others.<BR>\n\
+<TABLE cellspacing=0 cellpadding=0 border=0>\n\
+<TR><TD width=20></TD><TD>\n\
+<TABLE cellspacing=0 cellpadding=1 border=1>\n\
+<TR bgcolor=silver><TD align=center>PAD</TD><TD align=center>Description</TD></TR>\n\
+<TR><TD align=center>1</TD><TD>MCLR/Vpp</TD></TR>\n\
+<TR><TD align=center>2</TD><TD>Vdd</TD></TR>\n\
+<TR><TD align=center>3</TD><TD>GND</TD></TR>\n\
+<TR><TD align=center>4</TD><TD>PGD (ISPDAT)</TD></TR>\n\
+<TR><TD align=center>5</TD><TD>PGC (ISPCLK)</TD></TR>\n\
+<TR><TD align=center>6</TD><TD>nc (used for LVP)</TD></TR>\n\
+</TABLE>\n\
+</TD></TR></TABLE><BR><BR>\n\
+<I>Note:</I> Suitable Receptacle pins are 0295-0-15-xx-06-xx-10-0 series from <a href="www.mill-max.com">Mill-Max</a><BR><BR>\n\
+©2009 ROFA.cz';
+Layer 1;
+Smd '2' 0.7874 0.7874 -100 R0 NOCREAM (1.27 0.635);
+Layer 1;
+Smd '4' 0.7874 0.7874 -100 R0 NOCREAM (2.54 0.635);
+Layer 1;
+Smd '6' 0.7874 0.7874 -100 R0 NOCREAM (3.81 0.635);
+Layer 1;
+Smd '5' 0.7874 0.7874 -100 R0 NOCREAM (3.81 -0.635);
+Layer 1;
+Smd '3' 0.7874 0.7874 -100 R0 NOCREAM (2.54 -0.635);
+Layer 1;
+Smd '1' 0.7874 0.7874 -100 R0 NOCREAM (1.27 -0.635);
+Layer 39;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.0254  (1.27 -0.2413) (1.6637 -0.2413) (1.6637 -0.635) (2.1463 -0.635) \
+      (2.1463 -0.2413) (2.9337 -0.2413) (2.9337 -0.635) (3.4163 -0.635) \
+      (3.4163 -0.2413) (3.81 -0.2413) (3.81 0.2413) (3.4163 0.2413) \
+      (3.4163 0.635) (2.9337 0.635) (2.9337 0.2413) (2.1463 0.2413) \
+      (2.1463 0.635) (1.6637 0.635) (1.6637 0.2413) (1.27 0.2413) \
+      (1.27 -0.2413);
+Layer 16;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 7;
+Polygon 0.0254  (3.556 -1.016) +90 (5.08 -2.54) +90 (6.604 -1.016) (6.604 1.016) +90 \
+      (5.08 2.54) +90 (3.556 1.016) (3.556 -1.016);
+Layer 16;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 7;
+Polygon 0.0254  (-1.524 0) -90 (0 1.524) -90 (1.524 0) -90 (0 -1.524) -90 \
+      (-1.524 0);
+Layer 30;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (3.556 -1.016) +90 (5.08 -2.54) +90 (6.604 -1.016) (6.604 1.016) +90 \
+      (5.08 2.54) +90 (3.556 1.016) (3.556 -1.016);
+Layer 30;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.254  (-1.524 0) -90 (0 1.524) -90 (1.524 0) -90 (0 -1.524) -90 \
+      (-1.524 0);
+Hole 1.6 (0 0);
+Hole 1.6 (5.08 1.016);
+Hole 1.6 (5.08 -1.016);
+Layer 25;
+Change Size 1.27;
+Change Ratio 8;
+Text '>name' R0 (-1.27 1.905);
+
+Edit 'TC2030-MCP.pac';
+Description '\
+<B>TAG-CONNECT ISP Connector</B> - Legged version<BR><BR><I>Manufacturer:</I> <a href="www.tag-connect.com">Tag-Connect</a><BR>\n\
+<BR>Cable for easy In-Circuit PCB Programming. Designed for Microchip ICD2, suitable for many others.<BR>\n\
+<TABLE cellspacing=0 cellpadding=0 border=0>\n\
+<TR><TD width=20></TD><TD>\n\
+<TABLE cellspacing=0 cellpadding=1 border=1>\n\
+<TR bgcolor=silver><TD align=center>PAD</TD><TD align=center>Description</TD></TR>\n\
+<TR><TD align=center>1</TD><TD>MCLR/Vpp</TD></TR>\n\
+<TR><TD align=center>2</TD><TD>Vdd</TD></TR>\n\
+<TR><TD align=center>3</TD><TD>GND</TD></TR>\n\
+<TR><TD align=center>4</TD><TD>PGD (ISPDAT)</TD></TR>\n\
+<TR><TD align=center>5</TD><TD>PGC (ISPCLK)</TD></TR>\n\
+<TR><TD align=center>6</TD><TD>nc (used for LVP)</TD></TR>\n\
+</TABLE>\n\
+</TD></TR></TABLE><BR><BR>\n\
+©2009 ROFA.cz';
+Hole 0.95 (0 0);
+Hole 0.95 (5.08 -1.016);
+Hole 0.95 (5.08 1.016);
+Layer 1;
+Smd '2' 0.7874 0.7874 -100 R0 NOCREAM (1.27 0.635);
+Layer 1;
+Smd '4' 0.7874 0.7874 -100 R0 NOCREAM (2.54 0.635);
+Layer 1;
+Smd '6' 0.7874 0.7874 -100 R0 NOCREAM (3.81 0.635);
+Layer 1;
+Smd '5' 0.7874 0.7874 -100 R0 NOCREAM (3.81 -0.635);
+Layer 1;
+Smd '3' 0.7874 0.7874 -100 R0 NOCREAM (2.54 -0.635);
+Layer 1;
+Smd '1' 0.7874 0.7874 -100 R0 NOCREAM (1.27 -0.635);
+Layer 39;
+Change Spacing 1.27;
+Change Pour Solid;
+Change Rank 0;
+Polygon 0.0254  (1.27 -0.2413) (1.6637 -0.2413) (1.6637 -0.635) (2.1463 -0.635) \
+      (2.1463 -0.2413) (2.9337 -0.2413) (2.9337 -0.635) (3.4163 -0.635) \
+      (3.4163 -0.2413) (3.81 -0.2413) (3.81 0.2413) (3.4163 0.2413) \
+      (3.4163 0.635) (2.9337 0.635) (2.9337 0.2413) (2.1463 0.2413) \
+      (2.1463 0.635) (1.6637 0.635) (1.6637 0.2413) (1.27 0.2413) \
+      (1.27 -0.2413);
+Hole 2.3748 (0 2.54);
+Hole 2.3748 (0 -2.54);
+Hole 2.3748 (3.175 -2.54);
+Hole 2.3748 (3.175 2.54);
+Layer 25;
+Change Size 1.27;
+Change Ratio 8;
+Text '>name' R90 (-1.27 -2.54);
+
+Edit 'TC2030.dev';
+Prefix '';
+Description '\
+<B>TAG-CONNECT ISP Connector</B><BR><BR><I>Manufacturer:</I> <a href="www.tag-connect.com">Tag-Connect</a><BR>\n\
+<BR>Cable for easy In-Circuit PCB Programming. Designed for Microchip ICD2, suitable for many others.<BR>\n\
+Two variants - one "with legs" (for hads-free fit on PCB) and another "without legs" for quick programming.<BR>\n\
+<TABLE cellspacing=0 cellpadding=0 border=0>\n\
+<TR><TD width=20></TD><TD>\n\
+<TABLE cellspacing=0 cellpadding=1 border=1>\n\
+<TR bgcolor=silver><TD align=center>PAD</TD><TD align=center>Description</TD></TR>\n\
+<TR><TD align=center>1</TD><TD>MCLR/Vpp</TD></TR>\n\
+<TR><TD align=center>2</TD><TD>Vdd</TD></TR>\n\
+<TR><TD align=center>3</TD><TD>GND</TD></TR>\n\
+<TR><TD align=center>4</TD><TD>PGD (ISPDAT)</TD></TR>\n\
+<TR><TD align=center>5</TD><TD>PGC (ISPCLK)</TD></TR>\n\
+<TR><TD align=center>6</TD><TD>nc (used for LVP)</TD></TR>\n\
+</TABLE>\n\
+</TD></TR></TABLE><BR><BR>\n\
+©2009 ROFA.cz';
+Value Off;
+Add ICSP 'G$1' Next 0 (0 0);
+Package 'TC2030-MCP' '-MCP';
+Technology '';
+Connect  'G$1.VDD' '2'  'G$1.ICSP_DAT/PGD' '4'  'G$1.LVP' '6'  'G$1.ICSP_CLK/PGC' '5'  'G$1.VSS(GND)' '3' \
+         'G$1.VPP/MCLR' '1';
+Package 'TC2030-MCP-NL' '-MCP-NL';
+Technology '';
+Connect  'G$1.VDD' '2'  'G$1.ICSP_DAT/PGD' '4'  'G$1.LVP' '6'  'G$1.ICSP_CLK/PGC' '5'  'G$1.VSS(GND)' '3' \
+         'G$1.VPP/MCLR' '1';
+Package 'TC2030-MCP-NL-CP' '-MCP-NL-CP';
+Technology '';
+Connect  'G$1.VDD' '2'  'G$1.ICSP_DAT/PGD' '4'  'G$1.LVP' '6'  'G$1.ICSP_CLK/PGC' '5'  'G$1.VSS(GND)' '3' \
+         'G$1.VPP/MCLR' '1';
+Grid mil;
