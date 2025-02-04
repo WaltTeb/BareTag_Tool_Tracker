@@ -146,6 +146,8 @@ void in_pin_handler_INT1(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
 {
 
         nrf_gpio_pin_toggle(LED_2); // toggle an LED on the interrupt 
+
+        nrf_delay_ms(500);
 	
 	nrf_drv_twi_enable(&m_twi); //enable TWI
 
@@ -426,6 +428,8 @@ int twi_example(void){
 
     while(1) // do nothing, interrupt service routine happens in the background as high priority
     { 
+
+    // throw a flag here
     }
 }
 

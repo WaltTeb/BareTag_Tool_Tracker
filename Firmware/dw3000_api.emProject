@@ -80,6 +80,7 @@
           <configuration Name="Debug" build_exclude_from_build="No" />
         </file>
       </folder>
+      <file file_name="Src/config_options.c" />
       <folder Name="examples">
         <folder Name="ex_ss_twr_responder">
           <file file_name="Src/examples/ex_ss_twr_responder/ss_twr_responder.c" />
