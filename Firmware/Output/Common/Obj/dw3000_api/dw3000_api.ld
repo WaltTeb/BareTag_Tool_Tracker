@@ -18,8 +18,8 @@ SECTIONS
   __STACKSIZE_PROCESS__ = 0;
   __STACKSIZE__ = 8192;
 
-  __vectors_ram_load_start__ = 0x20000000;
-  .vectors_ram 0x20000000 (NOLOAD) : AT(0x20000000)
+  __vectors_ram_load_start__ = 0x20001678;
+  .vectors_ram 0x20001678 (NOLOAD) : AT(0x20001678)
   {
     __vectors_ram_start__ = .;
     __app_ram_start__ =   __vectors_ram_start__;
@@ -44,8 +44,8 @@ SECTIONS
 
   . = ASSERT(__nrf_sections_run_start__ == __nrf_sections_run_end__ || (__nrf_sections_run_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__ , "error: .nrf_sections_run is too large to fit in RAM1 memory segment");
 
-  __vectors_load_start__ = 0;
-  .vectors 0 : AT(0)
+  __vectors_load_start__ = 0x27000;
+  .vectors 0x27000 : AT(0x27000)
   {
     __vectors_start__ = .;
     *(.vectors .vectors.*)
@@ -56,8 +56,8 @@ SECTIONS
 
   . = ASSERT(__vectors_start__ == __vectors_end__ || (__vectors_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__ , "error: .vectors is too large to fit in FLASH memory segment");
 
-  __default_config_load_start__ = 0x1d000;
-  .default_config 0x1d000 : AT(0x1d000)
+  __default_config_load_start__ = 0x44000;
+  .default_config 0x44000 : AT(0x44000)
   {
     __default_config_start__ = .;
     *(.default_config .default_config.*)
@@ -70,8 +70,8 @@ SECTIONS
   . = ASSERT(__default_config_start__ == __default_config_end__ || (__default_config_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__ , "error: .default_config is too large to fit in FLASH memory segment");
   . = ASSERT(__vectors_end__ <= __default_config_start__ , "error: section .vectors overlaps absolute placed section .default_config");
 
-  __fConfig_load_start__ = 0x1e000;
-  .fConfig 0x1e000 : AT(0x1e000)
+  __fConfig_load_start__ = 0x45000;
+  .fConfig 0x45000 : AT(0x45000)
   {
     __fConfig_start__ = .;
     *(.fConfig .fConfig.*)
@@ -84,8 +84,8 @@ SECTIONS
   . = ASSERT(__fConfig_start__ == __fConfig_end__ || (__fConfig_end__ - __FLASH_segment_start__) <= __FLASH_segment_size__ , "error: .fConfig is too large to fit in FLASH memory segment");
   . = ASSERT(__default_config_end__ <= __fConfig_start__ , "error: section .default_config overlaps absolute placed section .fConfig");
 
-  __init_load_start__ = 0x1f000;
-  .init 0x1f000 : AT(0x1f000)
+  __init_load_start__ = 0x46000;
+  .init 0x46000 : AT(0x46000)
   {
     __init_start__ = .;
     *(.init .init.*)

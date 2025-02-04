@@ -15,8 +15,10 @@
 
 //#define TEST_SS_TWR_RESPONDER // The code we are using for our Tags
 
-#define UART_TEST // Put random numbers out over UART
+//#define UART_TEST // Put random numbers out over UART
 
 // #define TWR_UART_TEST // The file for anchors
+
+#define TEST_TWI_ACC
 
 #endif

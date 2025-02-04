@@ -19,8 +19,9 @@
       build_quietly="No"
       build_treat_warnings_as_errors="No"
       c_additional_options=""
-      c_preprocessor_definitions="BOARD_CUSTOM;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52833_XXAA;DEBUG"
-      c_user_include_directories="Src/platform;$(NordicSDKDir)/components/drivers_nrf/nrf_soc_nosd;$(NordicSDKDir)/components/boards;$(NordicSDKDir)/components/toolchain/cmsis/include;$(NordicSDKDir)/components/libraries/balloc;$(NordicSDKDir)/components/libraries/ringbuf;$(NordicSDKDir)/components/libraries/log;$(NordicSDKDir)/components/libraries/log/src;$(NordicSDKDir)/components/libraries/memobj;$(NordicSDKDir)/components/libraries/util;$(NordicSDKDir)/components/libraries/atomic;$(NordicSDKDir)/components/libraries/delay;$(NordicSDKDir)/components/libraries/experimental_section_vars;$(NordicSDKDir)/components/libraries/uart;$(NordicSDKDir)/components/libraries/strerror;$(NordicSDKDir)/modules/nrfx;$(NordicSDKDir)/modules/nrfx/hal;$(NordicSDKDir)/modules/nrfx/mdk;$(NordicSDKDir)/modules/nrfx/drivers/include;$(NordicSDKDir)/integration/nrfx;$(NordicSDKDir)/integration/nrfx/legacy;$(NordicSDKDir)/external/fprintf;Src;Src/examples/examples_info;Src/examples/shared_data;Src/MAC_802_15_4;Src/MAC_802_15_8;Shared/dwt_uwb_driver/Inc"
+      c_preprocessor_definitions="BOARD_CUSTOM;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52833_XXAA;DEBUG;SOFTDEVICE_PRESENT;S140"
+      c_user_include_directories="Src/platform;$(NordicSDKDir)/components/boards;$(NordicSDKDir)/components/toolchain/cmsis/include;$(NordicSDKDir)/components/libraries/balloc;$(NordicSDKDir)/components/libraries/ringbuf;$(NordicSDKDir)/components/libraries/log;$(NordicSDKDir)/components/libraries/log/src;$(NordicSDKDir)/components/libraries/memobj;$(NordicSDKDir)/components/libraries/util;$(NordicSDKDir)/components/libraries/atomic;$(NordicSDKDir)/components/libraries/delay;$(NordicSDKDir)/components/libraries/experimental_section_vars;$(NordicSDKDir)/components/libraries/strerror;$(NordicSDKDir)/components/libraries/uart;$(NordicSDKDir)/components/libraries/timer;$(NordicSDKDir)/components/libraries/twi_sensor;$(NordicSDKDir)/components/libraries/twi_mngr;$(NordicSDKDir)/modules/nrfx;$(NordicSDKDir)/modules/nrfx/hal;$(NordicSDKDir)/modules/nrfx/mdk;$(NordicSDKDir)/modules/nrfx/drivers/include;$(NordicSDKDir)/integration/nrfx;$(NordicSDKDir)/integration/nrfx/legacy;$(NordicSDKDir)/external/fprintf;Src;Src/examples/examples_info;Src/examples/shared_data;Src/MAC_802_15_4;Src/MAC_802_15_8;Shared/dwt_uwb_driver/Inc;$(NordicSDKDir)/components/softdevice/s140/headers;$(NordicSDKDir)/components/softdevice/s140/headers/nrf52;$(NordicSDKDir)/modules/nrfx/drivers/src/prs;$(NordicSDKDir)/components/softdevice/mbr/headers;$(NordicSDKDir)/components/softdevice/common"
+      debug_additional_load_file="$(NordicSDKDir)/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
       debug_register_definition_file="$(NordicSDKDir)/modules/nrfx/mdk/nrf52833.svd"
       debug_target_connection="J-Link"
       gcc_all_warnings_command_line_options=""
@@ -38,9 +39,9 @@
       linker_printf_width_precision_supported="Yes"
       linker_scanf_fmt_level="long"
       linker_section_placement_file="flash_placement.xml"
-      linker_section_placement_macros="FLASH_PH_START=0x0;FLASH_PH_SIZE=0x80000;RAM_PH_START=0x20000000;RAM_PH_SIZE=0x20000;FLASH_START=0;FLASH_SIZE=0xe4000;RAM_START=0x20000000;RAM_SIZE=0x20000;DEFAULT_CONFIG_START=0x1d000;DEFAULT_CONFIG_SIZE=0x400;FCONFIG_START=0x1e000;FCONFIG_SIZE=0x1000;INIT_START=0x1f000"
-      linker_section_placements_segments="FLASH RX 0x0 0x100000;RAM1 RWX 0x20000000 0x40000"
-      macros="NordicSDKDir=/usr/local/nRF5_SDK_17.1.0_ddde560;CMSIS_CONFIG_TOOL=$(NordicSDKDir)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard"
+      linker_section_placement_macros="FLASH_PH_START=0x0;FLASH_PH_SIZE=0x80000;RAM_PH_START=0x20000000;RAM_PH_SIZE=0x20000;FLASH_START=0x27000;FLASH_SIZE=0xe4000;RAM_START=0x20001678;RAM_SIZE=0x20000;DEFAULT_CONFIG_START=0x44000;DEFAULT_CONFIG_SIZE=0x400;FCONFIG_START=0x45000;FCONFIG_SIZE=0x1000;INIT_START=0x46000"
+      linker_section_placements_segments="FLASH RX 0x27000 0x100000;RAM1 RWX 0x20001678 0x40000"
+      macros="NordicSDKDir=/home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560;CMSIS_CONFIG_TOOL=$(NordicSDKDir)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard"
       project_can_build_in_parallel="Yes"
       project_directory=""
       project_type="Executable"
@@ -91,8 +92,8 @@
         <folder Name="ex_uart_test">
           <file file_name="Src/examples/ex_uart_test/uart_example.c" />
         </folder>
-        <folder Name="ex_twr_uart_test">
-          <file file_name="Src/examples/ex_twr_uart_test/twr_uart_example.c" />
+        <folder Name="ex_twi_acc">
+          <file file_name="Src/examples/ex_twi_acc/twi_acc_test.c" />
         </folder>
       </folder>
       <folder Name="SDK">
@@ -107,13 +108,13 @@
           <file file_name="$(NordicSDKDir)/components/libraries/memobj/nrf_memobj.c" />
           <file file_name="$(NordicSDKDir)/components/libraries/balloc/nrf_balloc.c" />
           <file file_name="$(NordicSDKDir)/components/libraries/uart/app_uart.c" />
-          <file file_name="$(NordicSDKDir)/components/libraries/uart/app_uart.h" />
-          <file file_name="$(NordicSDKDir)/components/libraries/delay/nrf_delay.h" />
-
+          <file file_name="$(NordicSDKDir)/components/libraries/timer/app_timer.c" />
         </folder>
         <folder Name="nRF_Common">
           <file file_name="$(NordicSDKDir)/modules/nrfx/mdk/system_nrf52833.c" />
-          <file file_name="$(NordicSDKDir)/components/boards/boards.c" />
+          <file file_name="$(NordicSDKDir)/components/boards/boards.c">
+            <configuration Name="Debug" build_exclude_from_build="No" />
+          </file>
         </folder>
         <folder Name="nRF_Drivers">
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_spi.c" />
@@ -121,12 +122,16 @@
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/prs/nrfx_prs.c" />
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_spim.c" />
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_gpiote.c" />
-          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uarte.c"/>
-          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uart.c"/>
-          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_rng.c"/>
           <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_clock.c" />
-          <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_uart.c" />
           <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_clock.c" />
+          <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_uart.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uarte.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_uart.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_twi.c" />
+          <file file_name="$(NordicSDKDir)/integration/nrfx/legacy/nrf_drv_twi.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_twim.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_twis.c" />
+          <file file_name="$(NordicSDKDir)/modules/nrfx/drivers/src/nrfx_twi_twim.c" />
         </folder>
       </folder>
       <folder Name="Shared">
@@ -139,6 +144,9 @@
           </folder>
         </folder>
       </folder>
+      <file file_name="Src/config_options.h" />
+      <file file_name="Src/custom_board.h" />
+      <file file_name="Src/example_selection.h" />
     </folder>
     <folder Name="System">
       <file file_name="$(StudioDir)/source/thumb_crt0.s" />
@@ -147,6 +155,7 @@
     </folder>
     <configuration
       Name="Debug"
+      debug_additional_load_file="$(NordicSDKDir)/components/softdevice/s140/hex/s140_nrf52_7.2.0_softdevice.hex"
       debug_register_definition_file="$(NordicSDKDir)/modules/nrfx/mdk/nrf52833.svd" />
   </project>
   <configuration

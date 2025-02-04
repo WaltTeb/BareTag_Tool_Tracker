@@ -1,23 +1,23 @@
 Output/Common/Obj/dw3000_api/app_error.o: \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.c \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/core_cm4.h \
- /usr/local/segger_embedded_studio_V5.42a/include/stdint.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_version.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_compiler.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_gcc.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/mpu_armv7.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52833.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833_bitfields.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52_to_nrf52833.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf51_to_nrf52.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/compiler_abstraction.h \
- /usr/local/segger_embedded_studio_V5.42a/include/stdio.h \
- /usr/local/segger_embedded_studio_V5.42a/include/__crossworks.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h \
- /usr/local/segger_embedded_studio_V5.42a/include/stdbool.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_errors.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/drivers_nrf/nrf_soc_nosd/nrf_error.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
- /usr/local/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error_weak.h
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.c \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/core_cm4.h \
+ /usr/share/segger_embedded_studio_for_arm_5.42a/include/stdint.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_version.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_compiler.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_gcc.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/mpu_armv7.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52833.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833_bitfields.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52_to_nrf52833.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf51_to_nrf52.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/compiler_abstraction.h \
+ /usr/share/segger_embedded_studio_for_arm_5.42a/include/stdio.h \
+ /usr/share/segger_embedded_studio_for_arm_5.42a/include/__crossworks.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h \
+ /usr/share/segger_embedded_studio_for_arm_5.42a/include/stdbool.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_errors.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/softdevice/s140/headers/nrf_error.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error_weak.h
