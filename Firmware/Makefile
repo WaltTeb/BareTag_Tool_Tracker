@@ -1,10 +1,10 @@
 # run SEGGER Embedded Studio's build system and output the results to ./Output/Common/Exe
 build:
-	/usr/share/segger_embedded_studio_for_arm_5.42a/bin/emBuild -config "Common" "$$(pwd)"/dw3000_api.emProject
+	"$$(find /usr/* -type d -name "segger_embedded_studio_for_arm_5.42a")"/bin/emBuild -config "Common" "$$(pwd)"/dw3000_api.emProject
 
 # remove all build outputs from the project (you may want to run this if you run into issues with stale interfaces)
 clean: 
-	/usr/share/segger_embedded_studio_for_arm_5.42a/bin/emBuild -config "Common" -clean "$$(pwd)"/dw3000_api.emProject
+	"$$(find /usr/* -type d -name "segger_embedded_studio_for_arm_5.42a")"/bin/emBuild -config "Common" -clean "$$(pwd)"/dw3000_api.emProject
 
 flash: build
 	nrfjprog --force -f nrf52 --program "$$(pwd)"/Output/Common/Exe/dw3000_api.hex --sectorerase --verify
