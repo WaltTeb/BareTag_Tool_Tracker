@@ -90,10 +90,9 @@ int main(void)
     nrf_delay_ms(2);
 
    
-    //extern int ss_twr_responder(void); ss_twr_responder(); // The code we are using to test our Tags
-    
+    extern int ss_twr_responder(void); ss_twr_responder(); // The code we are using to test our Tags
 
-    extern int uart_example(void); uart_example();
+    // extern int uart_example(void); uart_example();
     // extern int twr_uart_example(void); twr_uart_example();
 
     while (1) {}
