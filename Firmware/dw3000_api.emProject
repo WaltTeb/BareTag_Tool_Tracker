@@ -41,7 +41,7 @@
       linker_section_placement_file="flash_placement.xml"
       linker_section_placement_macros="FLASH_PH_START=0x0;FLASH_PH_SIZE=0x80000;RAM_PH_START=0x20000000;RAM_PH_SIZE=0x20000;FLASH_START=0x27000;FLASH_SIZE=0xe4000;RAM_START=0x20001678;RAM_SIZE=0x20000;DEFAULT_CONFIG_START=0x44000;DEFAULT_CONFIG_SIZE=0x400;FCONFIG_START=0x45000;FCONFIG_SIZE=0x1000;INIT_START=0x46000"
       linker_section_placements_segments="FLASH RX 0x27000 0x100000;RAM1 RWX 0x20001678 0x40000"
-      macros="NordicSDKDir=/home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560;CMSIS_CONFIG_TOOL=$(NordicSDKDir)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard"
+      macros="NordicSDKDir=/usr/local/nRF5_SDK_17.1.0_ddde560;CMSIS_CONFIG_TOOL=$(NordicSDKDir)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard"
       project_can_build_in_parallel="Yes"
       project_directory=""
       project_type="Executable"
@@ -80,7 +80,6 @@
           <configuration Name="Debug" build_exclude_from_build="No" />
         </file>
       </folder>
-      <file file_name="Src/config_options.c" />
       <file file_name="Src/config_options.c" />
       <folder Name="examples">
         <folder Name="ex_ss_twr_responder">
