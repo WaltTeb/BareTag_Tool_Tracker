@@ -24,6 +24,8 @@ Customization:
 #include "nrf_drv_gpiote.h"  //accelero 
 #include "app_timer.h"
 #include <custom_board.h>
+//#include <deca_device_api.h>
+#include "nrf_log.h"
 
 #if defined(TEST_TWI_ACC)
 
@@ -38,8 +40,8 @@ extern void test_run_info(unsigned char *data);
 #define ARDUINO_SDA_PIN   24
 #define I2C_DELAY     10  // mandatory delay in ms for this interface I2C else the target blocks .... CANNOT be set lower than 10ms
 
-#define SLEEP_MODE_TIMEOUT_SEC  86398  //in seconds, CAN be modified, minimum = 13 seconds and multiples of 13sec -> [13sec, 26sec, 39 sec...] 
-#define SLEEP_MODE_TIMEOUT_COUNTER_VALUE  SLEEP_MODE_TIMEOUT_SEC/13  // this define CANNOT be modified
+#define SLEEP_MODE_TIMEOUT_SEC  86398  //in seconds (1440 mins), CAN be modified, minimum = 13 seconds and multiples of 13sec -> [13sec, 26sec, 39 sec...] 
+#define SLEEP_MODE_TIMEOUT_COUNTER_VALUE  SLEEP_MODE_TIMEOUT_SEC/13  // this define CANNOT be modified (has a value of 1 if the above is 13)
 
 //-- BEGIN ACCELERO PART -------------------------/
 #define ACCEL_I2C_ADDR      0x19 // 0b0011001 This is the Slave Address referenced in the datasheet. Should be 7 bits 
@@ -63,14 +65,16 @@ extern void test_run_info(unsigned char *data);
 //#define 	INT2_DURATION	0x37
 
 static uint8_t G_ACCELERO_THRESHOLD_INT1=0x0C;   //threshold for INT1 (wakeup) and INT2 (wakeup) is the same, preferred value = 0x0C;
-static uint8_t G_ACCELERO_THRESHOLD_INT2=0x09;   //threshold for INT2 (wakeup) and INT2 (wakeup) is the same, preferred value = 0x09;
-
+//static uint8_t G_ACCELERO_THRESHOLD_INT2=0x09;   //threshold for INT2 (wakeup) and INT2 (wakeup) is the same, preferred value = 0x09;
+static bool accel_int = false;// flag to set when there is a wakeup interrupt from accelerometer motion
 //-- END ACCELERO PART -------------------------/
 
 void prepare_sleep_mode (void);
-void sleep_mode_enter(void);
+void motion_timeout_handler(void *p_context);
 
-static uint16_t sleep_mode_timeout_counter=0; //variable for time to remain active before going Sleep mode, uint16_t unsigned short (16-bit)  
+//static uint16_t sleep_mode_timeout_counter=0; //variable for time to remain active before going Sleep mode, uint16_t unsigned short (16-bit)  
+
+APP_TIMER_DEF(sleep_timer); // create a timer identifier and allocate memory for the timer
 
 /* Indicates if operation on TWI has ended. */
 static volatile bool m_xfer_done = false;
@@ -79,16 +83,46 @@ static volatile bool m_xfer_done = false;
 #define TWI_INSTANCE_ID     0
 static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
 
+
 /**@brief Function for the Timer initialization.
  *
  * @details Initializes the timer module. This creates and starts application timers.
  */
-static void timers_init(void)
+static void sleep_timer_init(void) // initialize, create, and start a timer for going to sleep 
 {
 
+	// Double t;
+	// uint32_t sleep_time = 0;
+	// uint16_t lp_osc_cal = 0;
+	// uint16_t sleepTime16;
+	// // Measure low power oscillator frequency
+	// p_osc_cal = dwt_calibratesleepcnt();
+	// // calibrate low power oscillator
+	// // the lp_osc_cal value is number of XTAL cycles in one cycle of LP OSC
+	// // to convert into seconds (38.4 MHz => 1/38.4 MHz ns)
+	// // so to get a sleep time of 10s we need a value of:
+	// // 10 / period and then >> 12 as the register holds upper 16-bits of 28-bit
+	// // counter
+	// t = ((double) 10.0 / ((double) lp_osc_cal/38.4e6));
+	// sleep_time = (int) t;
+	// sleepTime16 = sleep_time >> 12;
+	// dwt_configuresleepcnt(sleepTime16); // configure sleep time
+	// dwt_configuresleep(0x0001, 0x1);
+
+	
+    ret_code_t err_code;
+
     // Initialize timer module.
-    uint32_t err_code = app_timer_init();
+    err_code = app_timer_init();
     APP_ERROR_CHECK(err_code);
+
+   // build a timer such that it references sleep_timer and calls the interrupt function
+   err_code = app_timer_create(&sleep_timer, APP_TIMER_MODE_SINGLE_SHOT, motion_timeout_handler); // or .._MODE_REPEATED for loops
+   APP_ERROR_CHECK(err_code);
+
+   // start the timer,  The third parameter is a general-purpose pointer that is passed to the timeout handler. (p_context)
+   err_code = app_timer_start(sleep_timer, APP_TIMER_TICKS(10000), NULL); // APP_TIMER_TICKS takes in ms and converts to ticks for the timer
+  APP_ERROR_CHECK(err_code);
 }
 
 
@@ -144,14 +178,10 @@ void twi_init (void)
  */
 void in_pin_handler_INT1(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
 {
-
-        nrf_gpio_pin_toggle(LED_2); // toggle an LED on the interrupt 
-
-        nrf_delay_ms(500);
-	
+	accel_int = true;	
 	nrf_drv_twi_enable(&m_twi); //enable TWI
 
-	sleep_mode_timeout_counter = SLEEP_MODE_TIMEOUT_COUNTER_VALUE; //whenever we receive an INT1 then we delay again the time to go to sleep	
+	//sleep_mode_timeout_counter = SLEEP_MODE_TIMEOUT_COUNTER_VALUE; //whenever we receive an INT1 then we delay again the time to go to sleep	
 	
 	//read INT1_SRC to release latch. This means that when this register is read, the data is cleared and another measurement can be taken
 	uint8_t reg[2];
@@ -166,32 +196,45 @@ void in_pin_handler_INT1(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
 	
 }
 
+
 /**
- * @brief Function triggered by accelerometer (pin INT2) to go in sleep mode NEED TO HANDLE THIS ON PIN 1, CAN BE DONE
+ * @brief Once a timer has expired, use a timer interrupt to call this function and send the device to sleep
  */
-//void in_pin_handler_INT2(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
-//{
+void motion_timeout_handler(void *p_context)
+{
 
-//	sleep_mode_timeout_counter--;	
-	
-//	//read INT2_SRC to release latch
-//	uint8_t reg[2];
-//	reg[0] = INT2_SRC; 
-//	uint8_t value=0;
-//	nrf_drv_twi_t x(&m_twi, ACCEL_I2C_ADDR, reg, 1, false);
-//	nrf_delay_ms(I2C_DELAY);	
-//	while (m_xfer_done == false);
-//	nrf_drv_twi_rx(&m_twi, ACCEL_I2C_ADDR, &value, 1);
-//	nrf_delay_ms(I2C_DELAY);
-//	while (m_xfer_done == false);	
+	//nrf_gpio_pin_toggle(LED_1); // toggle an LED on the interrupt 
 
-//  if (sleep_mode_timeout_counter<=0)
-//	{
-//	  prepare_sleep_mode();
-//		sd_power_system_off(); //go in Low power mode
-//	}
+	//sleep_mode_timeout_counter--;	
 	
-//}
+	// Read the value and release the value so that there is no data being held by the accellerometer when it is going to sleep?y
+	uint8_t reg[2];
+	reg[0] = INT1_SRC; 
+	uint8_t value=0;
+	nrf_drv_twi_tx(&m_twi, ACCEL_I2C_ADDR, reg, 1, false);
+	nrf_delay_ms(I2C_DELAY);	
+	while (m_xfer_done == false);
+	nrf_drv_twi_rx(&m_twi, ACCEL_I2C_ADDR, &value, 1);
+	nrf_delay_ms(I2C_DELAY);
+	while (m_xfer_done == false);	
+
+
+	// dwt_configuresleep(0x0001, 0x1);
+	// dwt_entersleep(DWT_DW_IDLE);
+
+	//__WFE();
+
+ //if (sleep_mode_timeout_counter<=0)
+	//{
+	//prepare_sleep_mode();
+	//   /*The end result of sd_power_system_off() and NRF_POWER->POWEROFF = 1 is the same. When the softdevice is initialized, you should use sd_power_system_off(), which make sure the softdevice is not in the middle of a critical operation when putting the device into system off mode.
+	// 	Without the softdevice, sd_power_system_off() is not available, and it is safe to use NRF_POWER->POWEROFF = 1.
+	// 	Notice that the device is not OFF when you put it in system off mode, it is put in a low power/deep sleep state, where it can only be waked up by reset, GPIO, NFC field or LPCOMP module.*/
+	//sd_power_system_off(); //go in Low power mode. This works for us because we have the softdevice running, as described above
+	//}
+	
+}
+
 
 /**
  * @brief Function for configuring: PIN_IN pin for input, PIN_OUT pin for output,
@@ -207,7 +250,7 @@ static void gpio_init(void)
         nrf_drv_gpiote_init();
 	
 		// GPIOTE config for INT1
-    nrf_drv_gpiote_in_config_t in_config = GPIOTE_CONFIG_IN_SENSE_TOGGLE(true); //Indicates that the input pin will generate an event when the input value is changed to high. As parameter, you can specify if the input should have high accuracy or not.
+    nrf_drv_gpiote_in_config_t in_config = GPIOTE_CONFIG_IN_SENSE_LOTOHI(true); //Indicates that the input pin will generate an event when the input value is changed to high. As parameter, you can specify if the input should have high accuracy or not.
     in_config.pull = GPIO_PIN_CNF_PULL_Disabled;  //This input pin managed by accelerometer
 
     err_code = nrf_drv_gpiote_in_init(ACC_INT1, &in_config, in_pin_handler_INT1);
@@ -413,24 +456,30 @@ void accelero_init()
 
 /**@brief Function for application main entry.
  */
-int twi_example(void){
+int twi_example(void){ //  main()
 
-    timers_init();
+
+    printf("shit is running");
+    sd_power_system_off();
+    printf("shit is running");
+	
+    sleep_timer_init(); // this starts a 5 second timer
 		gpio_init(); //for accelerometer
 	
     twi_init(); //Initialization of the I2C
 		
 		accelero_init();	//accelerometer
 		
-   
+ 
 
-
-
-    while(1) // do nothing, interrupt service routine happens in the background as high priority
+    while(1) // wait for a flag set by the ISR before preforming any code
     { 
 
-    // throw a flag here
+    if (accel_int == true){  // on wakeup
+		nrf_gpio_pin_toggle(LED_2); // toggle an LED on the interrupt 
+		accel_int = false;
     }
+	}
 }
 
 #endif

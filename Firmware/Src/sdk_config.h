@@ -3769,7 +3769,7 @@
 #ifndef NRFX_TIMER_ENABLED
 #define NRFX_TIMER_ENABLED 1
 #endif
-// <q> NRFX_TIMER0_ENABLED  - Enable TIMER0 instance
+// <q> NRFX_TIMER0_ENABLED  - Enable TIMER0 instance // used by the softdevice
  
 
 #ifndef NRFX_TIMER0_ENABLED

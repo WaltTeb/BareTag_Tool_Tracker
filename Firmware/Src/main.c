@@ -80,7 +80,7 @@ int main(void)
     /* Initialise DWM3001C GPIOs */
     gpio_init();
 
-    bsp_board_leds_on(); // turn on all single LEDs on the board (the bottom 4)
+    //bsp_board_leds_on(); // turn on all single LEDs on the board (the bottom 4)
 
     /* Initialise the SPI for DWM3001C */
     dwm3001c_spi_init();
