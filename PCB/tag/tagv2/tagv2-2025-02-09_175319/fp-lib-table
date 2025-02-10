@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "digikey-footprints")(type "KiCad")(uri "/home/conno/Documents/kicad/digikey-kicad-library/digikey-footprints.pretty")(options "")(descr ""))
+  (lib (name "imported")(type "KiCad")(uri "${KIPRJMOD}/imported.pretty")(options "")(descr ""))
+  (lib (name "custom")(type "KiCad")(uri "/home/conno/Documents/sdp/PCB/custom.pretty")(options "")(descr ""))
+)
