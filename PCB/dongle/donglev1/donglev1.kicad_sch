@@ -6007,11 +6007,7 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "0.1uF"
-=======
 		(property "Value" "C0603C104J4RACTU"
->>>>>>> Stashed changes
 			(at 88.66 85.11 90)
 			(effects
 				(font
@@ -6078,11 +6074,7 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "10uF"
-=======
 		(property "Value" "C0603C106M9PAC7867"
->>>>>>> Stashed changes
 			(at 96.28 85.11 90)
 			(effects
 				(font
@@ -6282,13 +6274,8 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "20K"
-			(at 180.34 71.12 0)
-=======
 		(property "Value" "RT0603BRD0720KL"
 			(at 182.88 70.866 0)
->>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -6347,11 +6334,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "312c6662-6a6b-4793-93e6-5fd7ae42e5c8")
-<<<<<<< Updated upstream
-		(property "Reference" "IC1"
-=======
 		(property "Reference" "U1"
->>>>>>> Stashed changes
 			(at 121.92 64.77 0)
 			(effects
 				(font
@@ -6360,11 +6343,7 @@
 				(justify left bottom)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "CP2102N-24"
-=======
 		(property "Value" "CP2102N"
->>>>>>> Stashed changes
 			(at 121.92 127 0)
 			(effects
 				(font
@@ -6475,11 +6454,7 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
-<<<<<<< Updated upstream
-					(reference "IC1")
-=======
 					(reference "U1")
->>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -6495,11 +6470,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39b44a7a-411b-4f8f-8e30-e09c4d9de886")
-<<<<<<< Updated upstream
-		(property "Reference" "J2"
-=======
 		(property "Reference" "J1"
->>>>>>> Stashed changes
 			(at 64.77 118.11 0)
 			(effects
 				(font
@@ -6507,11 +6478,7 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "USB_A"
-=======
 		(property "Value" "1734028-1"
->>>>>>> Stashed changes
 			(at 64.77 120.65 0)
 			(effects
 				(font
@@ -6564,11 +6531,7 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
-<<<<<<< Updated upstream
-					(reference "J2")
-=======
 					(reference "J1")
->>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -6583,11 +6546,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "44faf979-281b-4608-806e-6341a1bc1949")
-<<<<<<< Updated upstream
-		(property "Reference" "R5"
-=======
 		(property "Reference" "R4"
->>>>>>> Stashed changes
 			(at 96.52 106.68 0)
 			(effects
 				(font
@@ -6595,13 +6554,8 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "47K"
-			(at 99.06 106.68 0)
-=======
 		(property "Value" "RC0603FR-0747KL"
 			(at 101.6 106.934 0)
->>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -6645,11 +6599,7 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
-<<<<<<< Updated upstream
-					(reference "R5")
-=======
 					(reference "R4")
->>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -6730,11 +6680,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4f0ecb2d-cd43-4bfd-b438-7c23b267b69f")
-<<<<<<< Updated upstream
-		(property "Reference" "R6"
-=======
 		(property "Reference" "R3"
->>>>>>> Stashed changes
 			(at 91.44 101.6 0)
 			(effects
 				(font
@@ -6742,13 +6688,8 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "20K"
-			(at 91.44 99.06 0)
-=======
 		(property "Value" "RT0603BRD0720KL"
 			(at 91.44 103.124 0)
->>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -6792,11 +6733,7 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
-<<<<<<< Updated upstream
-					(reference "R6")
-=======
 					(reference "R3")
->>>>>>> Stashed changes
 					(unit 1)
 				)
 			)
@@ -7345,11 +7282,7 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "0.1uF"
-=======
 		(property "Value" "C0603C104J4RACTU"
->>>>>>> Stashed changes
 			(at 106.44 85.11 90)
 			(effects
 				(font
@@ -7482,11 +7415,7 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "10uF"
-=======
 		(property "Value" "C0603C106M9PAC7867"
->>>>>>> Stashed changes
 			(at 114.06 115.59 90)
 			(effects
 				(font
@@ -7553,11 +7482,7 @@
 				)
 			)
 		)
-<<<<<<< Updated upstream
-		(property "Value" "10uF"
-=======
 		(property "Value" "C0603C106M9PAC7867"
->>>>>>> Stashed changes
 			(at 114.06 85.11 90)
 			(effects
 				(font
@@ -8018,6 +7943,7 @@
 				)
 			)
 		)
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 		(property "Value" "20K"
 			(at 170.18 71.12 0)
@@ -8025,6 +7951,10 @@
 		(property "Value" "RT0603BRD0720KL"
 			(at 172.72 70.866 0)
 >>>>>>> Stashed changes
+=======
+		(property "Value" "RT0603BRD0720KL"
+			(at 172.72 70.866 0)
+>>>>>>> PCBs
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -8216,11 +8146,15 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f926c30b-a47e-4c46-9900-73d328d4105b")
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 		(property "Reference" "J1"
 =======
 		(property "Reference" "U2"
 >>>>>>> Stashed changes
+=======
+		(property "Reference" "U2"
+>>>>>>> PCBs
 			(at 218.44 106.6799 0)
 			(effects
 				(font
@@ -8229,11 +8163,15 @@
 				(justify left)
 			)
 		)
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 		(property "Value" "Conn_01x05"
 =======
 		(property "Value" "RYLR998"
 >>>>>>> Stashed changes
+=======
+		(property "Value" "RYLR998"
+>>>>>>> PCBs
 			(at 218.44 109.2199 0)
 			(effects
 				(font
@@ -8287,11 +8225,15 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 					(reference "J1")
 =======
 					(reference "U2")
 >>>>>>> Stashed changes
+=======
+					(reference "U2")
+>>>>>>> PCBs
 					(unit 1)
 				)
 			)
