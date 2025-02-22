@@ -5800,7 +5800,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "15d6a33c-c36c-4cf0-a9ba-add10450f89c")
-		(property "Reference" "D150060RS75000"
+		(property "Reference" "D2"
 			(at 184.785 80.01 0)
 			(effects
 				(font
@@ -5808,7 +5808,7 @@
 				)
 			)
 		)
-		(property "Value" "RED"
+		(property "Value" "D2"
 			(at 177.546 80.01 0)
 			(effects
 				(font
@@ -5852,7 +5852,7 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
-					(reference "D150060RS75000")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -6133,7 +6133,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "27e73c62-3867-46ce-86de-e1d7e10c9f6f")
-		(property "Reference" "D150060RS75000"
+		(property "Reference" "D1"
 			(at 174.625 80.01 0)
 			(effects
 				(font
@@ -6141,7 +6141,7 @@
 				)
 			)
 		)
-		(property "Value" "GREEN"
+		(property "Value" "D1"
 			(at 167.386 80.01 0)
 			(effects
 				(font
@@ -6185,7 +6185,7 @@
 		(instances
 			(project ""
 				(path "/c46daff7-deef-4110-b4a6-4ebe95bd77a0"
-					(reference "D150060RS75000")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -6352,7 +6352,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit CP2102N Friend:QFN24_CP2102N_SIL"
+		(property "Footprint" "Adafruit CP2102N Friend:QFN24_CP2102N_SIL-L"
 			(at 134.62 93.98 0)
 			(effects
 				(font
@@ -6486,7 +6486,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Adafruit CP2102N Friend:17340281"
+		(property "Footprint" "Connector_USB:USB_A_CNCTech_1001-011-01101_Horizontal"
 			(at 68.58 132.08 0)
 			(effects
 				(font

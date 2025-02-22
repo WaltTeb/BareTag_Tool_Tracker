@@ -95,10 +95,10 @@ int main(void)
     //extern int ss_twr_responder(void); ss_twr_responder(); // The code we are using to test our Tags
 
     //extern int uart_example(void); uart_example();
-    // extern int twr_uart_example(void); twr_uart_example();
+     extern int twr_uart_example(void); twr_uart_example();
 
 
-    extern int twi_example(void); twi_example();
+    //extern int twi_example(void); twi_example();
 
 
     while (1) {}
