@@ -1,0 +1,26 @@
+Output/Common/Obj/dw3000_api/system_nrf52833.o: \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52833.c \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52.c \
+ /usr/share/segger_embedded_studio_for_arm_5.42a/include/stdint.h \
+ /usr/share/segger_embedded_studio_for_arm_5.42a/include/stdbool.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/core_cm4.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_version.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_compiler.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/cmsis_gcc.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/mpu_armv7.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52833.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833_bitfields.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52_to_nrf52833.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf51_to_nrf52.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/compiler_abstraction.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf_peripherals.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833_peripherals.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf_erratas.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf51_erratas.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52_erratas.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf53_erratas.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf91_erratas.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52.h \
+ /home/conno/ncs/DeviceDownload/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/system_nrf52_approtect.h
